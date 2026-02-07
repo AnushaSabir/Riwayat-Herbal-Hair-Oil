@@ -9,7 +9,7 @@ import { toast } from "sonner";
 const MagicParticles = () => {
   return (
     <div className="absolute inset-0 pointer-events-none z-0">
-      {[...Array(15)].map((_, i) => (
+      {[...Array(8)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute w-1 h-1 bg-gold rounded-full blur-[1px]"
@@ -164,7 +164,7 @@ const HeroSection = () => {
                 alt="Riwayat Herbal Hair Oil Bottle"
                 className="w-56 md:w-72 h-auto"
                 style={{
-                  filter: 'drop-shadow(0 30px 60px rgba(0,0,0,0.2))',
+                  filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.15))',
                   rotateX,
                   rotateY,
                   transformStyle: "preserve-3d"

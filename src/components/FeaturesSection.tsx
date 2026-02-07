@@ -55,13 +55,7 @@ const FeaturesSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{
-                  scale: 1.02,
-                  rotateX: -2,
-                  rotateY: 2,
-                  z: 30
-                }}
-                className="bg-white/20 backdrop-blur-xl border border-white/40 p-10 rounded-[40px] shadow-xl hover:shadow-gold/5 transition-all duration-500 group"
+                className="bg-white/10 backdrop-blur-xl border border-white/30 p-10 rounded-[40px] shadow-lg hover:shadow-gold/5 hover:bg-white/20 transition-all duration-500 group"
                 style={{
                   perspective: 1000,
                   transformStyle: "preserve-3d"

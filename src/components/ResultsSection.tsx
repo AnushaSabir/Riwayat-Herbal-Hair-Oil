@@ -73,11 +73,11 @@ const ResultsSection = () => {
               className="mb-32 relative group"
             >
               <div className="absolute inset-0 bg-gold/5 blur-[100px] rounded-full -z-10" />
-              <div className="relative overflow-hidden rounded-[80px] border border-white/40 shadow-2xl p-4 bg-white/10 backdrop-blur-sm">
+              <div className="relative overflow-hidden rounded-[80px] border border-white/40 shadow-2xl p-4 bg-white/10 backdrop-blur-sm flex items-center justify-center">
                 <motion.img
                   src={resultsInfographic}
                   alt="Hair Growth Results Infographic"
-                  className="w-full h-auto rounded-[64px] object-cover"
+                  className="w-full h-auto max-h-[75vh] rounded-[64px] object-contain"
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.8 }}
                 />

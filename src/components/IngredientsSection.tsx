@@ -54,17 +54,16 @@ const IngredientsSection = () => {
           >
             <motion.img
               animate={{
-                y: [0, -25, 0],
-                rotateZ: [0, 2, 0, -2, 0]
+                y: [0, -15, 0],
               }}
               transition={{
-                duration: 8,
+                duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
               }}
               src={bottleImage}
               alt="Riwayat Bottle"
-              className="w-56 md:w-80 h-auto filter drop-shadow-[0_45px_70px_rgba(44,62,80,0.25)]"
+              className="w-56 md:w-80 h-auto filter drop-shadow-2xl"
             />
             {/* Soft Glow behind bottle */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/10 blur-[100px] rounded-full -z-10" />
@@ -89,21 +88,20 @@ const IngredientsSection = () => {
                   rotateY: 10,
                   z: 50
                 }}
-                className="absolute z-10 p-5 bg-white/30 backdrop-blur-xl rounded-[24px] border border-white/40 shadow-[0_20px_40px_rgba(0,0,0,0.05)] group cursor-pointer transition-shadow hover:shadow-gold/10"
+                className="absolute z-10 p-5 bg-white/20 backdrop-blur-lg rounded-[24px] border border-white/30 shadow-md group cursor-pointer transition-all hover:bg-white/40 hover:shadow-gold/10"
                 style={{
-                  perspective: 1000,
-                  transformStyle: "preserve-3d"
+                  perspective: 800,
                 }}
               >
                 <div className="flex flex-col items-center gap-3 relative">
                   {/* Hotspot */}
-                  <div className="absolute -top-2 -right-2 z-20">
-                    <div className="w-2 h-2 rounded-full bg-gold animate-ping opacity-60" />
+                  <div className="absolute -top-1 -right-1 z-20">
+                    <div className="w-1.5 h-1.5 rounded-full bg-gold opacity-60" />
                   </div>
 
                   <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-white/80 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
                     {/* Glossy Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <img src={ingredient.image} alt={ingredient.name} className="w-full h-full object-contain relative z-10" />
                   </div>
                   <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-navy/95 backdrop-blur-xl text-white px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-white/10">

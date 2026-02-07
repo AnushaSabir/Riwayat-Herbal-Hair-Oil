@@ -76,9 +76,9 @@ const BottleExplorer = () => {
                             <img
                                 src={bottleImage}
                                 alt="Bottle"
-                                className="w-64 md:w-96 h-auto drop-shadow-[0_50px_100px_rgba(0,0,0,0.2)]"
+                                className="w-64 md:w-96 h-auto drop-shadow-xl"
                                 style={{
-                                    filter: "drop-shadow(0 20px 40px rgba(0,0,0,0.15))"
+                                    filter: "brightness(1.02)"
                                 }}
                             />
 
