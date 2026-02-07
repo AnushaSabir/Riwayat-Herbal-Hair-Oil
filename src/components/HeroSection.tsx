@@ -2,7 +2,6 @@ import { motion, useMotionValue, useTransform, useSpring, useScroll } from "fram
 import { useRef } from "react";
 import bottleImage from "@/assets/riwayat-bottle.png";
 import amlaLeaves from "@/assets/amla-leaves.png";
-import amlaFruit from "@/assets/ingredients/amla.png";
 import { useCartStore } from "@/lib/cartStore";
 import { toast } from "sonner";
 

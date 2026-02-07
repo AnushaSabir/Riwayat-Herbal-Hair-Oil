@@ -1,5 +1,4 @@
 import { motion, useScroll, useTransform } from "framer-motion";
-import amlaFruit from "@/assets/ingredients/amla.png";
 import neemLeaves from "@/assets/ingredients/neem.png";
 import amlaLeaves from "@/assets/amla-leaves.png";
 import leafPattern from "@/assets/leaf-pattern.png";
@@ -83,12 +82,17 @@ const BackgroundLayer = () => {
     const yParallaxSlow = useTransform(scrollYProgress, [0, 1], [0, -100]);
 
     const botanicalElements = [
-        { src: amlaLeaves, top: "5%", left: "5%", size: "w-24 md:w-32", rotate: -15, delay: 0, opacity: 0.08, parallax: yParallaxSlow },
-        { src: neemLeaves, top: "12%", right: "8%", size: "w-20 md:w-28", rotate: 20, delay: 2, opacity: 0.08, parallax: yParallaxFast },
-        { src: amlaFruit, top: "25%", left: "40%", size: "w-10 md:w-16", rotate: 10, delay: 1, opacity: 0.1, parallax: yParallaxSlow },
-        { src: amlaLeaves, top: "45%", right: "45%", size: "w-28 md:w-36", rotate: 45, delay: 3, opacity: 0.08, parallax: yParallaxFast },
-        { src: neemLeaves, top: "65%", left: "15%", size: "w-24 md:w-32", rotate: -25, delay: 1.5, opacity: 0.08, parallax: yParallaxSlow },
-        { src: amlaFruit, bottom: "10%", right: "35%", size: "w-12 md:w-20", rotate: -10, delay: 0.5, opacity: 0.1, parallax: yParallaxFast },
+        // Framing the top
+        { src: amlaLeaves, top: "-2%", left: "0%", size: "w-32 md:w-48", rotate: 10, delay: 0, opacity: 0.12, parallax: yParallaxSlow },
+        { src: neemLeaves, top: "8%", right: "-5%", size: "w-28 md:w-40", rotate: -20, delay: 2, opacity: 0.1, parallax: yParallaxFast },
+
+        // Mid-section depth
+        { src: amlaLeaves, top: "35%", right: "2%", size: "w-32 md:w-44", rotate: 160, delay: 3, opacity: 0.08, parallax: yParallaxFast },
+        { src: neemLeaves, top: "55%", left: "-2%", size: "w-24 md:w-36", rotate: -45, delay: 1.5, opacity: 0.1, parallax: yParallaxSlow },
+
+        // Bottom framing
+        { src: amlaLeaves, bottom: "5%", left: "5%", size: "w-36 md:w-56", rotate: -30, delay: 1, opacity: 0.12, parallax: yParallaxFast },
+        { src: neemLeaves, bottom: "10%", right: "8%", size: "w-24 md:w-32", rotate: 15, delay: 0.5, opacity: 0.1, parallax: yParallaxSlow },
     ];
 
     return (
