@@ -65,8 +65,8 @@ const Checkout = () => {
             <div className="min-h-screen bg-glossy-green pt-32 pb-20 px-4">
                 <Navbar />
                 <div className="max-w-2xl mx-auto text-center bg-white/60 backdrop-blur-xl p-12 rounded-[40px] shadow-2xl">
-                    <h2 className="text-3xl font-display text-navy mb-6">Your Basket is Empty</h2>
-                    <Button onClick={() => navigate('/')} className="bg-navy hover:bg-navy-light text-white rounded-xl px-12 py-6 text-lg font-elegant">
+                    <h2 className="text-3xl font-display text-foreground mb-6">Your Basket is Empty</h2>
+                    <Button onClick={() => navigate('/')} className="bg-background hover:bg-background-light text-white rounded-xl px-12 py-6 text-lg font-elegant">
                         Start Shopping
                     </Button>
                 </div>
@@ -85,7 +85,7 @@ const Checkout = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="bg-white/70 backdrop-blur-xl p-8 rounded-[40px] shadow-2xl border border-white"
                     >
-                        <h2 className="text-3xl font-display text-navy mb-8">Shipping Information</h2>
+                        <h2 className="text-3xl font-display text-foreground mb-8">Shipping Information</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -137,14 +137,14 @@ const Checkout = () => {
                             </div>
                             <div className="pt-6">
                                 <div className="bg-herbal/5 p-6 rounded-2xl mb-8 border border-herbal/10">
-                                    <p className="text-navy/70 font-elegant italic text-sm">
+                                    <p className="text-foreground/70 font-elegant italic text-sm">
                                         <strong>Note:</strong> We only accept Cash on Delivery (COD) at the moment. You will pay the rider when your Riwayat oil arrives.
                                     </p>
                                 </div>
                                 <Button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full bg-navy hover:bg-navy-light text-white py-8 rounded-2xl text-xl font-elegant shadow-2xl transition-all hover:scale-[1.02]"
+                                    className="w-full bg-background hover:bg-background-light text-white py-8 rounded-2xl text-xl font-elegant shadow-2xl transition-all hover:scale-[1.02]"
                                 >
                                     {loading ? "Placing Order..." : "Confirm COD Order"}
                                 </Button>
@@ -158,7 +158,7 @@ const Checkout = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="space-y-8"
                     >
-                        <div className="bg-navy/80 backdrop-blur-lg text-white p-8 rounded-[40px] shadow-2xl">
+                        <div className="bg-background/80 backdrop-blur-lg text-white p-8 rounded-[40px] shadow-2xl">
                             <h3 className="text-2xl font-display mb-8 tracking-widest uppercase">Order Summary</h3>
                             <div className="space-y-6 mb-8 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                                 {items.map((item) => (

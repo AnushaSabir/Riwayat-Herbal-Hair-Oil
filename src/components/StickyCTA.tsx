@@ -44,14 +44,14 @@ const StickyCTA = () => {
                         <div className="flex items-center gap-4 pl-4">
                             <img src={bottleImage} alt="Bottle" className="w-10 h-10 object-contain drop-shadow-lg" />
                             <div className="hidden sm:block">
-                                <p className="text-navy font-display font-bold text-sm tracking-tight leading-none">Riwayat Herbal Hair Oil</p>
+                                <p className="text-foreground font-display font-bold text-sm tracking-tight leading-none">Riwayat Herbal Hair Oil</p>
                                 <p className="text-gold font-elegant text-[10px] uppercase tracking-widest mt-1">Order Magic Now</p>
                             </div>
                         </div>
 
                         <button
                             onClick={handleAddToCart}
-                            className="px-8 md:px-12 py-3 bg-navy text-white font-display text-xs md:text-sm rounded-full shadow-xl hover:bg-gold transition-all uppercase tracking-widest font-bold"
+                            className="px-8 md:px-12 py-3 bg-background text-white font-display text-xs md:text-sm rounded-full shadow-xl hover:bg-gold transition-all uppercase tracking-widest font-bold"
                         >
                             Order Your Bottle
                         </button>

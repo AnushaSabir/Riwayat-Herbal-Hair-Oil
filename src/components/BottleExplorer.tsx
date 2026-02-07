@@ -37,14 +37,14 @@ const BottleExplorer = () => {
                         className="lg:w-1/2"
                     >
                         <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-8 block opacity-80">Immersive Experience</span>
-                        <h2 className="text-5xl md:text-8xl font-display font-medium text-navy mb-10 leading-[1.1] tracking-tight">
+                        <h2 className="text-5xl md:text-8xl font-display font-medium text-foreground mb-10 leading-[1.1] tracking-tight">
                             Inspect the <span className="italic">Magic.</span>
                         </h2>
-                        <p className="text-navy/60 font-elegant text-xl md:text-2xl leading-relaxed mb-12 italic">
+                        <p className="text-foreground/60 font-elegant text-xl md:text-2xl leading-relaxed mb-12 italic">
                             "Drag your cursor to explore every detail of the Riwayat bottle. A masterpiece of herbal engineering, designed to be held as much as used."
                         </p>
 
-                        <div className="flex items-center gap-4 text-xs font-elegant tracking-[0.3em] uppercase text-navy/40">
+                        <div className="flex items-center gap-4 text-xs font-elegant tracking-[0.3em] uppercase text-foreground/40">
                             <span className="w-12 h-[1px] bg-gold/40" />
                             <span>360 Degree Insight</span>
                         </div>
@@ -81,14 +81,14 @@ const BottleExplorer = () => {
                                 style={{ translateZ: 100 }}
                             >
                                 <div className="w-4 h-4 rounded-full bg-gold animate-ping" />
-                                <span className="text-[10px] font-elegant tracking-widest uppercase text-navy/60">Sealed for Freshness</span>
+                                <span className="text-[10px] font-elegant tracking-widest uppercase text-foreground/60">Sealed for Freshness</span>
                             </motion.div>
 
                             <motion.div
                                 className="absolute bottom-1/4 -left-10 md:-left-20 flex items-center gap-4"
                                 style={{ translateZ: 150 }}
                             >
-                                <span className="text-[10px] font-elegant tracking-widest uppercase text-navy/60">99% Glass Eco-Bottle</span>
+                                <span className="text-[10px] font-elegant tracking-widest uppercase text-foreground/60">99% Glass Eco-Bottle</span>
                                 <div className="w-4 h-4 rounded-full bg-gold animate-ping" />
                             </motion.div>
                         </motion.div>

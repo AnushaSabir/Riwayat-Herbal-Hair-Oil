@@ -31,17 +31,17 @@ const FeaturesSection = () => {
             className="lg:w-2/5 text-left"
           >
             <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-6 block opacity-80">The Benefits</span>
-            <h2 className="text-5xl md:text-7xl font-display font-medium text-navy mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground mb-8 leading-[1.1] tracking-tight">
               Why <span className="italic">Thousands</span> <br />Trust Riwayat
             </h2>
             <div className="w-20 h-[1px] bg-gold/30 mb-8" />
-            <p className="text-lg text-navy/70 font-elegant leading-relaxed mb-10 max-w-md italic">
+            <p className="text-lg text-foreground/70 font-elegant leading-relaxed mb-10 max-w-md italic">
               "We combine ancient herbal wisdom with modern science to give you the hair you've always dreamed of. No shortcuts, just pure nature."
             </p>
 
             <div className="hidden lg:block">
-              <div className="flex items-center gap-4 text-xs font-elegant tracking-widest text-navy/40 uppercase">
-                <span className="w-8 h-[1px] bg-navy/10" />
+              <div className="flex items-center gap-4 text-xs font-elegant tracking-widest text-foreground/40 uppercase">
+                <span className="w-8 h-[1px] bg-background/10" />
                 <span>Crafted with Care</span>
               </div>
             </div>
@@ -63,13 +63,13 @@ const FeaturesSection = () => {
               >
                 <div className="flex flex-col gap-6">
                   <div className="w-14 h-14 rounded-2xl bg-white/40 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
-                    <feature.icon className="w-6 h-6 text-navy/80 group-hover:text-gold transition-colors" />
+                    <feature.icon className="w-6 h-6 text-foreground/80 group-hover:text-gold transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-medium text-navy mb-3 tracking-tight">
+                    <h3 className="text-xl font-display font-medium text-foreground mb-3 tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-navy/60 font-elegant leading-relaxed text-sm">
+                    <p className="text-foreground/60 font-elegant leading-relaxed text-sm">
                       {feature.description}
                     </p>
                   </div>

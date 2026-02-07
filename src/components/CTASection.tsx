@@ -62,7 +62,7 @@ const CTASection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-8xl font-display font-medium text-navy mb-8 leading-[1.1] tracking-tight"
+              className="text-5xl md:text-8xl font-display font-medium text-foreground mb-8 leading-[1.1] tracking-tight"
             >
               Ready to Write <br />Your <span className="italic">Riwayat?</span>
             </motion.h2>
@@ -71,7 +71,7 @@ const CTASection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-navy/60 font-elegant text-xl md:text-2xl mb-14 max-w-2xl mx-auto italic"
+              className="text-foreground/60 font-elegant text-xl md:text-2xl mb-14 max-w-2xl mx-auto italic"
             >
               "Don't just dream of better hair. Own it. Order your bottle of Riwayat magic today and start your transformation."
             </motion.p>
@@ -96,11 +96,11 @@ const CTASection = () => {
               </motion.button>
               <div className="flex items-center gap-2 mt-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[10px] text-navy/40 font-elegant tracking-widest uppercase">In Stock • Ready to Ship</span>
+                <span className="text-[10px] text-foreground/40 font-elegant tracking-widest uppercase">In Stock • Ready to Ship</span>
               </div>
             </motion.div>
 
-            <div className="mt-20 flex flex-wrap justify-center gap-10 md:gap-16 text-navy/50 font-elegant text-[11px] uppercase tracking-[0.2em] border-t border-navy/5 pt-16">
+            <div className="mt-20 flex flex-wrap justify-center gap-10 md:gap-16 text-foreground/50 font-elegant text-[11px] uppercase tracking-[0.2em] border-t border-navy/5 pt-16">
               <div className="flex items-center gap-3">
                 <div className="w-1 h-1 bg-gold rounded-full" />
                 <span>Free Shipping</span>

@@ -73,27 +73,27 @@ const HeroSection = () => {
             className="mb-12 flex flex-col items-center"
           >
             {/* Riwayat Branding Section */}
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-branding-blue tracking-[0.3em] leading-none uppercase mb-4 drop-shadow-sm">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-foreground tracking-[0.3em] leading-none uppercase mb-4 drop-shadow-sm">
               RIWAYAT
             </h1>
-            <h2 className="text-xl md:text-2xl font-serif text-navy/60 mb-8 tracking-[0.2em] italic uppercase">
+            <h2 className="text-xl md:text-2xl font-serif text-foreground/60 mb-8 tracking-[0.2em] italic uppercase">
               The Essence of Herbal Wisdom
             </h2>
 
             {/* Natural Herbal Formula with Golden Lines */}
             <div className="w-full max-w-lg flex items-center justify-between mb-10 opacity-60">
               <div className="flex-grow h-[1px] bg-gradient-to-r from-transparent via-gold/50 to-transparent" />
-              <p className="px-6 text-[10px] md:text-xs text-navy font-elegant tracking-[0.5em] uppercase whitespace-nowrap">
+              <p className="px-6 text-[10px] md:text-xs text-foreground font-elegant tracking-[0.5em] uppercase whitespace-nowrap">
                 Premium Herbal Formula
               </p>
               <div className="flex-grow h-[1px] bg-gradient-to-l from-transparent via-gold/50 to-transparent" />
             </div>
 
             <div className="space-y-4 mb-14">
-              <p className="text-base md:text-xl text-navy font-elegant font-medium tracking-[0.4em] flex items-center justify-center gap-3 uppercase">
+              <p className="text-base md:text-xl text-foreground font-elegant font-medium tracking-[0.4em] flex items-center justify-center gap-3 uppercase">
                 Strong <span className="text-gold/40">•</span> Thick <span className="text-gold/40">•</span> Silky
               </p>
-              <p className="text-6xl md:text-8xl font-script text-navy/90 pt-4 leading-tight">
+              <p className="text-6xl md:text-8xl font-script text-foreground/90 pt-4 leading-tight">
                 Root se Growth tak
               </p>
             </div>
@@ -143,8 +143,8 @@ const HeroSection = () => {
 
           <div className="flex flex-col items-center gap-6 mt-14">
             <div className="flex flex-col items-center">
-              <span className="text-navy/40 text-xs font-elegant tracking-widest uppercase mb-1">Introductory Price</span>
-              <span className="text-4xl font-display font-medium text-navy tracking-tight">Rs. 1,499</span>
+              <span className="text-foreground/40 text-xs font-elegant tracking-widest uppercase mb-1">Introductory Price</span>
+              <span className="text-4xl font-display font-medium text-foreground tracking-tight">Rs. 1,499</span>
             </div>
 
             <motion.button

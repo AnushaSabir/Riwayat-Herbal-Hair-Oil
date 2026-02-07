@@ -48,7 +48,7 @@ const ResultsSection = () => {
               className="max-w-xl"
             >
               <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-6 block opacity-80">Proven Performance</span>
-              <h2 className="text-5xl md:text-7xl font-display font-medium text-navy leading-[1.1] tracking-tight">
+              <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground leading-[1.1] tracking-tight">
                 Beyond <span className="italic">Visual</span> Impact.
               </h2>
             </motion.div>
@@ -58,7 +58,7 @@ const ResultsSection = () => {
               transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
               className="max-w-md text-right md:pb-2"
             >
-              <p className="text-navy/60 font-elegant italic text-lg md:text-xl leading-relaxed">
+              <p className="text-foreground/60 font-elegant italic text-lg md:text-xl leading-relaxed">
                 "Scientific results meet traditional soul. Experience the measurable change in every strand."
               </p>
               <div className="w-12 h-[1px] bg-gold/40 ml-auto mt-6" />
@@ -86,7 +86,7 @@ const ResultsSection = () => {
               {/* Subtle label */}
               <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-4">
                 <div className="w-12 h-[1px] bg-gold/30" />
-                <span className="text-[10px] uppercase tracking-[0.4em] text-navy/40 font-bold">Documented Growth Journey</span>
+                <span className="text-[10px] uppercase tracking-[0.4em] text-foreground/40 font-bold">Documented Growth Journey</span>
                 <div className="w-12 h-[1px] bg-gold/30" />
               </div>
             </motion.div>
@@ -105,14 +105,14 @@ const ResultsSection = () => {
                   {/* Subtle Background Glow */}
                   <div className="absolute inset-0 bg-gold/0 group-hover:bg-gold/5 transition-colors duration-500 -z-10" />
 
-                  <div className="text-6xl md:text-7xl font-display font-bold text-navy tracking-tighter flex items-baseline mb-6 group-hover:scale-110 transition-transform duration-500">
+                  <div className="text-6xl md:text-7xl font-display font-bold text-foreground tracking-tighter flex items-baseline mb-6 group-hover:scale-110 transition-transform duration-500">
                     <AnimatedCounter target={result.percentage} isInView={isInView} />
                     <span className="text-2xl md:text-3xl text-gold ml-1">%</span>
                   </div>
 
                   <div className="w-10 h-[1px] bg-gold/40 mb-6 group-hover:w-16 transition-all duration-500" />
 
-                  <h3 className="text-navy/60 font-elegant uppercase tracking-[0.3em] text-[10px] md:text-xs font-bold transition-colors group-hover:text-navy/90">
+                  <h3 className="text-foreground/60 font-elegant uppercase tracking-[0.3em] text-[10px] md:text-xs font-bold transition-colors group-hover:text-foreground/90">
                     {result.label}
                   </h3>
                 </motion.div>

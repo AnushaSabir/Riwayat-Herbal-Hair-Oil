@@ -28,7 +28,7 @@ const WhatsAppButton = () => {
 
                 {/* Floating Label */}
                 <div className="absolute right-[calc(100%+1rem)] top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
-                    <p className="text-navy font-elegant text-sm font-bold tracking-tight">Order via WhatsApp</p>
+                    <p className="text-foreground font-elegant text-sm font-bold tracking-tight">Order via WhatsApp</p>
                 </div>
             </div>
         </motion.a>

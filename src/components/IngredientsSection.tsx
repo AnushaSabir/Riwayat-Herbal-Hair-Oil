@@ -38,7 +38,7 @@ const IngredientsSection = () => {
           className="text-center mb-20"
         >
           <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-4 block">The Secret Formula</span>
-          <h2 className="text-4xl md:text-6xl font-display font-medium text-navy uppercase tracking-tight leading-tight">
+          <h2 className="text-4xl md:text-6xl font-display font-medium text-foreground uppercase tracking-tight leading-tight">
             Nature's <span className="italic">Finest</span> Elements
           </h2>
           <div className="w-24 h-[1px] bg-gold/30 mx-auto mt-8" />
@@ -100,7 +100,7 @@ const IngredientsSection = () => {
                   <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-white/80 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
                     <img src={ingredient.image} alt={ingredient.name} className="w-full h-full object-contain relative z-10" />
                   </div>
-                  <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-navy/95 backdrop-blur-xl text-white px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-white/10">
+                  <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-background/95 backdrop-blur-xl text-white px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-white/10">
                     <span className="text-[8px] font-elegant tracking-[0.3em] text-gold uppercase mb-1 block">Pure Extract</span>
                     <p className="font-bold uppercase tracking-[0.1em] text-[10px] mb-0.5">{ingredient.name}</p>
                     <p className="font-elegant text-white/70 text-[9px] italic">{ingredient.benefit}</p>

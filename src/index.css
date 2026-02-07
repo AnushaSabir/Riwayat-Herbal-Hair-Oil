@@ -21,10 +21,10 @@ html {
     --herbal: 142 65% 50%;
     --herbal-dark: 142 70% 30%;
 
-    /* Deep Navy for text - Original */
-    --navy: 145 40% 80%;
-    --navy-light: 145 35% 90%;
-    --branding-blue: 145 40% 80%;
+    /* Deep Navy for text - Corrected to be Dark */
+    --navy: 220 70% 6%;
+    --navy-light: 220 40% 15%;
+    --branding-blue: 220 70% 10%;
 
     /* Matte Gold accents */
     --gold: 38 45% 48%;

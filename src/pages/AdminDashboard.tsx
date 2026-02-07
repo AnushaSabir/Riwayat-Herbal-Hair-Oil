@@ -60,7 +60,7 @@ const AdminDashboard = () => {
             <div className="max-w-7xl mx-auto">
                 <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div>
-                        <h1 className="text-3xl font-display font-bold text-navy">Riwayat Admin</h1>
+                        <h1 className="text-3xl font-display font-bold text-foreground">Riwayat Admin</h1>
                         <p className="text-slate-500 font-elegant">Manage your COD orders here</p>
                     </div>
                     <div className="relative">
@@ -105,17 +105,17 @@ const AdminDashboard = () => {
                                             </span>
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-navy">{order.shippingInfo.fullName}</h3>
+                                            <h3 className="text-xl font-bold text-foreground">{order.shippingInfo.fullName}</h3>
                                             <p className="text-slate-500">{order.shippingInfo.phone}</p>
                                         </div>
                                         <div className="bg-slate-50 p-4 rounded-2xl text-sm">
                                             <p className="font-bold text-slate-400 uppercase text-[10px] mb-2 tracking-tighter">Delivery Address</p>
-                                            <p className="text-navy/80">{order.shippingInfo.address}, {order.shippingInfo.city}</p>
+                                            <p className="text-foreground/80">{order.shippingInfo.address}, {order.shippingInfo.city}</p>
                                         </div>
                                     </div>
 
                                     <div className="w-full md:w-64 space-y-4">
-                                        <div className="bg-navy p-6 rounded-2xl text-white">
+                                        <div className="bg-background p-6 rounded-2xl text-white">
                                             <p className="text-white/60 text-xs mb-1">Total Amount</p>
                                             <p className="text-2xl font-bold">Rs. {order.total}</p>
                                         </div>
@@ -152,7 +152,7 @@ const AdminDashboard = () => {
                                     <div className="flex flex-wrap gap-4">
                                         {order.items.map((item, i) => (
                                             <div key={i} className="flex items-center gap-2 text-xs bg-slate-50 px-3 py-1 rounded-lg">
-                                                <span className="font-bold text-navy">{item.quantity}x</span>
+                                                <span className="font-bold text-foreground">{item.quantity}x</span>
                                                 <span className="text-slate-600">{item.name}</span>
                                             </div>
                                         ))}

@@ -43,7 +43,7 @@ const JourneySection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-32">
                     <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-6 block opacity-70">The Heritage</span>
-                    <h2 className="text-5xl md:text-7xl font-display font-medium text-navy tracking-tight uppercase leading-tight">
+                    <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground tracking-tight uppercase leading-tight">
                         Journey To <span className="italic">Pure</span> Excellence
                     </h2>
                     <div className="w-24 h-[1px] bg-gold/30 mx-auto mt-12" />
@@ -51,7 +51,7 @@ const JourneySection = () => {
 
                 <div className="max-w-4xl mx-auto relative">
                     {/* Central Progress Line */}
-                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-navy/10 hidden md:block">
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-background/10 hidden md:block">
                         <motion.div
                             style={{ scaleY, originY: 0 }}
                             className="w-full h-full bg-gold/50"
@@ -77,10 +77,10 @@ const JourneySection = () => {
                                         <div className={`flex flex-col ${isEven ? 'md:items-end' : 'items-start'} gap-4`}>
                                             <span className="text-gold font-elegant tracking-widest text-[10px] uppercase font-bold">{step.year}</span>
                                             <div className="p-4 bg-white/30 backdrop-blur-md rounded-2xl border border-white/50 shadow-sm group hover:border-gold/30 transition-colors">
-                                                <step.icon className="w-6 h-6 text-navy/70 group-hover:text-gold transition-colors" />
+                                                <step.icon className="w-6 h-6 text-foreground/70 group-hover:text-gold transition-colors" />
                                             </div>
-                                            <h3 className="text-2xl font-display font-medium text-navy tracking-tight">{step.title}</h3>
-                                            <p className="text-navy/50 font-elegant text-sm leading-relaxed max-w-sm">
+                                            <h3 className="text-2xl font-display font-medium text-foreground tracking-tight">{step.title}</h3>
+                                            <p className="text-foreground/50 font-elegant text-sm leading-relaxed max-w-sm">
                                                 {step.description}
                                             </p>
                                         </div>

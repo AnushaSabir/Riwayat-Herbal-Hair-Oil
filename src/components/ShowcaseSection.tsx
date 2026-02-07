@@ -44,13 +44,13 @@ const ShowcaseSection = () => {
                         <div className="absolute inset-x-8 top-1/2 -translate-y-1/2 flex justify-between z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                                 onClick={(e) => { e.stopPropagation(); prev(); }}
-                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-navy hover:bg-gold hover:text-white transition-all pointer-events-auto"
+                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
                             >
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
                             <button
                                 onClick={(e) => { e.stopPropagation(); next(); }}
-                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-navy hover:bg-gold hover:text-white transition-all pointer-events-auto"
+                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
                             >
                                 <ChevronRight className="w-6 h-6" />
                             </button>
@@ -78,7 +78,7 @@ const ShowcaseSection = () => {
                                 transition={{ duration: 0.5 }}
                             >
                                 <span className="text-gold font-elegant tracking-[0.6em] uppercase text-xs mb-4 block opacity-80">{images[index].label}</span>
-                                <h3 className="text-3xl md:text-5xl font-display font-medium text-navy tracking-tight italic">
+                                <h3 className="text-3xl md:text-5xl font-display font-medium text-foreground tracking-tight italic">
                                     {images[index].title.split(' ')[0]} <span className="text-gold">{images[index].title.split(' ').slice(1).join(' ')}</span>
                                 </h3>
                             </motion.div>

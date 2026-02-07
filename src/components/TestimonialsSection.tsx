@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-24">
                     <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-6 block opacity-80">Words of Magic</span>
-                    <h2 className="text-5xl md:text-7xl font-display font-medium text-navy leading-[1.1] tracking-tight">
+                    <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground leading-[1.1] tracking-tight">
                         Customer <span className="italic">Stories.</span>
                     </h2>
                     <div className="w-24 h-[1px] bg-gold/30 mx-auto mt-8" />
@@ -53,12 +53,12 @@ const TestimonialsSection = () => {
                                 ))}
                             </div>
 
-                            <p className="text-navy/70 font-elegant italic text-lg leading-relaxed mb-10">
+                            <p className="text-foreground/70 font-elegant italic text-lg leading-relaxed mb-10">
                                 "{t.content}"
                             </p>
 
                             <div className="pt-8 border-t border-navy/5">
-                                <h4 className="text-xl font-display font-medium text-navy mb-1 tracking-tight">{t.name}</h4>
+                                <h4 className="text-xl font-display font-medium text-foreground mb-1 tracking-tight">{t.name}</h4>
                                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">{t.role}</p>
                             </div>
                         </motion.div>

@@ -43,11 +43,11 @@ const WhyRiwayatSection = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-6 block opacity-80">Our Philosophy</span>
-            <h2 className="text-5xl md:text-7xl font-display font-medium text-navy mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground mb-8 leading-[1.1] tracking-tight">
               Rooted In <span className="italic">Wisdom</span>,<br />Driven By Nature.
             </h2>
             <div className="w-20 h-[1px] bg-gold/30 mb-10" />
-            <p className="text-lg text-navy/70 font-elegant leading-relaxed mb-12 max-w-lg italic">
+            <p className="text-lg text-foreground/70 font-elegant leading-relaxed mb-12 max-w-lg italic">
               "Riwayat is not just an oil; it's a legacy of hair care. We believe that true beauty shouldn't come at the cost of your health."
             </p>
 
@@ -59,8 +59,8 @@ const WhyRiwayatSection = () => {
                   whileHover={{ y: -5 }}
                 >
                   <reason.icon className="w-6 h-6 text-gold opacity-80 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-lg font-display font-bold text-navy uppercase tracking-widest">{reason.title}</h3>
-                  <p className="text-navy/60 font-elegant text-[13px] leading-relaxed">{reason.description}</p>
+                  <h3 className="text-lg font-display font-bold text-foreground uppercase tracking-widest">{reason.title}</h3>
+                  <p className="text-foreground/60 font-elegant text-[13px] leading-relaxed">{reason.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -81,18 +81,18 @@ const WhyRiwayatSection = () => {
                     rotateY: 2,
                     z: 50
                   }}
-                  className="bg-white/20 backdrop-blur-xl border border-white/40 p-10 rounded-[48px] text-navy flex gap-8 items-center group hover:bg-white/40 transition-all duration-500 shadow-xl hover:shadow-gold/5"
+                  className="bg-white/20 backdrop-blur-xl border border-white/40 p-10 rounded-[48px] text-foreground flex gap-8 items-center group hover:bg-white/40 transition-all duration-500 shadow-xl hover:shadow-gold/5"
                   style={{
                     perspective: 1000,
                     transformStyle: "preserve-3d"
                   }}
                 >
                   <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/10 transition-colors">
-                    <reason.icon className="w-7 h-7 text-navy/80 group-hover:text-gold transition-colors" />
+                    <reason.icon className="w-7 h-7 text-foreground/80 group-hover:text-gold transition-colors" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-display font-medium mb-2 tracking-tight">{reason.title}</h3>
-                    <p className="text-navy/60 font-elegant text-sm leading-relaxed">{reason.description}</p>
+                    <p className="text-foreground/60 font-elegant text-sm leading-relaxed">{reason.description}</p>
                   </div>
                 </motion.div>
               ))}

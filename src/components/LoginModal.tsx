@@ -40,7 +40,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px] bg-navy/95 backdrop-blur-xl border-white/10 rounded-2xl">
+            <DialogContent className="sm:max-w-[425px] bg-background border border-white/10 rounded-2xl shadow-2xl">
                 <DialogHeader>
                     <DialogTitle className="text-2xl font-display text-foreground text-center mb-4">
                         {isRegister ? "Create Account" : "Welcome Back"}
@@ -73,7 +73,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                     </div>
                     <Button
                         type="submit"
-                        className="w-full bg-navy hover:bg-navy-light text-white py-6 rounded-xl font-elegant text-lg shadow-xl"
+                        className="w-full bg-gold hover:bg-gold-light text-background py-6 rounded-xl font-display text-lg shadow-xl font-bold uppercase tracking-widest transition-all"
                         disabled={loading}
                     >
                         {loading ? "Processing..." : (isRegister ? "Sign Up" : "Login")}
@@ -82,7 +82,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                         <button
                             type="button"
                             onClick={() => setIsRegister(!isRegister)}
-                            className="text-sm font-elegant text-navy-light hover:text-gold transition-colors"
+                            className="text-sm font-elegant text-foreground/60 hover:text-gold transition-colors font-bold uppercase tracking-widest"
                         >
                             {isRegister ? "Already have an account? Login" : "Don't have an account? Sign up"}
                         </button>
