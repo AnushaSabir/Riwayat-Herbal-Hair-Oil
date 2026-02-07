@@ -26,7 +26,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-xl border-b border-white/20">
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/60 backdrop-blur-xl border-b border-white/10">
                 <div className="container mx-auto px-4 h-24 flex items-center justify-between">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -40,9 +40,9 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-12">
                         <div className="flex items-center gap-10">
-                            <a href="#features" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-navy/60 hover:text-navy transition-colors font-bold">Benefits</a>
-                            <a href="#ingredients" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-navy/60 hover:text-navy transition-colors font-bold">Ingredients</a>
-                            <a href="#results" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-navy/60 hover:text-navy transition-colors font-bold">Results</a>
+                            <a href="#features" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-foreground/70 hover:text-foreground transition-colors font-bold">Benefits</a>
+                            <a href="#ingredients" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-foreground/70 hover:text-foreground transition-colors font-bold">Ingredients</a>
+                            <a href="#results" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-foreground/70 hover:text-foreground transition-colors font-bold">Results</a>
                         </div>
 
                         <div className="flex items-center gap-6 ml-10 pl-10 border-l border-navy/5">

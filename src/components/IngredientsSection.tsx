@@ -72,7 +72,7 @@ const IngredientsSection = () => {
           {/* Floating Ingredients Circular Layout with 3D Tilt */}
           {ingredients.map((ingredient, index) => {
             const angle = (index / ingredients.length) * 2 * Math.PI;
-            const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 180 : 380;
+            const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 160 : 380;
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;
 

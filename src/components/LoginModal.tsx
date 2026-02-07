@@ -40,15 +40,15 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px] bg-white/95 backdrop-blur-xl border-navy/10 rounded-2xl">
+            <DialogContent className="sm:max-w-[425px] bg-navy/95 backdrop-blur-xl border-white/10 rounded-2xl">
                 <DialogHeader>
-                    <DialogTitle className="text-2xl font-display text-navy text-center mb-4">
+                    <DialogTitle className="text-2xl font-display text-foreground text-center mb-4">
                         {isRegister ? "Create Account" : "Welcome Back"}
                     </DialogTitle>
                 </DialogHeader>
                 <form onSubmit={handleSubmit} className="space-y-6 pt-4">
                     <div className="space-y-2">
-                        <Label htmlFor="email">Email address</Label>
+                        <Label htmlFor="email" className="text-foreground/80">Email address</Label>
                         <Input
                             id="email"
                             type="email"
@@ -56,11 +56,11 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="rounded-xl border-navy/10 focus:border-gold focus:ring-gold"
+                            className="rounded-xl border-white/10 bg-white/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
                         />
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="password">Password</Label>
+                        <Label htmlFor="password" className="text-foreground/80">Password</Label>
                         <Input
                             id="password"
                             type="password"
@@ -68,7 +68,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="rounded-xl border-navy/10 focus:border-gold focus:ring-gold"
+                            className="rounded-xl border-white/10 bg-white/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
                         />
                     </div>
                     <Button
