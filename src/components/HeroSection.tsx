@@ -5,36 +5,6 @@ import amlaLeaves from "@/assets/amla-leaves.png";
 import { useCartStore } from "@/lib/cartStore";
 import { toast } from "sonner";
 
-const MagicParticles = () => {
-  return (
-    <div className="absolute inset-0 pointer-events-none z-0">
-      {[...Array(8)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-gold rounded-full blur-[1px]"
-          initial={{
-            opacity: 0,
-            scale: 0,
-            x: "50%",
-            y: "50%"
-          }}
-          animate={{
-            opacity: [0, 1, 0],
-            scale: [0, 1.5, 0],
-            x: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 60}%`],
-            y: [`${50 + (Math.random() - 0.5) * 40}%`, `${50 + (Math.random() - 0.5) * 60}%`],
-          }}
-          transition={{
-            duration: Math.random() * 3 + 2,
-            repeat: Infinity,
-            delay: Math.random() * 2,
-            ease: "easeInOut"
-          }}
-        />
-      ))}
-    </div>
-  );
-};
 
 const HeroSection = () => {
   const addItem = useCartStore((state) => state.addItem);
@@ -91,13 +61,8 @@ const HeroSection = () => {
       onMouseLeave={handleMouseLeave}
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-24"
     >
-      <motion.div
-        style={{ y: yMist }}
-        className="absolute inset-0 pointer-events-none z-0"
-      >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(145,210,160,0.15)_0%,transparent_100%)]" />
-        <div className="absolute inset-0 opacity-[0.03] contrast-150 brightness-150" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }}></div>
-      </motion.div>
+      {/* Minimal Matte Background Overlay */}
+      <div className="absolute inset-0 bg-background z-0 pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
@@ -136,7 +101,6 @@ const HeroSection = () => {
 
           {/* Hero bottle area with 3D movement and Magic Particles */}
           <div className="relative mx-auto w-full max-w-md h-[450px] md:h-[550px] flex items-center justify-center">
-            <MagicParticles />
 
             {/* Ambient Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 md:w-[500px] md:h-[500px] bg-gold/5 blur-[120px] rounded-full pointer-events-none" />

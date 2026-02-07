@@ -65,8 +65,6 @@ const IngredientsSection = () => {
               alt="Riwayat Bottle"
               className="w-56 md:w-80 h-auto filter drop-shadow-2xl"
             />
-            {/* Soft Glow behind bottle */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-gold/10 blur-[100px] rounded-full -z-10" />
           </motion.div>
 
           {/* Floating Ingredients Circular Layout with 3D Tilt */}
@@ -100,8 +98,6 @@ const IngredientsSection = () => {
                   </div>
 
                   <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-white/80 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
-                    {/* Glossy Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     <img src={ingredient.image} alt={ingredient.name} className="w-full h-full object-contain relative z-10" />
                   </div>
                   <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-navy/95 backdrop-blur-xl text-white px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-white/10">
@@ -114,11 +110,6 @@ const IngredientsSection = () => {
             );
           })}
 
-          {/* Decorative Elements */}
-          <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none opacity-20">
-            <div className="w-[400px] h-[400px] md:w-[750px] md:h-[750px] border border-gold/20 rounded-full animate-pulse" />
-            <div className="w-[500px] h-[500px] md:w-[900px] md:h-[900px] border border-gold/10 rounded-full" />
-          </div>
         </div>
       </div>
     </section>

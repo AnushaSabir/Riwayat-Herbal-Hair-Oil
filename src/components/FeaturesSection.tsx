@@ -80,9 +80,6 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gold/5 blur-[100px] rounded-full" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-herbal/5 blur-[120px] rounded-full" />
     </section>
   );
 };

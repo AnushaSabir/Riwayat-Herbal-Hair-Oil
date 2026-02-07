@@ -56,13 +56,6 @@ const BottleExplorer = () => {
                         onMouseLeave={onMouseLeave}
                         className="lg:w-1/2 flex justify-center items-center relative py-20 cursor-move"
                     >
-                        {/* Glossy Background Circle */}
-                        <motion.div
-                            style={{
-                                background: "radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%)"
-                            }}
-                            className="absolute inset-0 z-0"
-                        />
 
                         <motion.div
                             style={{
