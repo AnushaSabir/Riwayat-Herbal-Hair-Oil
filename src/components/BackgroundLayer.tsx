@@ -5,5 +5,3 @@ const BackgroundLayer = () => {
 };
 
 export default BackgroundLayer;
-
-export default BackgroundLayer;
