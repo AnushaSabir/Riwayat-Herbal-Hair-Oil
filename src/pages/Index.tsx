@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ShowcaseSection from "@/components/ShowcaseSection";
+import VideoSection from "@/components/VideoSection";
 import BackgroundLayer from "@/components/BackgroundLayer";
 import SectionDivider from "@/components/SectionDivider";
 import FeaturesSection from "@/components/FeaturesSection";
@@ -21,6 +22,8 @@ const Index = () => {
       <BackgroundLayer />
       <Navbar />
       <HeroSection />
+      <SectionDivider />
+      <VideoSection />
       <SectionDivider />
       <ShowcaseSection />
       <SectionDivider />

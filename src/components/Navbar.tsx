@@ -27,14 +27,14 @@ const Navbar = () => {
     return (
         <>
             <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-herbal-light/10">
-                <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+                <div className="container mx-auto px-4 h-20 lg:h-24 flex items-center justify-between">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col"
                     >
-                        <span className="text-2xl font-display font-medium text-foreground tracking-[0.4em] uppercase">RIWAYAT</span>
-                        <span className="text-[9px] font-elegant tracking-[0.5em] text-gold uppercase -mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
+                        <span className="text-2xl lg:text-3xl font-display font-medium text-foreground tracking-[0.4em] uppercase">RIWAYAT</span>
+                        <span className="text-[9px] lg:text-[10px] font-elegant tracking-[0.5em] text-gold uppercase mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
                     </motion.div>
 
                     {/* Desktop Menu */}
