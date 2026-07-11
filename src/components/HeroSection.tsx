@@ -196,7 +196,7 @@ const HeroSection = () => {
           </motion.div>
 
           {/* Static Bottle Container - Centered */}
-          <div className="relative z-20 w-32 sm:w-48 md:w-56 lg:w-[260px] h-auto flex-shrink-0">
+          <div className="relative z-20 w-52 sm:w-64 md:w-72 lg:w-[340px] h-auto flex-shrink-0">
             <img 
               src={bottleImage} 
               alt="Riwayat Bottle" 
