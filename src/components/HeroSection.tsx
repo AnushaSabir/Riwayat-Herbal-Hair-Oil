@@ -127,81 +127,107 @@ const HeroSection = () => {
           </div>
         </motion.div>
 
-        {/* Right Column Visual - Takes up 6 columns */}
-        <div className="lg:col-span-6 relative w-full h-[500px] md:h-[700px] flex items-center justify-center z-10 pb-12 lg:pb-0 mt-8 lg:mt-0 lg:translate-x-8 xl:translate-x-16">
-          
-          {/* Vertical Typography Background */}
-          <div className="absolute right-[-40px] top-1/2 -translate-y-1/2 hidden md:flex flex-col pointer-events-none select-none opacity-40">
-            <span className="text-[120px] font-display font-bold text-herbal/10 leading-[0.8] tracking-widest writing-vertical-rl rotate-180">
-              HERBAL OIL
-            </span>
-            <span className="text-[120px] font-display font-bold text-transparent stroke-text-white leading-[0.8] tracking-widest writing-vertical-rl rotate-180" style={{ WebkitTextStroke: "1px rgba(163, 184, 153, 0.4)" }}>
-              HERBAL OIL
-            </span>
+        {/* Right Column Visual - Infographic Style */}
+        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 lg:translate-x-8 xl:translate-x-16 min-h-[500px] lg:min-h-[600px]">
+
+          {/* === LEFT INGREDIENTS (4 items) === */}
+          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 w-[100px] sm:w-[120px] lg:w-[140px]">
+            {ingredientBenefits.slice(0, 4).map((ing, i) => (
+              <motion.div
+                key={ing.name}
+                animate={{ opacity: [0, 1, 1, 0], x: [80, 0, 0, 80] }}
+                transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
+                className="flex items-center gap-2 group"
+              >
+                {/* Image */}
+                <motion.div
+                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
+                </motion.div>
+                {/* Text */}
+                <div className="text-right flex-1 hidden sm:block">
+                  <p className="text-[10px] lg:text-xs font-bold text-gold uppercase tracking-wide leading-tight">{ing.name}</p>
+                  <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          {/* Continuous Revolving Orbit Container for Ingredients */}
-          <motion.div 
-            className="absolute top-1/2 left-1/2 w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[460px] md:h-[460px] lg:w-[500px] lg:h-[500px] z-30 pointer-events-none"
-            style={{ x: "-50%", y: "-50%" }}
-            animate={{ rotate: 360 }}
-            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          >
-            {ingredientBenefits.map((ingredient, index) => {
-              const angle = (index * 360) / ingredientBenefits.length;
-              
-              return (
-                <div 
-                  key={ingredient.name}
-                  className="absolute top-1/2 left-1/2 w-full h-full"
-                  style={{ transform: `translate(-50%, -50%) rotate(${angle}deg)` }}
-                >
-                  {/* Positioned at the top edge of the rotating circle */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-auto">
-                    
-                    {/* Counter-rotation to keep the image perfectly upright */}
-                    <motion.div
-                      initial={{ rotate: -angle, scale: 0 }}
-                      animate={{ rotate: -(angle + 360), scale: 1 }}
-                      transition={{ 
-                        rotate: { duration: 40, repeat: Infinity, ease: "linear" },
-                        scale: { delay: index * 0.1 + 0.5, duration: 0.8, type: "spring" }
-                      }}
-                      className="relative flex flex-col items-center justify-center"
-                    >
-                      <motion.div 
-                        className="relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-22 lg:h-22 drop-shadow-2xl z-20 group"
-                        animate={{ y: [0, -8, 0] }}
-                        transition={{ duration: 3 + (index % 3), repeat: Infinity, ease: "easeInOut" }}
-                      >
-                        <img 
-                          src={ingredient.src} 
-                          alt={ingredient.name} 
-                          className="w-full h-full object-contain hover:scale-125 transition-transform duration-300 cursor-pointer"
-                        />
-                        <div className="absolute inset-0 bg-gold/10 blur-xl rounded-full -z-10" />
-                        
-                        {/* Tooltip on Hover */}
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none w-max max-w-[120px] md:max-w-[150px] bg-background/95 backdrop-blur-md border border-herbal/20 p-2 rounded-lg text-center shadow-xl z-50">
-                          <span className="block text-[9px] md:text-xs font-bold text-gold uppercase mb-0.5">{ingredient.name}</span>
-                          <span className="block text-[8px] md:text-[10px] text-foreground/80 leading-tight">{ingredient.benefit}</span>
-                        </div>
-                      </motion.div>
-                    </motion.div>
+          {/* === LEFT ARROWS === */}
+          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 mx-0.5 sm:mx-1">
+            {ingredientBenefits.slice(0, 4).map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
+                transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
+                className="flex items-center origin-left"
+              >
+                <div className="w-3 sm:w-4 lg:w-6 h-px border-t border-dashed border-gold/50" />
+                <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/60 flex-shrink-0">
+                  <path d="M0 4 L6 0 L6 8 Z" fill="currentColor" />
+                </svg>
+              </motion.div>
+            ))}
+          </div>
 
-                  </div>
-                </div>
-              );
-            })}
+          {/* === BOTTLE CENTER === */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
+            className="relative z-30 w-36 sm:w-48 md:w-56 lg:w-[300px] h-auto flex-shrink-0"
+          >
+            <img
+              src={bottleImage}
+              alt="Riwayat Bottle"
+              className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            />
           </motion.div>
 
-          {/* Static Bottle Container - Centered */}
-          <div className="relative z-20 w-52 sm:w-64 md:w-72 lg:w-[340px] h-auto flex-shrink-0">
-            <img 
-              src={bottleImage} 
-              alt="Riwayat Bottle" 
-              className="w-full h-full object-contain drop-shadow-[0_20px_30px_rgba(0,0,0,0.4)] lg:drop-shadow-[0_40px_50px_rgba(0,0,0,0.5)]" 
-            />
+          {/* === RIGHT ARROWS === */}
+          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 mx-0.5 sm:mx-1">
+            {ingredientBenefits.slice(4).map((_, i) => (
+              <motion.div
+                key={i}
+                animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
+                transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
+                className="flex items-center origin-right"
+              >
+                <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/60 flex-shrink-0">
+                  <path d="M8 4 L2 0 L2 8 Z" fill="currentColor" />
+                </svg>
+                <div className="w-3 sm:w-5 lg:w-7 h-px border-t border-dashed border-gold/50" />
+              </motion.div>
+            ))}
+          </div>
+
+          {/* === RIGHT INGREDIENTS (4 items) === */}
+          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 w-[100px] sm:w-[120px] lg:w-[140px]">
+            {ingredientBenefits.slice(4).map((ing, i) => (
+              <motion.div
+                key={ing.name}
+                animate={{ opacity: [0, 1, 1, 0], x: [-80, 0, 0, -80] }}
+                transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
+                className="flex items-center gap-2 group flex-row-reverse"
+              >
+                {/* Image */}
+                <motion.div
+                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
+                >
+                  <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
+                </motion.div>
+                {/* Text */}
+                <div className="text-left flex-1 hidden sm:block">
+                  <p className="text-[10px] lg:text-xs font-bold text-gold uppercase tracking-wide leading-tight">{ing.name}</p>
+                  <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
         </div>
@@ -211,3 +237,4 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
