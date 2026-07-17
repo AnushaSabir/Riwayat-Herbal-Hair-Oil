@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowRight, Sparkles, Shield, Leaf } from "lucide-react";
+import { ArrowRight, Sparkles, Shield, Leaf, Heart, Star, CheckCircle } from "lucide-react";
 import hairOilBottle from "@/assets/riwayat-bottle.png";
 import jointsOilBottle from "@/assets/joints/joints-bottle.jpg";
 
@@ -116,6 +116,22 @@ const HomePage = () => {
         </motion.div>
       </section>
 
+      {/* Philosophy Section */}
+      <section className="relative z-10 max-w-4xl mx-auto px-4 pb-20 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="border-y border-white/5 py-10"
+        >
+          <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-serif mb-4 block">Our Philosophy</span>
+          <p className="text-foreground/70 md:text-xl font-display leading-relaxed italic max-w-3xl mx-auto">
+            "For generations, our ancestors relied on the purity of nature to heal and nourish. At Riwayat, we bring back that lost heritage. Every drop in our bottles is a promise of 100% natural, unadulterated herbal power — crafted exactly the way nature intended."
+          </p>
+        </motion.div>
+      </section>
+
       {/* Product Cards */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 pb-24">
         <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
@@ -189,6 +205,42 @@ const HomePage = () => {
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </button>
               </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
+      {/* Why Choose Riwayat */}
+      <section className="relative z-10 max-w-6xl mx-auto px-4 pb-24 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-12"
+        >
+          <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">The Riwayat Promise</span>
+          <h2 className="text-3xl md:text-4xl font-display text-foreground">Why Choose Us?</h2>
+        </motion.div>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            { icon: <Leaf className="w-6 h-6" />, title: "Pure Ingredients", desc: "Sourced directly from nature, completely free from harsh chemicals, parabens, and artificial preservatives." },
+            { icon: <Star className="w-6 h-6" />, title: "Proven Results", desc: "Trusted by thousands of satisfied customers for genuine, visible results that speak for themselves." },
+            { icon: <Heart className="w-6 h-6" />, title: "Heritage Formula", desc: "Crafted using age-old traditional methods passed down through generations, blended with modern precision." }
+          ].map((feature, i) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+              className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+            >
+              <div className="w-12 h-12 mx-auto rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-lg font-display font-bold text-foreground mb-2">{feature.title}</h3>
+              <p className="text-foreground/50 text-sm leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
         </div>
