@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles, Shield, Leaf, Heart, Star, CheckCircle } from "lucide-react";
 import hairOilBottle from "@/assets/riwayat-bottle.png";
-import jointsOilBottle from "@/assets/joints/joints-bottle.jpg";
+import jointsOilBottle from "@/assets/joints/joints-bottle.png";
 import Footer from "@/components/Footer";
 
 const products = [

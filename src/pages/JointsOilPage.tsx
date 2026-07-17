@@ -6,7 +6,7 @@ import { useCartStore } from "@/lib/cartStore";
 import { toast } from "sonner";
 
 // Import joints bottle image
-import jointsBottle from "@/assets/joints/joints-bottle.jpg";
+import jointsBottle from "@/assets/joints/joints-bottle.png";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
