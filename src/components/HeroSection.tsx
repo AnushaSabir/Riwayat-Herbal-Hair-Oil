@@ -128,7 +128,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Right Column Visual - Infographic Style */}
-        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[400px] lg:min-h-[600px] scale-[0.85] sm:scale-100 origin-center">
+        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[400px] lg:min-h-[600px] scale-[0.95] sm:scale-100 origin-center">
 
           {/* === LEFT INGREDIENTS (4 items) === */}
           <div className="flex flex-col justify-around gap-2 sm:gap-3 lg:gap-4 z-20 w-[60px] sm:w-[100px] md:w-[120px] lg:w-[140px]">
@@ -178,7 +178,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-            className="relative z-30 w-28 sm:w-44 md:w-56 lg:w-[300px] h-auto flex-shrink-0 mx-1 sm:mx-0"
+            className="relative z-30 w-40 sm:w-44 md:w-56 lg:w-[300px] h-auto flex-shrink-0 mx-1 sm:mx-0"
           >
             <img
               src={bottleImage}

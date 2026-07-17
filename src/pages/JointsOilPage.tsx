@@ -196,7 +196,7 @@ const JointsOilPage = () => {
           </motion.div>
 
           {/* Right — Bottle + Ingredients infographic */}
-          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.85] sm:scale-100 origin-center">
+          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.95] sm:scale-100 origin-center">
             {/* Left ingredients */}
             <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
               {ingredients.slice(0, 4).map((ing, i) => (
@@ -232,7 +232,7 @@ const JointsOilPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="relative z-30 w-28 sm:w-44 md:w-56 lg:w-[320px] h-auto flex-shrink-0 mx-1 sm:mx-0"
+              className="relative z-30 w-40 sm:w-44 md:w-56 lg:w-[320px] h-auto flex-shrink-0 mx-1 sm:mx-0"
             >
               <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] sm:drop-shadow-[0_30px_50px_rgba(0,0,0,0.5)]" />
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
