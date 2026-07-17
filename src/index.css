@@ -10,22 +10,22 @@ html {
 
 @layer base {
   :root {
-    /* Primary brand colors - Premium Herbal Light Theme */
-    --background: 45 33% 96%; /* Soft White */
-    --foreground: 0 0% 17%; /* Charcoal Black */
+    /* Primary brand colors - Wellness Theme */
+    --background: 42 29% 94%; /* Cream */
+    --foreground: 15 16% 20%; /* Dark Brown */
 
-    /* Luxury herbal greens - Forest Green */
-    --herbal-light: 126 30% 35%;
-    --herbal: 126 42% 20%; /* Forest Green */
-    --herbal-dark: 126 50% 10%;
+    /* Deep Brown (was herbal) */
+    --herbal-light: 26 30% 45%;
+    --herbal: 26 30% 32%; /* Deep Brown */
+    --herbal-dark: 26 40% 20%;
 
-    /* Reuse navy tokens for Forest Green for backward compatibility */
-    --navy: 126 42% 20%;
-    --navy-light: 126 30% 30%;
-    --branding-blue: 126 50% 15%;
+    /* Reuse navy tokens for Deep Brown for backward compatibility */
+    --navy: 26 30% 32%;
+    --navy-light: 26 30% 45%;
+    --branding-blue: 26 40% 20%;
 
     /* Muted Gold accents */
-    --gold: 42 83% 43%; /* Muted Gold */
+    --gold: 42 83% 43%;
     --gold-light: 42 90% 55%;
     --gold-dark: 42 100% 30%;
 
@@ -33,31 +33,31 @@ html {
     --brand-red: 5 65% 42%;
     --brand-red-light: 8 70% 55%;
 
-    /* Card and surface colors (Sage Green) */
-    --card: 147 28% 93%; /* Sage Green */
-    --card-foreground: 0 0% 17%;
+    /* Card and surface colors (Olive Green) */
+    --card: 99 20% 38%; /* Olive Green */
+    --card-foreground: 42 29% 94%; /* Cream Text */
 
-    --popover: 147 28% 93%;
-    --popover-foreground: 0 0% 17%;
+    --popover: 99 20% 38%;
+    --popover-foreground: 42 29% 94%;
 
-    --primary: 126 42% 20%;
-    --primary-foreground: 45 33% 96%;
+    --primary: 26 30% 32%; /* Deep Brown */
+    --primary-foreground: 42 29% 94%;
 
-    --secondary: 147 28% 93%;
-    --secondary-foreground: 126 42% 20%;
+    --secondary: 99 20% 38%; /* Olive Green */
+    --secondary-foreground: 42 29% 94%;
 
-    --muted: 147 28% 85%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 42 20% 85%;
+    --muted-foreground: 15 16% 40%;
 
-    --accent: 42 83% 43%;
-    --accent-foreground: 45 33% 96%;
+    --accent: 42 83% 43%; /* Warm Gold */
+    --accent-foreground: 42 29% 94%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 147 20% 80%;
-    --input: 147 20% 80%;
-    --ring: 126 42% 20%;
+    --border: 42 20% 80%;
+    --input: 42 20% 80%;
+    --ring: 26 30% 32%;
 
     --radius: 1.25rem;
 
