@@ -87,7 +87,7 @@ const HomePage = () => {
           <span className="inline-flex items-center gap-2 text-gold text-xs tracking-[0.4em] uppercase font-serif mb-4">
             <Sparkles className="w-4 h-4" /> The Essence of Herbal Wisdom
           </span>
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-400 to-gold mb-2 tracking-widest uppercase leading-none drop-shadow-sm">
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-herbal mb-2 tracking-widest uppercase leading-none drop-shadow-sm">
             Riwayat
           </h1>
           <h2 className="text-2xl md:text-4xl font-display text-herbal/90 mb-6 tracking-wide">
