@@ -196,18 +196,18 @@ const JointsOilPage = () => {
           </motion.div>
 
           {/* Right — Bottle + Ingredients infographic */}
-          <div className="relative flex items-center justify-center min-h-[500px] translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24">
+          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.85] sm:scale-100 origin-center">
             {/* Left ingredients */}
-            <div className="flex flex-col gap-3 sm:gap-5 z-20 w-[90px] sm:w-[150px]">
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
               {ingredients.slice(0, 4).map((ing, i) => (
                 <motion.div key={ing.name}
-                  animate={{ opacity: [0, 1, 1, 0], x: [60, 0, 0, 60] }}
+                  animate={{ opacity: [0, 1, 1, 0], x: [30, 0, 0, 30] }}
                   transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-1 sm:gap-2"
                 >
-                  <span className="text-3xl sm:text-4xl flex-shrink-0">{ing.icon}</span>
+                  <span className="text-xl sm:text-3xl md:text-4xl flex-shrink-0">{ing.icon}</span>
                   <div className="text-right flex-1">
-                    <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-wide leading-tight ${ing.color}`}>{ing.name}</p>
+                    <p className={`text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight ${ing.color}`}>{ing.name}</p>
                   </div>
                 </motion.div>
               ))}
@@ -232,10 +232,10 @@ const JointsOilPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="relative z-30 w-44 sm:w-56 lg:w-[320px] h-auto flex-shrink-0"
+              className="relative z-30 w-28 sm:w-44 md:w-56 lg:w-[320px] h-auto flex-shrink-0 mx-1 sm:mx-0"
             >
-              <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.5)]" />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
+              <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] sm:drop-shadow-[0_30px_50px_rgba(0,0,0,0.5)]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
             </motion.div>
 
             {/* Right arrows */}
@@ -253,16 +253,16 @@ const JointsOilPage = () => {
             </div>
 
             {/* Right ingredients */}
-            <div className="flex flex-col gap-3 sm:gap-5 z-20 w-[90px] sm:w-[150px]">
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
               {ingredients.slice(4).map((ing, i) => (
                 <motion.div key={ing.name}
-                  animate={{ opacity: [0, 1, 1, 0], x: [-60, 0, 0, -60] }}
+                  animate={{ opacity: [0, 1, 1, 0], x: [-30, 0, 0, -30] }}
                   transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center gap-2 flex-row-reverse"
+                  className="flex items-center gap-1 sm:gap-2 flex-row-reverse"
                 >
-                  <span className="text-3xl sm:text-4xl flex-shrink-0">{ing.icon}</span>
+                  <span className="text-xl sm:text-3xl md:text-4xl flex-shrink-0">{ing.icon}</span>
                   <div className="text-left flex-1">
-                    <p className={`text-[10px] sm:text-xs font-bold uppercase tracking-wide leading-tight ${ing.color}`}>{ing.name}</p>
+                    <p className={`text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight ${ing.color}`}>{ing.name}</p>
                   </div>
                 </motion.div>
               ))}

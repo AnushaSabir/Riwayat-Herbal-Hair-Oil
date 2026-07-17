@@ -128,28 +128,28 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Right Column Visual - Infographic Style */}
-        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[500px] lg:min-h-[600px]">
+        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[400px] lg:min-h-[600px] scale-[0.85] sm:scale-100 origin-center">
 
           {/* === LEFT INGREDIENTS (4 items) === */}
-          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 w-[100px] sm:w-[120px] lg:w-[140px]">
+          <div className="flex flex-col justify-around gap-2 sm:gap-3 lg:gap-4 z-20 w-[60px] sm:w-[100px] md:w-[120px] lg:w-[140px]">
             {ingredientBenefits.slice(0, 4).map((ing, i) => (
               <motion.div
                 key={ing.name}
-                animate={{ opacity: [0, 1, 1, 0], x: [80, 0, 0, 80] }}
+                animate={{ opacity: [0, 1, 1, 0], x: [40, 0, 0, 40] }}
                 transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center gap-2 group"
+                className="flex items-center gap-1 sm:gap-2 group"
               >
                 {/* Image */}
                 <motion.div
-                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
+                  className="w-8 h-8 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
                 </motion.div>
                 {/* Text */}
-                <div className="text-right flex-1 hidden sm:block">
-                  <p className="text-[10px] lg:text-xs font-bold text-gold uppercase tracking-wide leading-tight">{ing.name}</p>
+                <div className="text-right flex-1">
+                  <p className="text-[7px] sm:text-[10px] lg:text-xs font-bold text-gold uppercase tracking-tight sm:tracking-wide leading-tight">{ing.name}</p>
                   <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
                 </div>
               </motion.div>
@@ -178,7 +178,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-            className="relative z-30 w-36 sm:w-48 md:w-56 lg:w-[300px] h-auto flex-shrink-0"
+            className="relative z-30 w-28 sm:w-44 md:w-56 lg:w-[300px] h-auto flex-shrink-0 mx-1 sm:mx-0"
           >
             <img
               src={bottleImage}
@@ -205,25 +205,25 @@ const HeroSection = () => {
           </div>
 
           {/* === RIGHT INGREDIENTS (4 items) === */}
-          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 w-[100px] sm:w-[120px] lg:w-[140px]">
+          <div className="flex flex-col justify-around gap-2 sm:gap-3 lg:gap-4 z-20 w-[60px] sm:w-[100px] md:w-[120px] lg:w-[140px]">
             {ingredientBenefits.slice(4).map((ing, i) => (
               <motion.div
                 key={ing.name}
-                animate={{ opacity: [0, 1, 1, 0], x: [-80, 0, 0, -80] }}
+                animate={{ opacity: [0, 1, 1, 0], x: [-40, 0, 0, -40] }}
                 transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center gap-2 group flex-row-reverse"
+                className="flex items-center gap-1 sm:gap-2 group flex-row-reverse"
               >
                 {/* Image */}
                 <motion.div
-                  className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
+                  className="w-8 h-8 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
                   animate={{ y: [0, -5, 0] }}
                   transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
                 </motion.div>
                 {/* Text */}
-                <div className="text-left flex-1 hidden sm:block">
-                  <p className="text-[10px] lg:text-xs font-bold text-gold uppercase tracking-wide leading-tight">{ing.name}</p>
+                <div className="text-left flex-1">
+                  <p className="text-[7px] sm:text-[10px] lg:text-xs font-bold text-gold uppercase tracking-tight sm:tracking-wide leading-tight">{ing.name}</p>
                   <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
                 </div>
               </motion.div>
