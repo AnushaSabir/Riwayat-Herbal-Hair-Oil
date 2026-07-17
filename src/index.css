@@ -10,19 +10,19 @@ html {
 
 @layer base {
   :root {
-    /* Primary brand colors - Wellness Theme */
-    --background: 42 29% 94%; /* Cream */
-    --foreground: 15 16% 20%; /* Dark Brown */
+    /* Primary brand colors - Hair Oil Theme (Default) */
+    --background: 45 33% 96%; /* Soft White */
+    --foreground: 0 0% 17%; /* Charcoal Black */
 
-    /* Deep Brown (was herbal) */
-    --herbal-light: 26 30% 45%;
-    --herbal: 26 30% 32%; /* Deep Brown */
-    --herbal-dark: 26 40% 20%;
+    /* Forest Green */
+    --herbal-light: 126 30% 35%;
+    --herbal: 126 42% 20%; /* Forest Green */
+    --herbal-dark: 126 50% 10%;
 
-    /* Reuse navy tokens for Deep Brown for backward compatibility */
-    --navy: 26 30% 32%;
-    --navy-light: 26 30% 45%;
-    --branding-blue: 26 40% 20%;
+    /* Reuse navy tokens for Forest Green */
+    --navy: 126 42% 20%;
+    --navy-light: 126 30% 30%;
+    --branding-blue: 126 50% 15%;
 
     /* Muted Gold accents */
     --gold: 42 83% 43%;
@@ -32,6 +32,53 @@ html {
     /* Brand Red - subtle accent */
     --brand-red: 5 65% 42%;
     --brand-red-light: 8 70% 55%;
+
+    /* Card and surface colors (Sage Green) */
+    --card: 147 28% 93%; /* Sage Green */
+    --card-foreground: 0 0% 17%;
+
+    --popover: 147 28% 93%;
+    --popover-foreground: 0 0% 17%;
+
+    --primary: 126 42% 20%; /* Forest Green */
+    --primary-foreground: 45 33% 96%; /* Soft White */
+
+    --secondary: 147 28% 93%; /* Sage Green */
+    --secondary-foreground: 126 42% 20%;
+
+    --muted: 147 28% 85%;
+    --muted-foreground: 0 0% 40%;
+
+    --accent: 42 83% 43%; /* Muted Gold */
+    --accent-foreground: 45 33% 96%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 147 20% 80%;
+    --input: 147 20% 80%;
+    --ring: 126 42% 20%;
+  }
+
+  .theme-joints {
+    /* Primary brand colors - Joints Oil Theme */
+    --background: 42 29% 94%; /* Cream */
+    --foreground: 15 16% 20%; /* Dark Brown */
+
+    /* Deep Brown */
+    --herbal-light: 26 30% 45%;
+    --herbal: 26 30% 32%; /* Deep Brown */
+    --herbal-dark: 26 40% 20%;
+
+    /* Reuse navy tokens for Deep Brown */
+    --navy: 26 30% 32%;
+    --navy-light: 26 30% 45%;
+    --branding-blue: 26 40% 20%;
+
+    /* Muted Gold accents */
+    --gold: 42 83% 43%;
+    --gold-light: 42 90% 55%;
+    --gold-dark: 42 100% 30%;
 
     /* Card and surface colors (Olive Green) */
     --card: 99 20% 38%; /* Olive Green */
@@ -51,9 +98,6 @@ html {
 
     --accent: 42 83% 43%; /* Warm Gold */
     --accent-foreground: 42 29% 94%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
 
     --border: 42 20% 80%;
     --input: 42 20% 80%;

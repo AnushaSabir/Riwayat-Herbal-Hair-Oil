@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ShoppingCart, Volume2, VolumeX, Leaf, Shield, Zap, Star, ChevronRight, Heart, Activity, Wind } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useCartStore } from "@/lib/cartStore";
 import { toast } from "sonner";
 
@@ -47,6 +47,13 @@ const videos = [
 
 // ──────────────────────────────────────────────────────────────────────────
 const JointsOilPage = () => {
+  useEffect(() => {
+    document.body.classList.add("theme-joints");
+    return () => {
+      document.body.classList.remove("theme-joints");
+    };
+  }, []);
+
   const navigate = useNavigate();
   const addItem = useCartStore((state) => state.addItem);
   const [activeVideo, setActiveVideo] = useState(0);
