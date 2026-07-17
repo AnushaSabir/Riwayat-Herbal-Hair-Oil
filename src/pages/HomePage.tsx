@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Sparkles, Shield, Leaf, Heart, Star, CheckCircle } from "lucide-react";
 import hairOilBottle from "@/assets/riwayat-bottle.png";
 import jointsOilBottle from "@/assets/joints/joints-bottle.jpg";
+import Footer from "@/components/Footer";
 
 const products = [
   {
@@ -116,21 +117,6 @@ const HomePage = () => {
         </motion.div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="relative z-10 max-w-4xl mx-auto px-4 pb-20 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="border-y border-white/5 py-10"
-        >
-          <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-serif mb-4 block">Our Philosophy</span>
-          <p className="text-foreground/70 md:text-xl font-display leading-relaxed italic max-w-3xl mx-auto">
-            "For generations, our ancestors relied on the purity of nature to heal and nourish. At Riwayat, we bring back that lost heritage. Every drop in our bottles is a promise of 100% natural, unadulterated herbal power — crafted exactly the way nature intended."
-          </p>
-        </motion.div>
-      </section>
 
       {/* Product Cards */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 pb-24">
@@ -210,6 +196,23 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Philosophy Section */}
+      <section className="relative z-10 max-w-4xl mx-auto px-4 pb-20 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="border-y border-white/5 py-10"
+        >
+          <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-serif mb-4 block">Our Philosophy</span>
+          <p className="text-foreground/70 md:text-xl font-display leading-relaxed italic max-w-3xl mx-auto">
+            "For generations, our ancestors relied on the purity of nature to heal and nourish. At Riwayat, we bring back that lost heritage. Every drop in our bottles is a promise of 100% natural, unadulterated herbal power — crafted exactly the way nature intended."
+          </p>
+        </motion.div>
+      </section>
+
+
       {/* Why Choose Riwayat */}
       <section className="relative z-10 max-w-6xl mx-auto px-4 pb-24 text-center">
         <motion.div
@@ -246,10 +249,7 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="relative z-10 text-center pb-8 text-foreground/30 text-xs tracking-widest uppercase">
-        © 2024 Riwayat — Herbal Wisdom
-      </footer>
+      <Footer />
     </main>
   );
 };
