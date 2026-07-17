@@ -128,7 +128,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Right Column Visual - Infographic Style */}
-        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 lg:translate-x-8 xl:translate-x-16 min-h-[500px] lg:min-h-[600px]">
+        <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[500px] lg:min-h-[600px]">
 
           {/* === LEFT INGREDIENTS (4 items) === */}
           <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 w-[100px] sm:w-[120px] lg:w-[140px]">

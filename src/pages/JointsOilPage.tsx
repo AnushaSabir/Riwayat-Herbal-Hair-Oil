@@ -196,7 +196,7 @@ const JointsOilPage = () => {
           </motion.div>
 
           {/* Right — Bottle + Ingredients infographic */}
-          <div className="relative flex items-center justify-center min-h-[500px]">
+          <div className="relative flex items-center justify-center min-h-[500px] translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24">
             {/* Left ingredients */}
             <div className="flex flex-col gap-3 sm:gap-5 z-20 w-[90px] sm:w-[150px]">
               {ingredients.slice(0, 4).map((ing, i) => (
