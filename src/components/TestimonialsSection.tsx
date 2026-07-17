@@ -28,7 +28,7 @@ const TestimonialsSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="text-center mb-24">
                     <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-6 block opacity-80">Words of Magic</span>
-                    <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground leading-[1.1] tracking-tight">
+                    <h2 className="text-5xl md:text-7xl font-display font-medium text-herbal leading-[1.1] tracking-tight">
                         Customer <span className="italic">Stories.</span>
                     </h2>
                     <div className="w-24 h-[1px] bg-gold/30 mx-auto mt-8" />
@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: i * 0.2 }}
                             whileHover={{ y: -10 }}
-                            className="bg-white/10 backdrop-blur-xl border border-white/30 p-12 rounded-[48px] shadow-xl hover:shadow-gold/5 transition-all duration-500 relative group"
+                            className="bg-black/10 backdrop-blur-xl border border-black/30 p-12 rounded-[48px] shadow-xl hover:shadow-gold/5 transition-all duration-500 relative group"
                         >
                             <Quote className="absolute top-8 right-12 w-12 h-12 text-gold/10 group-hover:text-gold/20 transition-colors" />
 
@@ -58,7 +58,7 @@ const TestimonialsSection = () => {
                             </p>
 
                             <div className="pt-8 border-t border-navy/5">
-                                <h4 className="text-xl font-display font-medium text-foreground mb-1 tracking-tight">{t.name}</h4>
+                                <h4 className="text-xl font-display font-medium text-herbal mb-1 tracking-tight">{t.name}</h4>
                                 <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">{t.role}</p>
                             </div>
                         </motion.div>

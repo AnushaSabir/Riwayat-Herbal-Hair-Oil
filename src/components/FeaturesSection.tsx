@@ -31,7 +31,7 @@ const FeaturesSection = () => {
             className="lg:w-2/5 text-left"
           >
             <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-6 block opacity-80">The Benefits</span>
-            <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-display font-medium text-herbal mb-8 leading-[1.1] tracking-tight">
               Why <span className="italic">Thousands</span> <br />Trust Riwayat
             </h2>
             <div className="w-20 h-[1px] bg-gold/30 mb-8" />
@@ -55,18 +55,18 @@ const FeaturesSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/10 backdrop-blur-xl border border-white/30 p-10 rounded-[40px] shadow-lg hover:shadow-gold/5 hover:bg-white/20 transition-all duration-500 group"
+                className="bg-black/10 backdrop-blur-xl border border-black/30 p-10 rounded-[40px] shadow-lg hover:shadow-gold/5 hover:bg-black/20 transition-all duration-500 group"
                 style={{
                   perspective: 1000,
                   transformStyle: "preserve-3d"
                 }}
               >
                 <div className="flex flex-col gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-white/40 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
+                  <div className="w-14 h-14 rounded-2xl bg-black/40 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
                     <feature.icon className="w-6 h-6 text-foreground/80 group-hover:text-gold transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-medium text-foreground mb-3 tracking-tight">
+                    <h3 className="text-xl font-display font-medium text-herbal mb-3 tracking-tight">
                       {feature.title}
                     </h3>
                     <p className="text-foreground/60 font-elegant leading-relaxed text-sm">

@@ -3,7 +3,7 @@ import leafPattern from "@/assets/leaf-pattern.png";
 
 const Footer = () => {
   return (
-    <footer className="relative py-24 overflow-hidden bg-transparent border-t border-white/5">
+    <footer className="relative py-24 overflow-hidden bg-transparent border-t border-black/5">
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -13,11 +13,11 @@ const Footer = () => {
         >
           {/* Brand name */}
           <div className="mb-12">
-            <h3 className="text-5xl md:text-7xl font-display font-medium text-foreground tracking-[0.3em] uppercase mb-4 opacity-10">
+            <h3 className="text-5xl md:text-7xl font-display font-medium text-herbal tracking-[0.3em] uppercase mb-4 opacity-10">
               RIWAYAT
             </h3>
             <div className="flex flex-col items-center -mt-8 md:-mt-12 relative z-10">
-              <span className="text-2xl md:text-3xl font-display font-medium text-foreground tracking-tight uppercase">
+              <span className="text-2xl md:text-3xl font-display font-medium text-herbal tracking-tight uppercase">
                 Riwayat <span className="italic text-gold">Herbal</span>
               </span>
               <p className="text-foreground/40 font-elegant italic tracking-widest text-sm mt-1 uppercase">
@@ -35,17 +35,17 @@ const Footer = () => {
             <div className="w-12 h-[1px] bg-gold/30" />
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12 w-full max-w-4xl py-12 border-y border-white/5 mb-12">
+          <div className="grid md:grid-cols-3 gap-12 w-full max-w-4xl py-12 border-y border-black/5 mb-12">
             <div className="space-y-4">
-              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-foreground/40 font-bold">The Company</h4>
+              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-herbal/40 font-bold">The Company</h4>
               <p className="text-sm font-display text-foreground/80">Chemora Lab Pvt Ltd</p>
             </div>
             <div className="space-y-4">
-              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-foreground/40 font-bold">Contact Us</h4>
+              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-herbal/40 font-bold">Contact Us</h4>
               <p className="text-sm font-display text-foreground/80">hello@riwayat.com</p>
             </div>
             <div className="space-y-4">
-              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-foreground/40 font-bold">Follow Us</h4>
+              <h4 className="text-[10px] font-elegant tracking-[0.3em] uppercase text-herbal/40 font-bold">Follow Us</h4>
               <p className="text-sm font-display text-foreground/80">@riwayatmagic</p>
             </div>
           </div>

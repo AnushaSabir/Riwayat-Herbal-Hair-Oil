@@ -60,7 +60,7 @@ const AdminDashboard = () => {
             <div className="max-w-7xl mx-auto">
                 <header className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
                     <div>
-                        <h1 className="text-3xl font-display font-bold text-foreground">Riwayat Admin</h1>
+                        <h1 className="text-3xl font-display font-bold text-herbal">Riwayat Admin</h1>
                         <p className="text-slate-500 font-elegant">Manage your COD orders here</p>
                     </div>
                     <div className="relative">
@@ -105,7 +105,7 @@ const AdminDashboard = () => {
                                             </span>
                                         </div>
                                         <div>
-                                            <h3 className="text-xl font-bold text-foreground">{order.shippingInfo.fullName}</h3>
+                                            <h3 className="text-xl font-bold text-herbal">{order.shippingInfo.fullName}</h3>
                                             <p className="text-slate-500">{order.shippingInfo.phone}</p>
                                         </div>
                                         <div className="bg-slate-50 p-4 rounded-2xl text-sm">

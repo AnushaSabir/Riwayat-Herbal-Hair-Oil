@@ -40,7 +40,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="sm:max-w-[425px] bg-background border border-white/10 rounded-2xl shadow-2xl">
+            <DialogContent className="sm:max-w-[425px] bg-background border border-black/10 rounded-2xl shadow-2xl">
                 <DialogHeader>
                     <DialogTitle className="text-2xl font-display text-foreground text-center mb-4">
                         {isRegister ? "Create Account" : "Welcome Back"}
@@ -56,7 +56,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             required
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="rounded-xl border-white/10 bg-white/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
+                            className="rounded-xl border-black/10 bg-black/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
                         />
                     </div>
                     <div className="space-y-2">
@@ -68,7 +68,7 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                             required
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="rounded-xl border-white/10 bg-white/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
+                            className="rounded-xl border-black/10 bg-black/5 text-foreground focus:border-gold focus:ring-gold placeholder:opacity-30"
                         />
                     </div>
                     <Button

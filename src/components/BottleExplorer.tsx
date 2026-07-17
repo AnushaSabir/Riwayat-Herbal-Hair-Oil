@@ -37,7 +37,7 @@ const BottleExplorer = () => {
                         className="lg:w-1/2"
                     >
                         <span className="text-gold font-elegant tracking-[0.5em] uppercase text-xs mb-8 block opacity-80">Immersive Experience</span>
-                        <h2 className="text-5xl md:text-8xl font-display font-medium text-foreground mb-10 leading-[1.1] tracking-tight">
+                        <h2 className="text-5xl md:text-8xl font-display font-medium text-herbal mb-10 leading-[1.1] tracking-tight">
                             Inspect the <span className="italic">Magic.</span>
                         </h2>
                         <p className="text-foreground/60 font-elegant text-xl md:text-2xl leading-relaxed mb-12 italic">

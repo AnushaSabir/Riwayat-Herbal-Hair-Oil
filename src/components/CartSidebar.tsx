@@ -28,7 +28,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onLoginClick
 
     return (
         <Sheet open={isOpen} onOpenChange={onClose}>
-            <SheetContent className="w-full sm:max-w-md bg-white/95 backdrop-blur-xl border-navy/10">
+            <SheetContent className="w-full sm:max-w-md bg-black/95 backdrop-blur-xl border-navy/10">
                 <SheetHeader className="pb-6 border-b border-navy/5">
                     <SheetTitle className="text-2xl font-display text-foreground flex items-center gap-2">
                         <ShoppingBag className="w-6 h-6" />
@@ -47,7 +47,7 @@ const CartSidebar: React.FC<CartSidebarProps> = ({ isOpen, onClose, onLoginClick
                                 <div key={item.id} className="flex gap-4 p-4 bg-background/5 rounded-2xl">
                                     <img src={item.image} alt={item.name} className="w-20 h-20 object-contain bg-white rounded-xl p-2" />
                                     <div className="flex-1">
-                                        <h4 className="font-display font-medium text-foreground uppercase text-sm">{item.name}</h4>
+                                        <h4 className="font-display font-medium text-herbal uppercase text-sm">{item.name}</h4>
                                         <p className="text-gold font-elegant font-bold">Rs. {item.price}</p>
                                         <div className="flex items-center gap-3 mt-3">
                                             <button

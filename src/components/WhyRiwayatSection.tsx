@@ -43,7 +43,7 @@ const WhyRiwayatSection = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-6 block opacity-80">Our Philosophy</span>
-            <h2 className="text-5xl md:text-7xl font-display font-medium text-foreground mb-8 leading-[1.1] tracking-tight">
+            <h2 className="text-5xl md:text-7xl font-display font-medium text-herbal mb-8 leading-[1.1] tracking-tight">
               Rooted In <span className="italic">Wisdom</span>,<br />Driven By Nature.
             </h2>
             <div className="w-20 h-[1px] bg-gold/30 mb-10" />
@@ -55,11 +55,11 @@ const WhyRiwayatSection = () => {
               {reasons.slice(0, 2).map((reason, i) => (
                 <motion.div
                   key={i}
-                  className="space-y-4 group p-6 rounded-3xl hover:bg-white/10 transition-colors"
+                  className="space-y-4 group p-6 rounded-3xl hover:bg-black/10 transition-colors"
                   whileHover={{ y: -5 }}
                 >
                   <reason.icon className="w-6 h-6 text-gold opacity-80 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-lg font-display font-bold text-foreground uppercase tracking-widest">{reason.title}</h3>
+                  <h3 className="text-lg font-display font-bold text-herbal uppercase tracking-widest">{reason.title}</h3>
                   <p className="text-foreground/60 font-elegant text-[13px] leading-relaxed">{reason.description}</p>
                 </motion.div>
               ))}
@@ -81,13 +81,13 @@ const WhyRiwayatSection = () => {
                     rotateY: 2,
                     z: 50
                   }}
-                  className="bg-white/20 backdrop-blur-xl border border-white/40 p-10 rounded-[48px] text-foreground flex gap-8 items-center group hover:bg-white/40 transition-all duration-500 shadow-xl hover:shadow-gold/5"
+                  className="bg-black/20 backdrop-blur-xl border border-black/40 p-10 rounded-[48px] text-foreground flex gap-8 items-center group hover:bg-black/40 transition-all duration-500 shadow-xl hover:shadow-gold/5"
                   style={{
                     perspective: 1000,
                     transformStyle: "preserve-3d"
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-white/40 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/10 transition-colors">
+                  <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/10 transition-colors">
                     <reason.icon className="w-7 h-7 text-foreground/80 group-hover:text-gold transition-colors" />
                   </div>
                   <div>

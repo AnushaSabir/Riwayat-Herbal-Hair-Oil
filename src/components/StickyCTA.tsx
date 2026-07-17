@@ -40,7 +40,7 @@ const StickyCTA = () => {
                     transition={{ type: "spring", damping: 25, stiffness: 200 }}
                     className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-8 pointer-events-none md:pb-4"
                 >
-                    <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-2xl border border-white/30 rounded-[32px] md:rounded-full p-3 md:p-2 shadow-2xl pointer-events-auto flex items-center justify-between gap-4">
+                    <div className="max-w-4xl mx-auto bg-black/10 backdrop-blur-2xl border border-black/30 rounded-[32px] md:rounded-full p-3 md:p-2 shadow-2xl pointer-events-auto flex items-center justify-between gap-4">
                         <div className="flex items-center gap-4 pl-4">
                             <img src={bottleImage} alt="Bottle" className="w-10 h-10 object-contain drop-shadow-lg" />
                             <div className="hidden sm:block">

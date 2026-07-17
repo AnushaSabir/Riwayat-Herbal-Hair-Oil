@@ -27,7 +27,7 @@ const ShowcaseSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto flex flex-col items-center">
 
-                    <div className="relative w-full rounded-[40px] md:rounded-[60px] overflow-hidden border border-white/40 shadow-2xl bg-white/5 backdrop-blur-md group flex items-center justify-center min-h-[400px] md:min-h-[600px]">
+                    <div className="relative w-full rounded-[40px] md:rounded-[60px] overflow-hidden border border-black/40 shadow-2xl bg-black/5 backdrop-blur-md group flex items-center justify-center min-h-[400px] md:min-h-[600px]">
                         <AnimatePresence mode="wait">
                             <motion.img
                                 key={index}
@@ -44,13 +44,13 @@ const ShowcaseSection = () => {
                         <div className="absolute inset-x-8 top-1/2 -translate-y-1/2 flex justify-between z-20 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
                                 onClick={(e) => { e.stopPropagation(); prev(); }}
-                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
+                                className="p-4 rounded-full bg-black/10 backdrop-blur-md border border-black/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
                             >
                                 <ChevronLeft className="w-6 h-6" />
                             </button>
                             <button
                                 onClick={(e) => { e.stopPropagation(); next(); }}
-                                className="p-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
+                                className="p-4 rounded-full bg-black/10 backdrop-blur-md border border-black/20 text-foreground hover:bg-gold hover:text-white transition-all pointer-events-auto"
                             >
                                 <ChevronRight className="w-6 h-6" />
                             </button>
@@ -62,7 +62,7 @@ const ShowcaseSection = () => {
                                 <div
                                     key={i}
                                     onClick={() => setIndex(i)}
-                                    className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === index ? "w-12 bg-gold" : "w-3 bg-white/40"}`}
+                                    className={`h-1.5 transition-all duration-500 rounded-full cursor-pointer ${i === index ? "w-12 bg-gold" : "w-3 bg-black/40"}`}
                                 />
                             ))}
                         </div>
@@ -78,7 +78,7 @@ const ShowcaseSection = () => {
                                 transition={{ duration: 0.5 }}
                             >
                                 <span className="text-gold font-elegant tracking-[0.6em] uppercase text-xs mb-4 block opacity-80">{images[index].label}</span>
-                                <h3 className="text-3xl md:text-5xl font-display font-medium text-foreground tracking-tight italic">
+                                <h3 className="text-3xl md:text-5xl font-display font-medium text-herbal tracking-tight italic">
                                     {images[index].title.split(' ')[0]} <span className="text-gold">{images[index].title.split(' ').slice(1).join(' ')}</span>
                                 </h3>
                             </motion.div>

@@ -72,14 +72,14 @@ const HeroSection = () => {
           className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left z-20 pt-32 lg:pt-40 xl:pt-48 lg:-ml-4 xl:-ml-12"
         >
           {/* Big RIWAYAT Branding */}
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-medium text-foreground tracking-[0.3em] leading-none uppercase mb-2 drop-shadow-sm">
+          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-medium text-herbal tracking-[0.3em] leading-none uppercase mb-2 drop-shadow-sm">
             RIWAYAT
           </h1>
           <h2 className="text-xs md:text-sm lg:text-base font-serif text-gold mb-6 tracking-[0.3em] uppercase">
             The Essence of Herbal Wisdom
           </h2>
 
-          <h3 className="text-3xl md:text-5xl font-display font-bold text-foreground leading-[1.2] mb-4">
+          <h3 className="text-3xl md:text-5xl font-display font-bold text-herbal leading-[1.2] mb-4">
             Life Moves Fast. <br />
             Your Hair Care <br />
             Should Too.

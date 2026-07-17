@@ -55,7 +55,7 @@ const VideoSection = ({
           <span className={`${accent} uppercase tracking-[0.4em] text-xs font-elegant mb-4`}>
             {subtitle}
           </span>
-          <h2 className="text-4xl md:text-6xl font-display text-foreground mb-6">
+          <h2 className="text-4xl md:text-6xl font-display text-herbal mb-6">
             {title.split(" ").map((word, i) =>
               i === title.split(" ").length - 1
                 ? <span key={i} className={`${accent}`}> {word}</span>
@@ -115,7 +115,7 @@ const VideoSection = ({
               {/* Mute/Unmute Toggle */}
               <button
                 onClick={toggleMute}
-                className="absolute bottom-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center transition-all hover:bg-black/70 hover:scale-105 border border-white/20 z-20"
+                className="absolute bottom-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center transition-all hover:bg-black/70 hover:scale-105 border border-black/20 z-20"
                 aria-label={isMuted ? "Unmute video" : "Mute video"}
               >
                 {isMuted ? (

@@ -22,12 +22,12 @@ const WhatsAppButton = () => {
                 <div className="absolute inset-0 bg-green-500/30 rounded-full animate-ping" />
 
                 {/* Main Button */}
-                <div className="relative bg-gradient-to-tr from-green-600 to-green-400 p-4 rounded-full shadow-2xl border border-white/20 flex items-center justify-center">
+                <div className="relative bg-gradient-to-tr from-green-600 to-green-400 p-4 rounded-full shadow-2xl border border-black/20 flex items-center justify-center">
                     <MessageCircle className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Floating Label */}
-                <div className="absolute right-[calc(100%+1rem)] top-1/2 -translate-y-1/2 bg-white/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
+                <div className="absolute right-[calc(100%+1rem)] top-1/2 -translate-y-1/2 bg-black/90 backdrop-blur-md px-4 py-2 rounded-xl shadow-xl border border-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap hidden md:block">
                     <p className="text-foreground font-elegant text-sm font-bold tracking-tight">Order via WhatsApp</p>
                 </div>
             </div>

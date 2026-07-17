@@ -56,7 +56,7 @@ const HomePage = () => {
       {/* Simple top nav */}
       <nav className="relative z-50 flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
         <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-          <span className="text-2xl md:text-3xl font-display font-bold text-foreground tracking-[0.25em] uppercase">
+          <span className="text-2xl md:text-3xl font-display font-bold text-herbal tracking-[0.25em] uppercase">
             RIWAYAT
           </span>
           <span className="text-[10px] text-gold tracking-[0.3em] uppercase font-serif">Herbal Wisdom</span>
@@ -90,7 +90,7 @@ const HomePage = () => {
           <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-400 to-gold mb-2 tracking-widest uppercase leading-none drop-shadow-sm">
             Riwayat
           </h1>
-          <h2 className="text-2xl md:text-4xl font-display text-foreground/90 mb-6 tracking-wide">
+          <h2 className="text-2xl md:text-4xl font-display text-herbal/90 mb-6 tracking-wide">
             Nature's Best, Bottled for You
           </h2>
           <p className="text-foreground/60 max-w-xl mx-auto text-base md:text-lg font-medium">
@@ -110,7 +110,7 @@ const HomePage = () => {
             { icon: <Shield className="w-4 h-4" />, text: "Lab Tested" },
             { icon: <Sparkles className="w-4 h-4" />, text: "No Chemicals" },
           ].map((b) => (
-            <span key={b.text} className="flex items-center gap-1.5 text-xs text-foreground/50 border border-white/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
+            <span key={b.text} className="flex items-center gap-1.5 text-xs text-foreground/50 border border-black/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
               <span className="text-gold">{b.icon}</span> {b.text}
             </span>
           ))}
@@ -147,7 +147,7 @@ const HomePage = () => {
 
               {/* Volume */}
               <div className="absolute top-5 right-5 z-20">
-                <span className="text-[10px] text-foreground/40 border border-white/10 px-2.5 py-1 rounded-full bg-background/20">
+                <span className="text-[10px] text-foreground/40 border border-black/10 px-2.5 py-1 rounded-full bg-background/20">
                   {product.volume}
                 </span>
               </div>
@@ -169,7 +169,7 @@ const HomePage = () => {
                 <p className={`text-xs tracking-[0.3em] uppercase font-serif mb-1 ${product.accentColor}`}>
                   {product.tagline}
                 </p>
-                <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-2">
+                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2">
                   {product.name}
                 </h2>
                 <p className="text-foreground/60 text-sm mb-4 leading-relaxed">
@@ -179,7 +179,7 @@ const HomePage = () => {
                 {/* Ingredient tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {product.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] text-foreground/50 border border-white/10 px-2.5 py-1 rounded-full bg-white/5">
+                    <span key={tag} className="text-[10px] text-foreground/50 border border-black/10 px-2.5 py-1 rounded-full bg-black/5">
                       {tag}
                     </span>
                   ))}
@@ -203,7 +203,7 @@ const HomePage = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="border-y border-white/5 py-10"
+          className="border-y border-black/5 py-10"
         >
           <span className="text-gold text-[10px] tracking-[0.3em] uppercase font-serif mb-4 block">Our Philosophy</span>
           <p className="text-foreground/70 md:text-xl font-display leading-relaxed italic max-w-3xl mx-auto">
@@ -222,7 +222,7 @@ const HomePage = () => {
           className="mb-12"
         >
           <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">The Riwayat Promise</span>
-          <h2 className="text-3xl md:text-4xl font-display text-foreground">Why Choose Us?</h2>
+          <h2 className="text-3xl md:text-4xl font-display text-herbal">Why Choose Us?</h2>
         </motion.div>
         
         <div className="grid md:grid-cols-3 gap-8">
@@ -237,12 +237,12 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="p-6 rounded-2xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-colors"
+              className="p-6 rounded-2xl border border-black/5 bg-black/[0.02] hover:bg-black/[0.04] transition-colors"
             >
               <div className="w-12 h-12 mx-auto rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-display font-bold text-foreground mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-display font-bold text-herbal mb-2">{feature.title}</h3>
               <p className="text-foreground/50 text-sm leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}

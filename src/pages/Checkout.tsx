@@ -64,8 +64,8 @@ const Checkout = () => {
         return (
             <div className="min-h-screen bg-glossy-green pt-32 pb-20 px-4">
                 <Navbar />
-                <div className="max-w-2xl mx-auto text-center bg-white/60 backdrop-blur-xl p-12 rounded-[40px] shadow-2xl">
-                    <h2 className="text-3xl font-display text-foreground mb-6">Your Basket is Empty</h2>
+                <div className="max-w-2xl mx-auto text-center bg-black/60 backdrop-blur-xl p-12 rounded-[40px] shadow-2xl">
+                    <h2 className="text-3xl font-display text-herbal mb-6">Your Basket is Empty</h2>
                     <Button onClick={() => navigate('/')} className="bg-background hover:bg-background-light text-white rounded-xl px-12 py-6 text-lg font-elegant">
                         Start Shopping
                     </Button>
@@ -83,9 +83,9 @@ const Checkout = () => {
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="bg-white/70 backdrop-blur-xl p-8 rounded-[40px] shadow-2xl border border-white"
+                        className="bg-black/70 backdrop-blur-xl p-8 rounded-[40px] shadow-2xl border border-white"
                     >
-                        <h2 className="text-3xl font-display text-foreground mb-8">Shipping Information</h2>
+                        <h2 className="text-3xl font-display text-herbal mb-8">Shipping Information</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -162,7 +162,7 @@ const Checkout = () => {
                             <h3 className="text-2xl font-display mb-8 tracking-widest uppercase">Order Summary</h3>
                             <div className="space-y-6 mb-8 max-h-[400px] overflow-y-auto pr-2 custom-scrollbar">
                                 {items.map((item) => (
-                                    <div key={item.id} className="flex justify-between items-center bg-white/5 p-4 rounded-2xl">
+                                    <div key={item.id} className="flex justify-between items-center bg-black/5 p-4 rounded-2xl">
                                         <div className="flex gap-4 items-center">
                                             <img src={item.image} className="w-16 h-16 object-contain bg-white rounded-xl p-2" />
                                             <div>
@@ -174,7 +174,7 @@ const Checkout = () => {
                                     </div>
                                 ))}
                             </div>
-                            <div className="space-y-4 pt-6 border-t border-white/10 text-lg">
+                            <div className="space-y-4 pt-6 border-t border-black/10 text-lg">
                                 <div className="flex justify-between opacity-70">
                                     <span>Shipping</span>
                                     <span className="font-elegant italic">FREE</span>

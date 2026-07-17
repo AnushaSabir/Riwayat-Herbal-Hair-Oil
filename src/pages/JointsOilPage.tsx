@@ -90,7 +90,7 @@ const JointsOilPage = () => {
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:block font-display uppercase tracking-widest text-xs">All Products</span>
             </button>
-            <div className="w-px h-6 bg-white/10" />
+            <div className="w-px h-6 bg-black/10" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
               <span className="text-xl font-display font-bold text-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
               <span className="text-[9px] text-sky-400 tracking-[0.4em] uppercase font-serif">Joint Care</span>
@@ -137,13 +137,13 @@ const JointsOilPage = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.1] mb-3 tracking-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-herbal leading-[1.1] mb-3 tracking-tight">
               RIWAYAT
             </h1>
             <h2 className="text-2xl md:text-3xl font-display text-sky-400 mb-2 tracking-wide">
               Joint Pain &
             </h2>
-            <h2 className="text-2xl md:text-3xl font-display text-foreground/70 mb-6 tracking-wide">
+            <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
               Joint Repair Oil
             </h2>
 
@@ -282,7 +282,7 @@ const JointsOilPage = () => {
             transition={{ duration: 0.8 }} className="text-center mb-12"
           >
             <span className="text-sky-400 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">See It In Action</span>
-            <h2 className="text-4xl md:text-5xl font-display text-foreground mb-4">Real Results, <span className="text-sky-400">Real Stories</span></h2>
+            <h2 className="text-4xl md:text-5xl font-display text-herbal mb-4">Real Results, <span className="text-sky-400">Real Stories</span></h2>
             <div className="w-24 h-px bg-gradient-to-r from-transparent via-herbal to-transparent mx-auto" />
           </motion.div>
 
@@ -308,7 +308,7 @@ const JointsOilPage = () => {
                   autoPlay muted={isMuted} loop playsInline
                 />
                 <button onClick={toggleMute}
-                  className="absolute bottom-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 hover:bg-black/70 transition-all z-20">
+                  className="absolute bottom-4 right-4 w-10 h-10 bg-black/50 backdrop-blur-md rounded-full flex items-center justify-center border border-black/20 hover:bg-black/70 transition-all z-20">
                   {isMuted ? <VolumeX className="w-5 h-5 text-white" /> : <Volume2 className="w-5 h-5 text-white" />}
                 </button>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
@@ -329,7 +329,7 @@ const JointsOilPage = () => {
             className="text-center mb-14"
           >
             <span className="text-sky-400 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Why Choose Riwayat</span>
-            <h2 className="text-4xl md:text-5xl font-display text-foreground">
+            <h2 className="text-4xl md:text-5xl font-display text-herbal">
               6 Powerful <span className="text-sky-400">Benefits</span>
             </h2>
           </motion.div>
@@ -345,7 +345,7 @@ const JointsOilPage = () => {
                 <div className="w-12 h-12 rounded-xl bg-sky-500/10 flex items-center justify-center text-sky-400 mb-4 group-hover:bg-sky-500/20 transition-colors">
                   {b.icon}
                 </div>
-                <h3 className="text-foreground font-display font-bold text-base mb-2">{b.title}</h3>
+                <h3 className="text-herbal font-display font-bold text-base mb-2">{b.title}</h3>
                 <p className="text-foreground/50 text-sm leading-relaxed">{b.desc}</p>
               </motion.div>
             ))}
@@ -363,7 +363,7 @@ const JointsOilPage = () => {
             className="text-center mb-14"
           >
             <span className="text-sky-400 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Nature's Power</span>
-            <h2 className="text-4xl md:text-5xl font-display text-foreground">
+            <h2 className="text-4xl md:text-5xl font-display text-herbal">
               8 Herbal <span className="text-sky-400">Ingredients</span>
             </h2>
           </motion.div>
@@ -374,7 +374,7 @@ const JointsOilPage = () => {
                 key={ing.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="group p-5 rounded-2xl border border-white/5 bg-card/40 hover:border-sky-500/20 hover:bg-card/60 transition-all duration-300 hover:-translate-y-1 text-center"
+                className="group p-5 rounded-2xl border border-black/5 bg-card/40 hover:border-sky-500/20 hover:bg-card/60 transition-all duration-300 hover:-translate-y-1 text-center"
               >
                 <div className="text-4xl mb-3">{ing.icon}</div>
                 <h3 className={`font-display font-bold text-sm mb-1.5 ${ing.color}`}>{ing.name}</h3>
@@ -395,7 +395,7 @@ const JointsOilPage = () => {
             className="text-center mb-14"
           >
             <span className="text-sky-400 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Customer Stories</span>
-            <h2 className="text-4xl md:text-5xl font-display text-foreground">
+            <h2 className="text-4xl md:text-5xl font-display text-herbal">
               Real People, <span className="text-sky-400">Real Relief</span>
             </h2>
           </motion.div>
@@ -433,7 +433,7 @@ const JointsOilPage = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="text-sky-400 text-xs uppercase tracking-[0.4em] font-serif mb-4 block">Limited Stock Available</span>
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-herbal mb-4">
               Move Without <span className="text-sky-400">Pain</span>
             </h2>
             <p className="text-foreground/60 max-w-lg mx-auto text-base mb-10 leading-relaxed">
@@ -463,7 +463,7 @@ const JointsOilPage = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-white/5 py-8 text-center text-foreground/30 text-xs tracking-widest uppercase">
+      <footer className="border-t border-black/5 py-8 text-center text-foreground/30 text-xs tracking-widest uppercase">
         <p>© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
       </footer>
     </main>
