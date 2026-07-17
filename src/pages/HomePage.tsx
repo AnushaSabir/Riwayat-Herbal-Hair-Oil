@@ -87,12 +87,12 @@ const HomePage = () => {
           <span className="inline-flex items-center gap-2 text-gold text-xs tracking-[0.4em] uppercase font-serif mb-4">
             <Sparkles className="w-4 h-4" /> The Essence of Herbal Wisdom
           </span>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-4 leading-tight">
-            Nature's Best,{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-400 to-gold">
-              Bottled for You
-            </span>
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-gold via-yellow-400 to-gold mb-2 tracking-widest uppercase leading-none drop-shadow-sm">
+            Riwayat
           </h1>
+          <h2 className="text-2xl md:text-4xl font-display text-foreground/90 mb-6 tracking-wide">
+            Nature's Best, Bottled for You
+          </h2>
           <p className="text-foreground/60 max-w-xl mx-auto text-base md:text-lg font-medium">
             Two powerful herbal solutions — crafted from centuries-old wisdom, made for modern lives.
           </p>
@@ -157,7 +157,7 @@ const HomePage = () => {
                 <motion.img
                   src={product.bottle}
                   alt={product.name}
-                  className="h-56 md:h-64 lg:h-72 object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10"
+                  className="h-72 md:h-80 lg:h-[26rem] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10"
                   animate={{ y: [0, -10, 0] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
                 />
