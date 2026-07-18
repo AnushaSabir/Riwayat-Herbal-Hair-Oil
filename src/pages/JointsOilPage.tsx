@@ -10,14 +10,14 @@ import jointsBottle from "@/assets/joints/joints-bottle.png";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
-  { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints", icon: "🌿", color: "text-amber-400" },
-  { name: "Kalonji", benefit: "Powerful pain relief & anti-inflammatory", icon: "🌑", color: "text-purple-400" },
-  { name: "Eucalyptus", benefit: "Deep cooling & instant pain relief", icon: "🌿", color: "text-cyan-400" },
-  { name: "Rosemary", benefit: "Improves blood circulation in joints", icon: "🪴", color: "text-green-400" },
-  { name: "Ajwain", benefit: "Relieves stiffness & muscle cramps", icon: "🌾", color: "text-yellow-400" },
-  { name: "Himalayan Salt", benefit: "Natural detox & mineral support", icon: "💎", color: "text-blue-300" },
-  { name: "Camphor (Kapur)", benefit: "Anti-spasm & deep pain relief", icon: "❄️", color: "text-herbal" },
-  { name: "Til Oil (Sesame)", benefit: "Base carrier oil, deeply nourishing", icon: "🫙", color: "text-orange-400" },
+  { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
+  { name: "Kalonji", benefit: "Powerful pain relief & anti-inflammatory", icon: <Shield className="w-10 h-10 text-herbal-light" /> },
+  { name: "Eucalyptus", benefit: "Deep cooling & instant pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
+  { name: "Rosemary", benefit: "Improves blood circulation in joints", icon: <Leaf className="w-10 h-10 text-herbal-light" /> },
+  { name: "Ajwain", benefit: "Relieves stiffness & muscle cramps", icon: <Activity className="w-10 h-10 text-herbal-light" /> },
+  { name: "Himalayan Salt", benefit: "Natural detox & mineral support", icon: <Star className="w-10 h-10 text-herbal-light" /> },
+  { name: "Camphor (Kapur)", benefit: "Anti-spasm & deep pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
+  { name: "Til Oil (Sesame)", benefit: "Base carrier oil, deeply nourishing", icon: <Heart className="w-10 h-10 text-herbal-light" /> },
 ];
 
 // ─── Benefits ──────────────────────────────────────────────────────────────
@@ -64,7 +64,7 @@ const JointsOilPage = () => {
     addItem({
       id: "riwayat-joints-oil-200ml",
       name: "Riwayat Joint Pain & Repair Oil (200ml)",
-      price: 1299,
+      price: 1459,
       quantity: 1,
       image: jointsBottle,
     });
@@ -87,27 +87,27 @@ const JointsOilPage = () => {
       </div>
 
       {/* ── Navbar ── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-herbal/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-herbal text-primary-foreground backdrop-blur-md border-b border-herbal/30">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate("/")}
-              className="flex items-center gap-2 text-foreground/50 hover:text-herbal transition-colors text-sm group"
+              className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:block font-display uppercase tracking-widest text-xs">All Products</span>
             </button>
-            <div className="w-px h-6 bg-black/10" />
+            <div className="w-px h-6 bg-primary-foreground/20" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-              <span className="text-xl font-display font-bold text-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
-              <span className="text-[9px] text-herbal tracking-[0.4em] uppercase font-serif">Joint Care</span>
+              <span className="text-xl font-display font-bold text-primary-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
+              <span className="text-[9px] text-primary-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
             </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
             {["Benefits", "Ingredients", "Results", "Videos"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`}
-                className="text-[11px] uppercase tracking-[0.3em] font-display text-foreground/60 hover:text-herbal transition-colors font-semibold">
+                className="text-[11px] uppercase tracking-[0.3em] font-display text-primary-foreground/80 hover:text-primary-foreground transition-colors font-semibold">
                 {item}
               </a>
             ))}
@@ -115,7 +115,7 @@ const JointsOilPage = () => {
 
           <button
             onClick={handleAddToCart}
-            className="flex items-center gap-2 bg-herbal/10 hover:bg-herbal/20 border border-herbal/30 text-herbal px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
+            className="flex items-center gap-2 bg-primary-foreground/15 hover:bg-primary-foreground/25 border border-primary-foreground/30 text-primary-foreground px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
           >
             <ShoppingCart className="w-4 h-4" />
             <span className="hidden sm:block">Order Now</span>
@@ -174,7 +174,7 @@ const JointsOilPage = () => {
                 onClick={handleAddToCart}
                 className="px-8 py-4 bg-herbal text-white font-display text-base rounded-full uppercase tracking-widest font-semibold shadow-lg transition-all"
               >
-                Order Now — Rs. 1,299
+                Order Now — Rs. 1,459
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.04 }}
@@ -283,8 +283,8 @@ const JointsOilPage = () => {
                       <div className="w-1.5 h-1.5 rounded-full bg-herbal opacity-60" />
                     </div>
 
-                    <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-black/70 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
-                      <span className="text-3xl md:text-4xl">{ingredient.icon}</span>
+                    <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#F0E6D0]/10 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
+                      {ingredient.icon}
                     </div>
                     <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-background/95 backdrop-blur-xl px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-herbal/20">
                       <span className="text-[8px] font-serif tracking-[0.3em] text-herbal uppercase mb-1 block">Pure Extract</span>
@@ -475,7 +475,7 @@ const JointsOilPage = () => {
                 onClick={handleAddToCart}
                 className="px-10 py-4 bg-herbal text-white font-display font-bold text-base rounded-full uppercase tracking-widest shadow-lg"
               >
-                Order Now — Rs. 1,299
+                Order Now — Rs. 1,459
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.04 }}
@@ -491,8 +491,9 @@ const JointsOilPage = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-black/5 py-8 text-center text-foreground/30 text-xs tracking-widest uppercase">
-        <p>© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
+      <footer className="bg-herbal py-10 text-center">
+        <p className="text-primary-foreground/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
+        <p className="text-primary-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
       </footer>
     </main>
   );
