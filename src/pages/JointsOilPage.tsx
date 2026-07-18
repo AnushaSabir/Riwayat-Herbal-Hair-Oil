@@ -427,13 +427,13 @@ const JointsOilPage = () => {
                 key={b.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="group p-6 rounded-2xl border border-herbal/10 bg-card/40 hover:border-herbal/30 hover:bg-card/60 transition-all duration-300 hover:-translate-y-1"
+                className="group p-6 rounded-2xl bg-[#86B3B1] hover:bg-[#639694] transition-all duration-300 hover:-translate-y-1 shadow-md"
               >
-                <div className="w-12 h-12 rounded-xl bg-herbal/10 flex items-center justify-center text-herbal mb-4 group-hover:bg-herbal/20 transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white mb-4 group-hover:bg-white/30 transition-colors">
                   {b.icon}
                 </div>
-                <h3 className="text-herbal font-display font-bold text-base mb-2">{b.title}</h3>
-                <p className="text-foreground/50 text-sm leading-relaxed">{b.desc}</p>
+                <h3 className="text-white font-display font-bold text-base mb-2">{b.title}</h3>
+                <p className="text-white/70 text-sm leading-relaxed">{b.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -461,11 +461,11 @@ const JointsOilPage = () => {
                 key={ing.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="group p-5 rounded-2xl border border-black/5 bg-card/40 hover:border-herbal/20 hover:bg-card/60 transition-all duration-300 hover:-translate-y-1 text-center"
+                className="group p-5 rounded-2xl bg-[#86B3B1] hover:bg-[#639694] transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
               >
-                <div className="text-4xl mb-3">{ing.icon}</div>
-                <h3 className={`font-display font-bold text-sm mb-1.5 ${ing.color}`}>{ing.name}</h3>
-                <p className="text-foreground/50 text-xs leading-relaxed">{ing.benefit}</p>
+                <div className="text-4xl mb-3 flex justify-center text-white">{ing.icon}</div>
+                <h3 className="font-display font-bold text-sm mb-1.5 text-white">{ing.name}</h3>
+                <p className="text-white/70 text-xs leading-relaxed">{ing.benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -493,13 +493,13 @@ const JointsOilPage = () => {
                 key={t.name}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="p-6 rounded-2xl border border-herbal/10 bg-card/40 flex flex-col gap-3"
+                className="p-6 rounded-2xl bg-[#86B3B1] hover:bg-[#639694] transition-all duration-300 flex flex-col gap-3 shadow-md"
               >
-                <div className="flex text-herbal text-sm">{Array(t.rating).fill("★").join("")}</div>
-                <p className="text-foreground/70 text-sm leading-relaxed flex-1">"{t.text}"</p>
+                <div className="flex text-white text-sm">{Array(t.rating).fill("★").join("")}</div>
+                <p className="text-white/80 text-sm leading-relaxed flex-1">"{t.text}"</p>
                 <div>
-                  <p className="text-foreground font-display font-bold text-sm">{t.name}</p>
-                  <p className="text-foreground/40 text-xs">Age {t.age}</p>
+                  <p className="text-white font-display font-bold text-sm">{t.name}</p>
+                  <p className="text-white/60 text-xs">Age {t.age}</p>
                 </div>
               </motion.div>
             ))}
