@@ -10,54 +10,50 @@ html {
 
 @layer base {
   :root {
-    /* Primary brand colors - Hair Oil Theme (Mint Teal) */
-    --background: 175 30% 72%; /* Mint Teal */
-    --foreground: 175 30% 23%; /* Dark Teal Text */
+    /* Primary brand colors - Hair Oil Theme (Strict 2-Color Exact Match) */
+    --background: 81 28% 84%; /* Light Mint Green (#DAE2CB) */
+    --foreground: 132 51% 12%; /* Dark Forest Green (#0F2E15) */
 
-    /* Dark Teal for buttons and highlights */
-    --herbal-light: 175 30% 60%;
-    --herbal: 175 30% 33%;
-    --herbal-dark: 175 30% 15%;
+    /* Dark Forest Green for buttons and highlights */
+    --herbal-light: 132 40% 20%;
+    --herbal: 132 51% 12%; /* Dark Forest Green */
+    --herbal-dark: 132 60% 8%;
 
-    /* Reuse navy tokens for Dark Teal */
-    --navy: 175 30% 33%;
-    --navy-light: 175 30% 45%;
-    --branding-blue: 175 30% 25%;
+    /* Reuse navy tokens for Dark Forest Green */
+    --navy: 132 51% 12%;
+    --navy-light: 132 40% 20%;
+    --branding-blue: 132 51% 12%;
 
-    /* Muted Gold accents */
-    --gold: 42 83% 43%;
-    --gold-light: 42 90% 55%;
-    --gold-dark: 42 100% 30%;
+    /* Accent colors strictly matching Dark Forest Green */
+    --gold: 132 51% 12%;
+    --gold-light: 132 40% 20%;
+    --gold-dark: 132 60% 8%;
 
-    /* Brand Red - subtle accent */
-    --brand-red: 5 65% 42%;
-    --brand-red-light: 8 70% 55%;
+    /* Card and surface colors (Light Mint Green) */
+    --card: 81 28% 84%;
+    --card-foreground: 132 51% 12%;
 
-    /* Card and surface colors (Lighter Mint Teal) */
-    --card: 175 35% 80%;
-    --card-foreground: 175 30% 23%;
+    --popover: 81 28% 84%;
+    --popover-foreground: 132 51% 12%;
 
-    --popover: 175 35% 80%;
-    --popover-foreground: 175 30% 23%;
+    --primary: 132 51% 12%;
+    --primary-foreground: 81 28% 84%;
 
-    --primary: 175 30% 33%;
-    --primary-foreground: 175 30% 95%;
+    --secondary: 132 51% 12%;
+    --secondary-foreground: 81 28% 84%;
 
-    --secondary: 175 35% 80%;
-    --secondary-foreground: 175 30% 23%;
+    --muted: 81 20% 75%;
+    --muted-foreground: 132 40% 30%;
 
-    --muted: 175 25% 65%;
-    --muted-foreground: 175 30% 35%;
-
-    --accent: 42 83% 43%;
-    --accent-foreground: 45 33% 96%;
+    --accent: 132 51% 12%;
+    --accent-foreground: 81 28% 84%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 81 28% 84%;
 
-    --border: 175 30% 60%;
-    --input: 175 30% 60%;
-    --ring: 175 30% 33%;
+    --border: 132 51% 12%;
+    --input: 132 51% 12%;
+    --ring: 132 51% 12%;
   }
 
   .theme-joints {
