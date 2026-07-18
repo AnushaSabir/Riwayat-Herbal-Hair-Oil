@@ -87,27 +87,27 @@ const JointsOilPage = () => {
       </div>
 
       {/* ── Navbar ── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-herbal text-primary-foreground backdrop-blur-md border-b border-herbal/30">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#C8AF93] text-foreground backdrop-blur-md border-b border-foreground/10">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate("/")}
-              className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors text-sm group"
+              className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors text-sm group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:block font-display uppercase tracking-widest text-xs">All Products</span>
             </button>
-            <div className="w-px h-6 bg-primary-foreground/20" />
+            <div className="w-px h-6 bg-foreground/20" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-              <span className="text-xl font-display font-bold text-primary-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
-              <span className="text-[9px] text-primary-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
+              <span className="text-xl font-display font-bold text-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
+              <span className="text-[9px] text-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
             </div>
           </div>
 
           <div className="hidden md:flex items-center gap-8">
             {["Benefits", "Ingredients", "Results", "Videos"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`}
-                className="text-[11px] uppercase tracking-[0.3em] font-display text-primary-foreground/80 hover:text-primary-foreground transition-colors font-semibold">
+                className="text-[11px] uppercase tracking-[0.3em] font-display text-foreground/80 hover:text-foreground transition-colors font-semibold">
                 {item}
               </a>
             ))}
@@ -115,7 +115,7 @@ const JointsOilPage = () => {
 
           <button
             onClick={handleAddToCart}
-            className="flex items-center gap-2 bg-primary-foreground/15 hover:bg-primary-foreground/25 border border-primary-foreground/30 text-primary-foreground px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
+            className="flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-[#C8AF93] px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
           >
             <ShoppingCart className="w-4 h-4" />
             <span className="hidden sm:block">Order Now</span>
@@ -550,9 +550,9 @@ const JointsOilPage = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-herbal py-10 text-center">
-        <p className="text-primary-foreground/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
-        <p className="text-primary-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
+      <footer className="bg-[#C8AF93] py-10 text-center border-t border-foreground/10">
+        <p className="text-foreground/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
+        <p className="text-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
       </footer>
     </main>
   );

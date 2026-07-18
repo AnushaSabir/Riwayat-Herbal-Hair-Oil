@@ -57,8 +57,8 @@ html {
   }
 
   .theme-joints {
-    /* Primary brand colors - Joints Oil Theme (Warm Cream & Army Green) */
-    --background: 36 47% 90%; /* Warm Cream/Sand (#F0E6D0) */
+    /* Primary brand colors - Joints Oil Theme (Darker Warm Cream & Army Green) */
+    --background: 36 38% 80%; /* Darker Warm Cream/Sand (#DEC5A4) */
     --foreground: 110 30% 14%; /* Dark Army Green text (#1E2D14) */
 
     /* Dark Army Green - from bottle color in image */
