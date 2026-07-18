@@ -10,19 +10,19 @@ html {
 
 @layer base {
   :root {
-    /* Primary brand colors - Hair Oil Theme (Default) */
-    --background: 45 33% 96%; /* Soft White */
-    --foreground: 0 0% 17%; /* Charcoal Black */
+    /* Primary brand colors - Hair Oil Theme (Mint Teal) */
+    --background: 175 30% 72%; /* Mint Teal */
+    --foreground: 175 30% 23%; /* Dark Teal Text */
 
-    /* Forest Green */
-    --herbal-light: 126 30% 35%;
-    --herbal: 126 42% 20%; /* Forest Green */
-    --herbal-dark: 126 50% 10%;
+    /* Dark Teal for buttons and highlights */
+    --herbal-light: 175 30% 60%;
+    --herbal: 175 30% 33%;
+    --herbal-dark: 175 30% 15%;
 
-    /* Reuse navy tokens for Forest Green */
-    --navy: 126 42% 20%;
-    --navy-light: 126 30% 30%;
-    --branding-blue: 126 50% 15%;
+    /* Reuse navy tokens for Dark Teal */
+    --navy: 175 30% 33%;
+    --navy-light: 175 30% 45%;
+    --branding-blue: 175 30% 25%;
 
     /* Muted Gold accents */
     --gold: 42 83% 43%;
@@ -33,31 +33,31 @@ html {
     --brand-red: 5 65% 42%;
     --brand-red-light: 8 70% 55%;
 
-    /* Card and surface colors (Sage Green) */
-    --card: 147 28% 93%; /* Sage Green */
-    --card-foreground: 0 0% 17%;
+    /* Card and surface colors (Lighter Mint Teal) */
+    --card: 175 35% 80%;
+    --card-foreground: 175 30% 23%;
 
-    --popover: 147 28% 93%;
-    --popover-foreground: 0 0% 17%;
+    --popover: 175 35% 80%;
+    --popover-foreground: 175 30% 23%;
 
-    --primary: 126 42% 20%; /* Forest Green */
-    --primary-foreground: 45 33% 96%; /* Soft White */
+    --primary: 175 30% 33%;
+    --primary-foreground: 175 30% 95%;
 
-    --secondary: 147 28% 93%; /* Sage Green */
-    --secondary-foreground: 126 42% 20%;
+    --secondary: 175 35% 80%;
+    --secondary-foreground: 175 30% 23%;
 
-    --muted: 147 28% 85%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 175 25% 65%;
+    --muted-foreground: 175 30% 35%;
 
-    --accent: 42 83% 43%; /* Muted Gold */
+    --accent: 42 83% 43%;
     --accent-foreground: 45 33% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 147 20% 80%;
-    --input: 147 20% 80%;
-    --ring: 126 42% 20%;
+    --border: 175 30% 60%;
+    --input: 175 30% 60%;
+    --ring: 175 30% 33%;
   }
 
   .theme-joints {
