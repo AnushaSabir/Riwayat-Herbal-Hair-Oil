@@ -58,7 +58,7 @@ html {
 
   .theme-joints {
     /* Primary brand colors - Joints Oil Theme (Fawn & Army Green) */
-    --background: 35 50% 75%; /* Fawn (#D6B58D) */
+    --background: 35 45% 65%; /* Darker Fawn (#C19D71) */
     --foreground: 110 30% 14%; /* Dark Army Green text (#1E2D14) */
 
     /* Dark Army Green - from bottle color in image */
