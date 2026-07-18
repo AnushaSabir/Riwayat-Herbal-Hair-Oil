@@ -57,47 +57,47 @@ html {
   }
 
   .theme-joints {
-    /* Primary brand colors - Joints Oil Theme (Dark Fiery Theme) */
-    --background: 300 7% 8%; /* Very Dark Brown/Black (#161316) */
-    --foreground: 0 0% 100%; /* White (#FFFFFF) */
+    /* Primary brand colors - Joints Oil Theme (Warm Cream & Army Green) */
+    --background: 36 47% 90%; /* Warm Cream/Sand (#F0E6D0) */
+    --foreground: 110 30% 14%; /* Dark Army Green text (#1E2D14) */
 
-    /* Vibrant Orange for buttons and highlights */
-    --herbal-light: 19 100% 68%;
-    --herbal: 19 100% 58%; /* Vibrant Orange (#FF6D29) */
-    --herbal-dark: 19 100% 48%;
+    /* Dark Army Green - from bottle color in image */
+    --herbal-light: 110 30% 28%;
+    --herbal: 110 35% 18%; /* Dark Army Green (#2D4A1E) */
+    --herbal-dark: 110 40% 10%;
 
-    /* Reuse navy tokens for Dark Brown */
-    --navy: 18 28% 21%; /* Dark Brown (#453027) */
-    --navy-light: 18 28% 31%;
-    --branding-blue: 300 7% 8%; /* Very Dark Brown/Black (#161316) */
+    /* Reuse navy tokens for Dark Army Green */
+    --navy: 110 35% 18%;
+    --navy-light: 110 30% 28%;
+    --branding-blue: 110 40% 12%;
 
-    /* Accent colors strictly matching Vibrant Orange */
-    --gold: 19 100% 58%;
-    --gold-light: 19 100% 68%;
-    --gold-dark: 19 100% 48%;
+    /* Warm Gold accents - dried grass/straw tones */
+    --gold: 40 60% 52%; /* Warm Golden (#C4A035) */
+    --gold-light: 40 70% 62%;
+    --gold-dark: 40 55% 38%;
 
-    /* Card and surface colors (Dark Brown) */
-    --card: 18 28% 21%; /* Dark Brown (#453027) */
-    --card-foreground: 0 0% 100%; /* White (#FFFFFF) */
+    /* Card and surface colors (slightly darker cream) */
+    --card: 36 40% 83%; /* Deeper cream for cards */
+    --card-foreground: 110 35% 18%;
 
-    --popover: 18 28% 21%; /* Dark Brown (#453027) */
-    --popover-foreground: 0 0% 100%; /* White (#FFFFFF) */
+    --popover: 36 40% 83%;
+    --popover-foreground: 110 35% 18%;
 
-    --primary: 19 100% 58%; /* Vibrant Orange (#FF6D29) */
-    --primary-foreground: 300 7% 8%; /* Very Dark Brown/Black (#161316) */
+    --primary: 110 35% 18%; /* Dark Army Green */
+    --primary-foreground: 36 47% 95%; /* Near white cream */
 
-    --secondary: 18 28% 21%; /* Dark Brown (#453027) */
-    --secondary-foreground: 0 0% 100%; /* White (#FFFFFF) */
+    --secondary: 36 40% 83%; /* Deeper cream */
+    --secondary-foreground: 110 35% 18%;
 
-    --muted: 0 0% 20%; /* Darker gray for muted backgrounds */
-    --muted-foreground: 0 0% 73%; /* Light Gray (#BABABA) */
+    --muted: 36 35% 80%;
+    --muted-foreground: 110 20% 35%;
 
-    --accent: 19 100% 58%; /* Vibrant Orange (#FF6D29) */
-    --accent-foreground: 300 7% 8%; /* Very Dark Brown/Black (#161316) */
+    --accent: 40 60% 52%; /* Warm Gold */
+    --accent-foreground: 110 35% 12%;
 
-    --border: 0 0% 30%; /* Dim gray border */
-    --input: 0 0% 30%;
-    --ring: 19 100% 58%; /* Vibrant Orange (#FF6D29) */
+    --border: 36 30% 72%; /* Soft sand border */
+    --input: 36 30% 72%;
+    --ring: 110 35% 18%; /* Dark Army Green */
 
     --radius: 1.25rem;
 
