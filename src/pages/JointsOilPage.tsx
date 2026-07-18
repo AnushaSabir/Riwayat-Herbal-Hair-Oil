@@ -202,23 +202,82 @@ const JointsOilPage = () => {
             </div>
           </motion.div>
 
-          {/* Right — Bottle floating */}
-          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px]">
+          {/* Right — Bottle + Ingredients infographic */}
+          <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.95] sm:scale-100 origin-center">
+            {/* Left ingredients */}
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
+              {ingredients.slice(0, 4).map((ing, i) => (
+                <motion.div key={ing.name}
+                  animate={{ opacity: [0, 1, 1, 0], x: [30, 0, 0, 30] }}
+                  transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
+                  className="flex items-center gap-1 sm:gap-2"
+                >
+                  <div className="flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-herbal/10 rounded-full flex items-center justify-center text-herbal">
+                    {ing.icon}
+                  </div>
+                  <div className="text-right flex-1">
+                    <p className="text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight text-herbal">{ing.name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Left arrows */}
+            <div className="flex flex-col gap-3 sm:gap-5 z-20 mx-0.5 sm:mx-1">
+              {ingredients.slice(0, 4).map((_, i) => (
+                <motion.div key={i}
+                  animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
+                  transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
+                  className="flex items-center origin-left"
+                >
+                  <div className="w-3 sm:w-6 h-px border-t border-dashed border-herbal/40" />
+                  <svg width="7" height="7" viewBox="0 0 8 8" className="text-herbal/50 flex-shrink-0"><path d="M0 4 L6 0 L6 8 Z" fill="currentColor" /></svg>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Bottle */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="relative z-30 w-48 sm:w-56 md:w-72 lg:w-80 h-auto flex-shrink-0"
+              className="relative z-30 w-40 sm:w-44 md:w-56 lg:w-[320px] h-auto flex-shrink-0 mx-1 sm:mx-0"
             >
-              <motion.img
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                src={jointsBottle}
-                alt="Riwayat Joint Pain Oil"
-                className="w-full h-full object-contain drop-shadow-[0_30px_60px_rgba(255,109,41,0.3)]"
-              />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-8 bg-herbal/20 blur-2xl rounded-full" />
+              <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_30px_50px_rgba(0,0,0,0.3)]" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
             </motion.div>
+
+            {/* Right arrows */}
+            <div className="flex flex-col gap-3 sm:gap-5 z-20 mx-0.5 sm:mx-1">
+              {ingredients.slice(4).map((_, i) => (
+                <motion.div key={i}
+                  animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
+                  transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
+                  className="flex items-center origin-right"
+                >
+                  <svg width="7" height="7" viewBox="0 0 8 8" className="text-herbal/50 flex-shrink-0"><path d="M8 4 L2 0 L2 8 Z" fill="currentColor" /></svg>
+                  <div className="w-3 sm:w-6 h-px border-t border-dashed border-herbal/40" />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Right ingredients */}
+            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
+              {ingredients.slice(4).map((ing, i) => (
+                <motion.div key={ing.name}
+                  animate={{ opacity: [0, 1, 1, 0], x: [-30, 0, 0, -30] }}
+                  transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
+                  className="flex items-center gap-1 sm:gap-2 flex-row-reverse"
+                >
+                  <div className="flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-herbal/10 rounded-full flex items-center justify-center text-herbal">
+                    {ing.icon}
+                  </div>
+                  <div className="text-left flex-1">
+                    <p className="text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight text-herbal">{ing.name}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
