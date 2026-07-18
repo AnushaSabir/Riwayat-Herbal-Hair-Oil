@@ -55,21 +55,21 @@ const FeaturesSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-black/10 backdrop-blur-xl border border-black/30 p-10 rounded-[40px] shadow-lg hover:shadow-gold/5 hover:bg-black/20 transition-all duration-500 group"
+                className="bg-herbal backdrop-blur-xl border border-herbal-dark p-10 rounded-[40px] shadow-lg hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 group"
                 style={{
                   perspective: 1000,
                   transformStyle: "preserve-3d"
                 }}
               >
                 <div className="flex flex-col gap-6">
-                  <div className="w-14 h-14 rounded-2xl bg-black/40 flex items-center justify-center group-hover:bg-gold/10 transition-colors">
-                    <feature.icon className="w-6 h-6 text-foreground/80 group-hover:text-gold transition-colors" />
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
+                    <feature.icon className="w-6 h-6 text-white group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-display font-medium text-herbal mb-3 tracking-tight">
+                    <h3 className="text-xl font-display font-medium text-white mb-3 tracking-tight">
                       {feature.title}
                     </h3>
-                    <p className="text-foreground/60 font-elegant leading-relaxed text-sm">
+                    <p className="text-white/70 font-elegant leading-relaxed text-sm">
                       {feature.description}
                     </p>
                   </div>

@@ -76,8 +76,8 @@ const JourneySection = () => {
                                     >
                                         <div className={`flex flex-col ${isEven ? 'md:items-end' : 'items-start'} gap-4`}>
                                             <span className="text-gold font-elegant tracking-widest text-[10px] uppercase font-bold">{step.year}</span>
-                                            <div className="p-4 bg-black/30 backdrop-blur-md rounded-2xl border border-black/50 shadow-sm group hover:border-gold/30 transition-colors">
-                                                <step.icon className="w-6 h-6 text-foreground/70 group-hover:text-gold transition-colors" />
+                                            <div className="p-4 bg-herbal backdrop-blur-md rounded-2xl border border-herbal-dark shadow-sm group hover:bg-herbal-dark transition-colors">
+                                                <step.icon className="w-6 h-6 text-white group-hover:text-white transition-colors" />
                                             </div>
                                             <h3 className="text-2xl font-display font-medium text-herbal tracking-tight">{step.title}</h3>
                                             <p className="text-foreground/50 font-elegant text-sm leading-relaxed max-w-sm">

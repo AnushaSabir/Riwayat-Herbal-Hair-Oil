@@ -81,18 +81,18 @@ const WhyRiwayatSection = () => {
                     rotateY: 2,
                     z: 50
                   }}
-                  className="bg-black/20 backdrop-blur-xl border border-black/40 p-10 rounded-[48px] text-foreground flex gap-8 items-center group hover:bg-black/40 transition-all duration-500 shadow-xl hover:shadow-gold/5"
+                  className="bg-herbal backdrop-blur-xl border border-herbal-dark p-10 rounded-[48px] text-white flex gap-8 items-center group hover:bg-herbal-dark transition-all duration-500 shadow-xl hover:shadow-herbal/20"
                   style={{
                     perspective: 1000,
                     transformStyle: "preserve-3d"
                   }}
                 >
-                  <div className="w-16 h-16 rounded-2xl bg-black/40 flex items-center justify-center flex-shrink-0 group-hover:bg-gold/10 transition-colors">
-                    <reason.icon className="w-7 h-7 text-foreground/80 group-hover:text-gold transition-colors" />
+                  <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-white/20 transition-colors">
+                    <reason.icon className="w-7 h-7 text-white group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-display font-medium mb-2 tracking-tight">{reason.title}</h3>
-                    <p className="text-foreground/60 font-elegant text-sm leading-relaxed">{reason.description}</p>
+                    <h3 className="text-2xl font-display font-medium mb-2 tracking-tight text-white">{reason.title}</h3>
+                    <p className="text-white/70 font-elegant text-sm leading-relaxed">{reason.description}</p>
                   </div>
                 </motion.div>
               ))}
