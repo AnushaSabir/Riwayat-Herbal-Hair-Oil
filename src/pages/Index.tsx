@@ -6,7 +6,6 @@ import BackgroundLayer from "@/components/BackgroundLayer";
 import SectionDivider from "@/components/SectionDivider";
 import FeaturesSection from "@/components/FeaturesSection";
 import IngredientsSection from "@/components/IngredientsSection";
-import JourneySection from "@/components/JourneySection";
 import WhyRiwayatSection from "@/components/WhyRiwayatSection";
 import ResultsSection from "@/components/ResultsSection";
 import CTASection from "@/components/CTASection";
@@ -38,8 +37,6 @@ const Index = () => {
       <FeaturesSection />
       <SectionDivider />
       <IngredientsSection />
-      <SectionDivider />
-      <JourneySection />
       <SectionDivider />
       <BottleExplorer />
       <SectionDivider />
