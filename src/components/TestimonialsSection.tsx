@@ -43,23 +43,23 @@ const TestimonialsSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: i * 0.2 }}
                             whileHover={{ y: -10 }}
-                            className="bg-black/10 backdrop-blur-xl border border-black/30 p-12 rounded-[48px] shadow-xl hover:shadow-gold/5 transition-all duration-500 relative group"
+                            className="bg-herbal backdrop-blur-xl border border-herbal-dark p-12 rounded-[48px] shadow-xl hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 relative group"
                         >
-                            <Quote className="absolute top-8 right-12 w-12 h-12 text-gold/10 group-hover:text-gold/20 transition-colors" />
+                            <Quote className="absolute top-8 right-12 w-12 h-12 text-white/10 group-hover:text-white/20 transition-colors" />
 
                             <div className="flex gap-1 mb-8">
                                 {[...Array(t.stars)].map((_, j) => (
-                                    <Star key={j} className="w-4 h-4 text-gold fill-gold" />
+                                    <Star key={j} className="w-4 h-4 text-white fill-white" />
                                 ))}
                             </div>
 
-                            <p className="text-foreground/70 font-elegant italic text-lg leading-relaxed mb-10">
+                            <p className="text-white/80 font-elegant italic text-lg leading-relaxed mb-10">
                                 "{t.content}"
                             </p>
 
-                            <div className="pt-8 border-t border-navy/5">
-                                <h4 className="text-xl font-display font-medium text-herbal mb-1 tracking-tight">{t.name}</h4>
-                                <p className="text-[10px] uppercase tracking-[0.2em] text-gold font-bold">{t.role}</p>
+                            <div className="pt-8 border-t border-white/10">
+                                <h4 className="text-xl font-display font-medium text-white mb-1 tracking-tight">{t.name}</h4>
+                                <p className="text-[10px] uppercase tracking-[0.2em] text-white/60 font-bold">{t.role}</p>
                             </div>
                         </motion.div>
                     ))}
