@@ -97,7 +97,7 @@ const IngredientsSection = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-gold opacity-60" />
                   </div>
 
-                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-black/80 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
+                  <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-white p-2 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
                     <img src={ingredient.image} alt={ingredient.name} className="w-full h-full object-contain relative z-10" />
                   </div>
                   <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-background/95 backdrop-blur-xl text-white px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-black/10">
