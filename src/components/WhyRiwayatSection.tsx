@@ -55,12 +55,12 @@ const WhyRiwayatSection = () => {
               {reasons.slice(0, 2).map((reason, i) => (
                 <motion.div
                   key={i}
-                  className="space-y-4 group p-6 rounded-3xl hover:bg-black/10 transition-colors"
+                  className="space-y-4 group p-6 rounded-3xl bg-herbal hover:bg-herbal-dark transition-colors border border-herbal-dark shadow-lg"
                   whileHover={{ y: -5 }}
                 >
-                  <reason.icon className="w-6 h-6 text-gold opacity-80 group-hover:opacity-100 transition-opacity" />
-                  <h3 className="text-lg font-display font-bold text-herbal uppercase tracking-widest">{reason.title}</h3>
-                  <p className="text-foreground/60 font-elegant text-[13px] leading-relaxed">{reason.description}</p>
+                  <reason.icon className="w-6 h-6 text-white opacity-80 group-hover:opacity-100 transition-opacity" />
+                  <h3 className="text-lg font-display font-bold text-white uppercase tracking-widest">{reason.title}</h3>
+                  <p className="text-white/70 font-elegant text-[13px] leading-relaxed">{reason.description}</p>
                 </motion.div>
               ))}
             </div>
