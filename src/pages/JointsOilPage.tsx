@@ -88,12 +88,12 @@ const JointsOilPage = () => {
       </div>
 
       {/* ── Navbar ── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-herbal text-white backdrop-blur-md border-b border-white/10">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#86B3B1] text-foreground backdrop-blur-md border-b border-foreground/10">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button
               onClick={() => navigate("/")}
-              className="flex items-center gap-2 text-white/80 hover:text-white transition-colors text-sm group"
+              className="flex items-center gap-2 text-foreground/80 hover:text-foreground transition-colors text-sm group"
             >
               <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
               <span className="hidden sm:block font-display uppercase tracking-widest text-xs">All Products</span>
@@ -108,7 +108,7 @@ const JointsOilPage = () => {
           <div className="hidden md:flex items-center gap-8">
             {["Benefits", "Ingredients", "Results", "Videos"].map((item) => (
               <a key={item} href={`#${item.toLowerCase()}`}
-                className="text-[11px] uppercase tracking-[0.3em] font-display text-white/80 hover:text-white transition-colors font-semibold">
+                className="text-[11px] uppercase tracking-[0.3em] font-display text-foreground/80 hover:text-foreground transition-colors font-semibold">
                 {item}
               </a>
             ))}
@@ -116,7 +116,7 @@ const JointsOilPage = () => {
 
           <button
             onClick={handleAddToCart}
-            className="flex items-center gap-2 bg-white hover:bg-white/90 text-herbal px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
+            className="flex items-center gap-2 bg-foreground hover:bg-foreground/90 text-[#86B3B1] px-4 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all hover:scale-105"
           >
             <ShoppingCart className="w-4 h-4" />
             <span className="hidden sm:block">Order Now</span>
@@ -129,7 +129,7 @@ const JointsOilPage = () => {
       ═══════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center pt-20">
         {/* Right background panel */}
-        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[48%] bg-[#639694] rounded-l-[200px] z-0 border-l border-white/10 shadow-2xl" />
+        <div className="absolute right-0 top-0 bottom-0 w-full lg:w-[48%] bg-[#639694] rounded-l-[200px] z-0 border-l border-foreground/10 shadow-2xl" />
 
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left content */}
@@ -433,7 +433,7 @@ const JointsOilPage = () => {
                 key={b.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="group p-6 rounded-2xl bg-herbal hover:bg-herbal-dark border border-herbal-dark transition-all duration-300 hover:-translate-y-1 shadow-md"
+                className="group p-6 rounded-2xl bg-[#133937] hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 shadow-md"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white mb-4 group-hover:bg-white/30 transition-colors">
                   {b.icon}
@@ -467,7 +467,7 @@ const JointsOilPage = () => {
                 key={ing.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="group p-5 rounded-2xl bg-herbal hover:bg-herbal-dark border border-herbal-dark transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
+                className="group p-5 rounded-2xl bg-[#133937] hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
               >
                 <div className="text-4xl mb-3 flex justify-center text-white">{ing.icon}</div>
                 <h3 className="font-display font-bold text-sm mb-1.5 text-white">{ing.name}</h3>
@@ -499,7 +499,7 @@ const JointsOilPage = () => {
                 key={t.name}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="p-6 rounded-2xl bg-herbal hover:bg-herbal-dark border border-herbal-dark transition-all duration-300 flex flex-col gap-3 shadow-md"
+                className="p-6 rounded-2xl bg-[#133937] hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 flex flex-col gap-3 shadow-md"
               >
                 <div className="flex text-white text-sm">{Array(t.rating).fill("★").join("")}</div>
                 <p className="text-white/80 text-sm leading-relaxed flex-1">"{t.text}"</p>
@@ -556,9 +556,9 @@ const JointsOilPage = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-herbal py-10 text-center border-t border-white/10">
-        <p className="text-white/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
-        <p className="text-white/60 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
+      <footer className="bg-[#86B3B1] py-10 text-center border-t border-foreground/10">
+        <p className="text-foreground/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
+        <p className="text-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
       </footer>
     </main>
   );
