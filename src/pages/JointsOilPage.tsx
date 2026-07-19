@@ -7,6 +7,7 @@ import { toast } from "sonner";
 
 // Import joints bottle image
 import jointsBottle from "@/assets/joints/joints-bottle.png";
+import JointsShowcaseSection from "@/components/JointsShowcaseSection";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
@@ -405,6 +406,11 @@ const JointsOilPage = () => {
           </div>
         </div>
       </section>
+
+      {/* ═══════════════════════════════════════════════════
+          SHOWCASE GALLERY
+      ═══════════════════════════════════════════════════ */}
+      <JointsShowcaseSection />
 
       {/* ═══════════════════════════════════════════════════
           BENEFITS
