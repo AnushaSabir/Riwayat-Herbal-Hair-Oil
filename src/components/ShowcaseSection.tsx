@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import img1 from "@/assets/infographic-product.jpg";
 import img2 from "@/assets/infographic-results.jpg";
 import img3 from "@/assets/brand-creative-1.jpg";
+import img4 from "@/assets/brand-creative-2.jpg";
+import img5 from "@/assets/brand-creative-3.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     { src: img1, title: "Anatomy of Excellence", label: "Pure Formula" },
     { src: img2, title: "Proven Results", label: "Real Growth" },
-    { src: img3, title: "Herbal Wisdom", label: "Traditional Art" }
+    { src: img3, title: "Herbal Wisdom", label: "Traditional Art" },
+    { src: img4, title: "Natural Glow", label: "Shine & Strength" },
+    { src: img5, title: "Root Deep", label: "Complete Care" }
 ];
 
 const ShowcaseSection = () => {
