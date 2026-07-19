@@ -51,7 +51,7 @@ const StickyCTA = () => {
 
                         <button
                             onClick={handleAddToCart}
-                            className="px-8 md:px-12 py-3 bg-background text-white font-display text-xs md:text-sm rounded-full shadow-xl hover:bg-gold transition-all uppercase tracking-widest font-bold"
+                            className="px-8 md:px-12 py-3 bg-herbal text-white font-display text-xs md:text-sm rounded-full shadow-xl hover:bg-herbal-dark transition-all uppercase tracking-widest font-bold"
                         >
                             Order Your Bottle
                         </button>
