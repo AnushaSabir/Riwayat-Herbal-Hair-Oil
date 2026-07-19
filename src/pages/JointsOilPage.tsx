@@ -242,7 +242,7 @@ const JointsOilPage = () => {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="relative z-30 w-40 sm:w-44 md:w-56 lg:w-[320px] h-auto flex-shrink-0 mx-1 sm:mx-0"
+              className="relative z-30 w-52 sm:w-60 md:w-80 lg:w-[450px] h-auto flex-shrink-0 mx-1 sm:mx-0"
             >
               <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_30px_50px_rgba(0,0,0,0.3)]" />
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
@@ -315,7 +315,7 @@ const JointsOilPage = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 src={jointsBottle}
                 alt="Riwayat Joint Pain Oil"
-                className="w-56 md:w-80 h-auto filter drop-shadow-2xl"
+                className="w-72 md:w-[420px] h-auto filter drop-shadow-2xl"
               />
             </motion.div>
 
