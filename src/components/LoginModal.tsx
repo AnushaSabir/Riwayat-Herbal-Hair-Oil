@@ -31,8 +31,8 @@ const LoginModal: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
                 toast.success("Logged in successfully!");
             }
             onClose();
-        } catch (error: any) {
-            toast.error(error.message || "An error occurred");
+        } catch (error: unknown) {
+            toast.error((error as Error).message || "An error occurred");
         } finally {
             setLoading(false);
         }

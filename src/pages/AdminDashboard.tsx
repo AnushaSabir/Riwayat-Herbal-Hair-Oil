@@ -16,8 +16,8 @@ interface Order {
         address: string;
         city: string;
     };
-    items: any[];
-    createdAt: any;
+    items: Record<string, unknown>[];
+    createdAt: unknown;
 }
 
 const AdminDashboard = () => {

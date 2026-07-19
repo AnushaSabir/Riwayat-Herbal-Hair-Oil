@@ -52,9 +52,9 @@ const Checkout = () => {
             toast.success("Order placed successfully! We will contact you soon.");
             clearCart();
             navigate('/');
-        } catch (error: any) {
-            console.error("Order error:", error);
-            toast.error("Error placing order. Please try again.");
+        } catch (error: unknown) {
+            console.error("Checkout error:", error);
+            toast.error((error as Error).message || "An error occurred during checkout");
         } finally {
             setLoading(false);
         }
