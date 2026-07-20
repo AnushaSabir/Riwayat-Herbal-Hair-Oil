@@ -130,105 +130,22 @@ const HeroSection = () => {
         {/* Right Column Visual - Infographic Style */}
         <div className="lg:col-span-6 relative w-full flex items-center justify-center z-10 pt-16 pb-8 lg:pt-0 lg:pb-0 translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 min-h-[400px] lg:min-h-[600px] scale-[0.95] sm:scale-100 origin-center">
 
-          {/* === LEFT INGREDIENTS (4 items) === */}
-          <div className="flex flex-col justify-around gap-2 sm:gap-3 lg:gap-4 z-20 w-[60px] sm:w-[100px] md:w-[120px] lg:w-[140px]">
-            {ingredientBenefits.slice(0, 4).map((ing, i) => (
-              <motion.div
-                key={ing.name}
-                animate={{ opacity: [0, 1, 1, 0], x: [40, 0, 0, 40] }}
-                transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center gap-1 sm:gap-2 group"
-              >
-                {/* Image */}
-                <motion.div
-                  className="w-8 h-8 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
-                </motion.div>
-                {/* Text */}
-                <div className="text-right flex-1">
-                  <p className="text-[7px] sm:text-[10px] lg:text-xs font-bold text-gold uppercase tracking-tight sm:tracking-wide leading-tight">{ing.name}</p>
-                  <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* === LEFT ARROWS === */}
-          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 mx-0.5 sm:mx-1">
-            {ingredientBenefits.slice(0, 4).map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
-                transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center origin-left"
-              >
-                <div className="w-3 sm:w-4 lg:w-6 h-px border-t border-dashed border-gold/50" />
-                <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/60 flex-shrink-0">
-                  <path d="M0 4 L6 0 L6 8 Z" fill="currentColor" />
-                </svg>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* === BOTTLE CENTER === */}
+          {/* === HERO VIDEO === */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.8, type: "spring" }}
-            className="relative z-30 w-40 sm:w-44 md:w-56 lg:w-[300px] h-auto flex-shrink-0 mx-1 sm:mx-0"
+            className="relative z-30 w-full max-w-[300px] sm:max-w-[400px] lg:max-w-[600px] h-auto flex-shrink-0 mx-auto"
           >
-            <img
-              src={bottleImage}
-              alt="Riwayat Bottle"
-              className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+            <video
+              src="/videos/hair-hero.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] pointer-events-none"
             />
           </motion.div>
-
-          {/* === RIGHT ARROWS === */}
-          <div className="flex flex-col justify-around gap-3 lg:gap-4 z-20 mx-0.5 sm:mx-1">
-            {ingredientBenefits.slice(4).map((_, i) => (
-              <motion.div
-                key={i}
-                animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
-                transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center origin-right"
-              >
-                <svg width="8" height="8" viewBox="0 0 8 8" className="text-gold/60 flex-shrink-0">
-                  <path d="M8 4 L2 0 L2 8 Z" fill="currentColor" />
-                </svg>
-                <div className="w-3 sm:w-5 lg:w-7 h-px border-t border-dashed border-gold/50" />
-              </motion.div>
-            ))}
-          </div>
-
-          {/* === RIGHT INGREDIENTS (4 items) === */}
-          <div className="flex flex-col justify-around gap-2 sm:gap-3 lg:gap-4 z-20 w-[60px] sm:w-[100px] md:w-[120px] lg:w-[140px]">
-            {ingredientBenefits.slice(4).map((ing, i) => (
-              <motion.div
-                key={ing.name}
-                animate={{ opacity: [0, 1, 1, 0], x: [-40, 0, 0, -40] }}
-                transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.08 }}
-                className="flex items-center gap-1 sm:gap-2 group flex-row-reverse"
-              >
-                {/* Image */}
-                <motion.div
-                  className="w-8 h-8 sm:w-12 sm:h-12 lg:w-14 lg:h-14 flex-shrink-0 drop-shadow-lg"
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ duration: 3 + i * 0.5, repeat: Infinity, ease: "easeInOut" }}
-                >
-                  <img src={ing.src} alt={ing.name} className="w-full h-full object-contain" />
-                </motion.div>
-                {/* Text */}
-                <div className="text-left flex-1">
-                  <p className="text-[7px] sm:text-[10px] lg:text-xs font-bold text-gold uppercase tracking-tight sm:tracking-wide leading-tight">{ing.name}</p>
-                  <p className="text-[8px] lg:text-[9px] text-foreground/60 leading-tight mt-0.5 hidden lg:block">{ing.benefit}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
 
         </div>
       </div>

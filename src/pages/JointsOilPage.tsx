@@ -205,80 +205,22 @@ const JointsOilPage = () => {
 
           {/* Right — Bottle + Ingredients infographic */}
           <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.95] sm:scale-100 origin-center">
-            {/* Left ingredients */}
-            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
-              {ingredients.slice(0, 4).map((ing, i) => (
-                <motion.div key={ing.name}
-                  animate={{ opacity: [0, 1, 1, 0], x: [30, 0, 0, 30] }}
-                  transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center gap-1 sm:gap-2"
-                >
-                  <div className="flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-herbal/10 rounded-full flex items-center justify-center text-herbal">
-                    {ing.icon}
-                  </div>
-                  <div className="text-right flex-1">
-                    <p className="text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight text-herbal">{ing.name}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Left arrows */}
-            <div className="flex flex-col gap-3 sm:gap-5 z-20 mx-0.5 sm:mx-1">
-              {ingredients.slice(0, 4).map((_, i) => (
-                <motion.div key={i}
-                  animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
-                  transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center origin-left"
-                >
-                  <div className="w-3 sm:w-6 h-px border-t border-dashed border-herbal/40" />
-                  <svg width="7" height="7" viewBox="0 0 8 8" className="text-herbal/50 flex-shrink-0"><path d="M0 4 L6 0 L6 8 Z" fill="currentColor" /></svg>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Bottle */}
+            {/* === HERO VIDEO === */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8, type: "spring" }}
-              className="relative z-30 w-52 sm:w-60 md:w-80 lg:w-[450px] h-auto flex-shrink-0 mx-1 sm:mx-0"
+              className="relative z-30 w-full max-w-[350px] sm:max-w-[450px] lg:max-w-[650px] h-auto flex-shrink-0 mx-auto"
             >
-              <img src={jointsBottle} alt="Riwayat Joint Pain Oil" className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.3)] sm:drop-shadow-[0_30px_50px_rgba(0,0,0,0.3)]" />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-24 sm:w-40 h-8 bg-herbal/20 blur-2xl rounded-full" />
+              <video
+                src="/videos/joints-hero.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] pointer-events-none rounded-3xl"
+              />
             </motion.div>
-
-            {/* Right arrows */}
-            <div className="flex flex-col gap-3 sm:gap-5 z-20 mx-0.5 sm:mx-1">
-              {ingredients.slice(4).map((_, i) => (
-                <motion.div key={i}
-                  animate={{ opacity: [0, 1, 1, 0], scaleX: [0, 1, 1, 0] }}
-                  transition={{ duration: 5, times: [0, 0.25, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center origin-right"
-                >
-                  <svg width="7" height="7" viewBox="0 0 8 8" className="text-herbal/50 flex-shrink-0"><path d="M8 4 L2 0 L2 8 Z" fill="currentColor" /></svg>
-                  <div className="w-3 sm:w-6 h-px border-t border-dashed border-herbal/40" />
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Right ingredients */}
-            <div className="flex flex-col gap-2 sm:gap-3 md:gap-5 z-20 w-[60px] sm:w-[90px] md:w-[150px]">
-              {ingredients.slice(4).map((ing, i) => (
-                <motion.div key={ing.name}
-                  animate={{ opacity: [0, 1, 1, 0], x: [-30, 0, 0, -30] }}
-                  transition={{ duration: 5, times: [0, 0.2, 0.85, 1], repeat: Infinity, ease: "easeOut", delay: i * 0.1 }}
-                  className="flex items-center gap-1 sm:gap-2 flex-row-reverse"
-                >
-                  <div className="flex-shrink-0 w-6 h-6 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-herbal/10 rounded-full flex items-center justify-center text-herbal">
-                    {ing.icon}
-                  </div>
-                  <div className="text-left flex-1">
-                    <p className="text-[7px] sm:text-[10px] md:text-xs font-bold uppercase tracking-tight sm:tracking-wide leading-tight text-herbal">{ing.name}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -302,59 +244,23 @@ const JointsOilPage = () => {
           </motion.div>
 
           <div className="relative max-w-7xl mx-auto h-[700px] md:h-[900px] flex items-center justify-center pt-20">
-            {/* Central Bottle with 3D Float */}
+            {/* Central Video */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
-              className="relative z-20 pointer-events-none"
+              className="relative z-20 w-full max-w-[400px] md:max-w-[700px] lg:max-w-[900px]"
             >
-              <motion.img
-                animate={{ y: [0, -15, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                src={jointsBottle}
-                alt="Riwayat Joint Pain Oil"
-                className="w-72 md:w-[420px] h-auto filter drop-shadow-2xl"
+              <video
+                src="/videos/joints-ingredients.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] pointer-events-none rounded-3xl"
               />
             </motion.div>
-
-            {/* Floating Ingredients Circular Layout */}
-            {ingredients.map((ingredient, index) => {
-              const angle = (index / ingredients.length) * 2 * Math.PI;
-              const radius = typeof window !== 'undefined' && window.innerWidth < 768 ? 160 : 380;
-              const x = Math.cos(angle) * radius;
-              const y = Math.sin(angle) * radius;
-
-              return (
-                <motion.div
-                  key={ingredient.name}
-                  initial={{ opacity: 0, x: 0, y: 0 }}
-                  whileInView={{ opacity: 1, x, y }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1, delay: index * 0.1, ease: "circOut" }}
-                  whileHover={{ scale: 1.15, rotateX: -10, rotateY: 10, z: 50 }}
-                  className="absolute z-10 p-5 bg-black/30 backdrop-blur-lg rounded-[24px] border border-herbal/30 shadow-md group cursor-pointer transition-all hover:bg-herbal/20 hover:shadow-herbal/10"
-                  style={{ perspective: 800 }}
-                >
-                  <div className="flex flex-col items-center gap-3 relative">
-                    {/* Hotspot */}
-                    <div className="absolute -top-1 -right-1 z-20">
-                      <div className="w-1.5 h-1.5 rounded-full bg-herbal opacity-60" />
-                    </div>
-
-                    <div className="w-14 h-14 md:w-20 md:h-20 rounded-2xl bg-[#F0E6D0]/10 p-3 flex items-center justify-center shadow-inner overflow-hidden group-hover:scale-110 transition-transform duration-500 relative">
-                      {ingredient.icon}
-                    </div>
-                    <div className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 absolute -bottom-16 w-40 bg-background/95 backdrop-blur-xl px-4 py-3 rounded-2xl pointer-events-none transform translate-y-2 group-hover:translate-y-0 shadow-2xl border border-herbal/20">
-                      <span className="text-[8px] font-serif tracking-[0.3em] text-herbal uppercase mb-1 block">Pure Extract</span>
-                      <p className="font-bold uppercase tracking-[0.1em] text-[10px] mb-0.5 text-foreground">{ingredient.name}</p>
-                      <p className="font-serif text-foreground/70 text-[9px] italic">{ingredient.benefit}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
           </div>
         </div>
       </section>
