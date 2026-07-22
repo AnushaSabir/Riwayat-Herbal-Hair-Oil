@@ -13,6 +13,7 @@ const products = [
     tagline: "Root se Growth tak",
     description: "Premium herbal formula with 8 powerful ingredients for stronger, thicker, silky hair.",
     bottle: hairOilBottle,
+    video: "/videos/hair-hero.mp4",
     color: "from-herbal/20 to-gold/10",
     borderColor: "border-gold/30",
     glowColor: "bg-gold/20",
@@ -30,6 +31,7 @@ const products = [
     tagline: "Relieves Pain. Restores Life.",
     description: "100% herbal solution that relieves pain, reduces swelling and improves joint flexibility.",
     bottle: jointsOilBottle,
+    video: "/videos/joints-hero.mp4",
     color: "from-blue-900/20 to-herbal/10",
     borderColor: "border-herbal/30",
     glowColor: "bg-herbal/20",
@@ -152,14 +154,15 @@ const HomePage = () => {
                 </span>
               </div>
 
-              {/* Bottle Image */}
-              <div className="flex justify-center pt-14 pb-4 relative">
-                <motion.img
-                  src={product.bottle}
-                  alt={product.name}
-                  className="h-72 md:h-80 lg:h-[26rem] object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10"
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.5 }}
+              {/* Product Video */}
+              <div className="flex justify-center pt-14 pb-4 relative h-72 md:h-80 lg:h-[26rem] px-4">
+                <video
+                  src={product.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10 pointer-events-none rounded-3xl"
                 />
                 <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-8 ${product.glowColor} blur-2xl rounded-full`} />
               </div>
