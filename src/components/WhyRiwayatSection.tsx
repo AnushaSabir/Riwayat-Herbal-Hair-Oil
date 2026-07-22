@@ -81,7 +81,7 @@ const WhyRiwayatSection = () => {
                     rotateY: 2,
                     z: 50
                   }}
-                  className="bg-herbal backdrop-blur-xl border border-herbal-dark p-10 rounded-[48px] text-white flex gap-8 items-center group hover:bg-herbal-dark transition-all duration-500 shadow-xl hover:shadow-herbal/20"
+                  className="bg-herbal animated-border backdrop-blur-xl border border-herbal-dark p-10 rounded-[48px] text-white flex gap-8 items-center group hover:bg-herbal-dark transition-all duration-500 shadow-xl hover:shadow-herbal/20"
                   style={{
                     perspective: 1000,
                     transformStyle: "preserve-3d"

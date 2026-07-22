@@ -27,7 +27,7 @@ const CTASection = () => {
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
-          <div className="bg-herbal backdrop-blur-2xl border border-herbal-dark rounded-[80px] p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
+          <div className="bg-herbal animated-border backdrop-blur-2xl border border-herbal-dark rounded-[80px] p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
 

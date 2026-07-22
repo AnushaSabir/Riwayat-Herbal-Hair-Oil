@@ -100,7 +100,7 @@ const ResultsSection = () => {
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.8, delay: index * 0.15, ease: "easeOut" }}
                   whileHover={{ y: -10, scale: 1.02 }}
-                  className="bg-herbal backdrop-blur-xl border border-herbal-dark p-10 rounded-[48px] shadow-xl hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 flex flex-col items-center group relative overflow-hidden"
+                  className="bg-herbal animated-border backdrop-blur-xl border border-herbal-dark p-10 rounded-[48px] shadow-xl hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 flex flex-col items-center group relative overflow-hidden"
                 >
                   {/* Subtle Background Glow */}
                   <div className="absolute inset-0 bg-white/0 group-hover:bg-white/5 transition-colors duration-500 -z-10" />

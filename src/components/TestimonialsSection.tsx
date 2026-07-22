@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.8, delay: i * 0.2 }}
                             whileHover={{ y: -10 }}
-                            className="bg-herbal backdrop-blur-xl border border-herbal-dark p-12 rounded-[48px] shadow-xl hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 relative group"
+                            className="bg-herbal animated-border backdrop-blur-xl border border-herbal-dark p-12 rounded-[48px] shadow-xl hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 relative group"
                         >
                             <Quote className="absolute top-8 right-12 w-12 h-12 text-white/10 group-hover:text-white/20 transition-colors" />
 

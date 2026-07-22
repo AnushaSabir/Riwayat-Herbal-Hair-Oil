@@ -240,7 +240,7 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="p-6 rounded-2xl border border-herbal-dark bg-herbal hover:bg-herbal-dark transition-all duration-300 shadow-lg hover:-translate-y-1"
+              className="p-6 rounded-2xl animated-border transition-all duration-300 shadow-lg hover:-translate-y-1"
             >
               <div className="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center text-gold mb-4">
                 {feature.icon}

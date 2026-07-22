@@ -55,7 +55,7 @@ const FeaturesSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-herbal backdrop-blur-xl border border-herbal-dark p-10 rounded-[40px] shadow-lg hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 group"
+                className="bg-herbal animated-border backdrop-blur-xl border border-herbal-dark p-10 rounded-[40px] shadow-lg hover:shadow-herbal/20 hover:bg-herbal-dark transition-all duration-500 group"
                 style={{
                   perspective: 1000,
                   transformStyle: "preserve-3d"
