@@ -333,19 +333,19 @@ html {
   left: -50%;
   width: 200%;
   height: 200%;
-  animation: spin 3s linear infinite;
-  background: conic-gradient(from 0deg, transparent 75%, #d4af37 100%);
+  animation: spin 4s linear infinite;
+  background: conic-gradient(from 0deg, transparent 50%, #d4af37 100%);
 }
 
 .theme-joints .animated-border::before {
-  background: conic-gradient(from 0deg, transparent 75%, #c0c0c0 100%);
+  background: conic-gradient(from 0deg, transparent 50%, #e0e0e0 100%);
 }
 
 .animated-border::after {
   content: '';
   position: absolute;
   z-index: -1;
-  inset: 2px;
+  inset: 3px;
   border-radius: inherit;
   background: #0F2E15;
 }
