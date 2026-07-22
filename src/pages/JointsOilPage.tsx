@@ -128,7 +128,6 @@ const JointsOilPage = () => {
           HERO SECTION
       ═══════════════════════════════════════════════════ */}
       <section className="relative min-h-screen flex items-center pt-20">
-        {/* Right background panel removed as requested */}
 
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left content */}

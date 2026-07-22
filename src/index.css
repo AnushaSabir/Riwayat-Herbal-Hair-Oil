@@ -333,12 +333,12 @@ html {
   left: -50%;
   width: 200%;
   height: 200%;
-  animation: spin 4s linear infinite;
-  background: conic-gradient(from 0deg, transparent 50%, #d4af37 100%);
+  animation: spin 3s linear infinite;
+  background: conic-gradient(from 0deg, transparent 55%, #d4af37 100%);
 }
 
 .theme-joints .animated-border::before {
-  background: conic-gradient(from 0deg, transparent 50%, #e0e0e0 100%);
+  background: conic-gradient(from 0deg, transparent 55%, #c0c0c0 100%);
 }
 
 .animated-border::after {
