@@ -290,7 +290,7 @@ const JointsOilPage = () => {
 
           {/* Video Player */}
           <div className="max-w-sm mx-auto">
-            <div className="glass-card p-2 md:p-3 rounded-3xl relative group shadow-2xl border border-herbal/20">
+            <div className="glass-card p-2 md:p-3 rounded-3xl relative group shadow-2xl border border-herbal/20 animated-border-silver">
               <div className="relative rounded-2xl overflow-hidden bg-navy-light aspect-[9/16] shadow-inner">
                 <video
                   ref={videoRef}
