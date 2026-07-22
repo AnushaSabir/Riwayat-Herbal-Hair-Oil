@@ -240,13 +240,13 @@ const HomePage = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="p-6 rounded-2xl border border-black/5 bg-black/[0.02] hover:bg-black/[0.04] transition-colors"
+              className="p-6 rounded-2xl border border-herbal-dark bg-herbal hover:bg-herbal-dark transition-all duration-300 shadow-lg hover:-translate-y-1"
             >
-              <div className="w-12 h-12 mx-auto rounded-full bg-gold/10 flex items-center justify-center text-gold mb-4">
+              <div className="w-12 h-12 mx-auto rounded-full bg-white/10 flex items-center justify-center text-gold mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-display font-bold text-herbal mb-2">{feature.title}</h3>
-              <p className="text-foreground/50 text-sm leading-relaxed">{feature.desc}</p>
+              <h3 className="text-lg font-display font-bold text-white mb-2">{feature.title}</h3>
+              <p className="text-white/80 text-sm leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
         </div>
