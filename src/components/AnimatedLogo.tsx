@@ -38,7 +38,7 @@ export default function AnimatedLogo({
       
       {/* Golden Shine tracking the bottle */}
       <motion.div 
-        className="absolute top-1/2 z-15 pointer-events-none bg-gold blur-[10px] rounded-full mix-blend-screen"
+        className="absolute top-1/2 z-15 pointer-events-none bg-gold blur-[10px] rounded-full mix-blend-normal"
         style={{ height: '2em', width: '1.5em' }}
         initial={{ left: "0%", x: "-50%", y: "-50%", opacity: 0 }}
         whileInView={{ left: "100%", x: "-50%", y: "-50%", opacity: [0, 0.6, 0.6, 0] }}

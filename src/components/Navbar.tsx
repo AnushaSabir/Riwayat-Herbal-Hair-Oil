@@ -34,7 +34,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col"
                     >
-                        <AnimatedLogo className="text-2xl lg:text-3xl font-display font-medium tracking-[0.4em] uppercase" textColor="text-white" glowColor="text-gold" />
+                        <AnimatedLogo className="text-2xl lg:text-3xl font-display font-medium tracking-[0.4em] uppercase" textColor="text-black" glowColor="text-gold" />
                         <span className="text-[9px] lg:text-[10px] font-elegant tracking-[0.5em] text-gold uppercase mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
                     </motion.div>
 
