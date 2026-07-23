@@ -1,5 +1,5 @@
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import bottleImage from "@/assets/riwayat-bottle.png";
+import bottleImage from "@/assets/inspect-magic.jpg";
 import { useRef } from "react";
 
 const BottleExplorer = () => {
