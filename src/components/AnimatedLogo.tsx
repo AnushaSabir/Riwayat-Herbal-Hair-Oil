@@ -11,6 +11,7 @@ interface AnimatedLogoProps {
 export default function AnimatedLogo({ 
   className = "text-2xl font-display font-medium tracking-[0.4em] uppercase", 
   glowColor = "text-gold drop-shadow-md",
+  textColor = "text-foreground",
   text = "RIWAYAT"
 }: AnimatedLogoProps) {
   const duration = 2.5; 
