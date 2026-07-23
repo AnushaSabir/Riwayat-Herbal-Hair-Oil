@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ShoppingCart, Volume2, VolumeX, Leaf, Shield, Zap, Star, ChevronRight, Heart, Activity, Wind } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import AnimatedLogo from "../components/AnimatedLogo";
 import { useCartStore } from "@/lib/cartStore";
 import { toast } from "sonner";
 
@@ -102,7 +103,7 @@ const JointsOilPage = () => {
             </button>
             <div className="w-px h-6 bg-foreground/20" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-              <span className="text-xl font-display font-bold text-foreground tracking-[0.3em] uppercase">RIWAYAT</span>
+              <AnimatedLogo className="text-xl font-display font-bold tracking-[0.3em] uppercase" textColor="text-foreground" glowColor="text-herbal drop-shadow-sm" />
               <span className="text-[9px] text-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
             </div>
           </div>
@@ -145,9 +146,9 @@ const JointsOilPage = () => {
               </span>
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-herbal leading-[1.1] mb-3 tracking-tight">
-              RIWAYAT
-            </h1>
+            <div className="mb-3 flex lg:justify-start">
+              <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
+            </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide">
               Joint Pain &
             </h2>

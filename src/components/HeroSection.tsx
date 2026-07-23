@@ -1,5 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
+import AnimatedLogo from "./AnimatedLogo";
 import bottleImage from "@/assets/riwayat-bottle.png";
 import amla from "@/assets/ingredients/amla.png";
 import kalonji from "@/assets/ingredients/kalonji.png";
@@ -72,9 +73,13 @@ const HeroSection = () => {
           className="lg:col-span-6 flex flex-col items-center lg:items-start text-center lg:text-left z-20 pt-32 lg:pt-40 xl:pt-48 lg:-ml-4 xl:-ml-12"
         >
           {/* Big RIWAYAT Branding */}
-          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-medium text-herbal tracking-[0.3em] leading-none uppercase mb-2 drop-shadow-sm">
-            RIWAYAT
-          </h1>
+          <div className="mb-2 drop-shadow-sm flex justify-center lg:justify-start">
+            <AnimatedLogo 
+              className="text-5xl md:text-7xl lg:text-[5.5rem] font-display font-medium tracking-[0.3em] leading-none uppercase" 
+              textColor="text-herbal" 
+              glowColor="text-gold drop-shadow-md" 
+            />
+          </div>
           <h2 className="text-xs md:text-sm lg:text-base font-serif text-gold mb-6 tracking-[0.3em] uppercase">
             The Essence of Herbal Wisdom
           </h2>

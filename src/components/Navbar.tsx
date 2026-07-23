@@ -7,6 +7,7 @@ import { signOut } from 'firebase/auth';
 import LoginModal from './LoginModal';
 import CartSidebar from './CartSidebar';
 import { useCartStore } from '@/lib/cartStore';
+import AnimatedLogo from './AnimatedLogo';
 
 const Navbar = () => {
     const { user } = useAuth();
@@ -33,7 +34,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col"
                     >
-                        <span className="text-2xl lg:text-3xl font-display font-medium text-white tracking-[0.4em] uppercase">RIWAYAT</span>
+                        <AnimatedLogo className="text-2xl lg:text-3xl font-display font-medium tracking-[0.4em] uppercase" textColor="text-white" glowColor="text-gold" />
                         <span className="text-[9px] lg:text-[10px] font-elegant tracking-[0.5em] text-gold uppercase mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
                     </motion.div>
 

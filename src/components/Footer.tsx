@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import leafPattern from "@/assets/leaf-pattern.png";
+import AnimatedLogo from "./AnimatedLogo";
 
 const Footer = () => {
   return (
@@ -13,9 +14,13 @@ const Footer = () => {
         >
           {/* Brand name */}
           <div className="mb-12">
-            <h3 className="text-5xl md:text-7xl font-display font-medium text-herbal tracking-[0.3em] uppercase mb-4 opacity-10">
-              RIWAYAT
-            </h3>
+            <div className="flex justify-center w-full mb-4">
+              <AnimatedLogo 
+                className="text-5xl md:text-7xl font-display font-medium tracking-[0.3em] uppercase opacity-20" 
+                textColor="text-herbal" 
+                glowColor="text-herbal drop-shadow-md" 
+              />
+            </div>
             <div className="flex flex-col items-center -mt-8 md:-mt-12 relative z-10">
               <span className="text-2xl md:text-3xl font-display font-medium text-herbal tracking-tight uppercase">
                 Riwayat <span className="italic text-gold">Herbal</span>
