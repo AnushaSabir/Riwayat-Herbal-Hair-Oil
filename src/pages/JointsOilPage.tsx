@@ -103,7 +103,7 @@ const JointsOilPage = () => {
             </button>
             <div className="w-px h-6 bg-foreground/20" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-              <AnimatedLogo className="text-xl font-display font-bold tracking-[0.3em] uppercase" textColor="text-foreground" glowColor="text-herbal drop-shadow-sm" />
+              <AnimatedLogo className="text-xl font-display font-bold tracking-[0.3em] uppercase" textColor="text-foreground" glowColor="text-herbal drop-shadow-sm" bottleImageSrc={jointsBottle} />
               <span className="text-[9px] text-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
             </div>
           </div>
@@ -147,7 +147,7 @@ const JointsOilPage = () => {
             </motion.div>
 
             <div className="mb-3 flex lg:justify-start">
-              <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
+              <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" bottleImageSrc={jointsBottle} />
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide">
               Joint Pain &
