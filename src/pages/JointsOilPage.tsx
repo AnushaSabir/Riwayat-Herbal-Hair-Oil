@@ -290,7 +290,7 @@ const JointsOilPage = () => {
 
           {/* Video Player */}
           <div className="max-w-sm mx-auto">
-            <div className="glass-card p-2 md:p-3 rounded-3xl relative group shadow-2xl border border-herbal/20 animated-border-silver">
+            <div className="glass-card p-2 md:p-3 rounded-3xl relative group shadow-2xl border border-herbal/20 animated-border">
               <div className="relative rounded-2xl overflow-hidden bg-navy-light aspect-[9/16] shadow-inner">
                 <video
                   ref={videoRef}
@@ -337,7 +337,7 @@ const JointsOilPage = () => {
                 key={b.title}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="group p-6 rounded-2xl bg-[#133937] animated-border-silver hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 shadow-md"
+                className="group p-6 rounded-2xl bg-[#133937] animated-border hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 shadow-md"
               >
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-white mb-4 group-hover:bg-white/30 transition-colors">
                   {b.icon}
@@ -371,7 +371,7 @@ const JointsOilPage = () => {
                 key={ing.name}
                 initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="group p-5 rounded-2xl bg-[#133937] animated-border-silver hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
+                className="group p-5 rounded-2xl bg-[#133937] animated-border hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
               >
                 <div className="text-4xl mb-3 flex justify-center text-white">{ing.icon}</div>
                 <h3 className="font-display font-bold text-sm mb-1.5 text-white">{ing.name}</h3>
@@ -403,7 +403,7 @@ const JointsOilPage = () => {
                 key={t.name}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.1, duration: 0.6 }}
-                className="p-6 rounded-2xl bg-[#133937] animated-border-silver hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 flex flex-col gap-3 shadow-md"
+                className="p-6 rounded-2xl bg-[#133937] animated-border hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 flex flex-col gap-3 shadow-md"
               >
                 <div className="flex text-white text-sm">{Array(t.rating).fill("★").join("")}</div>
                 <p className="text-white/80 text-sm leading-relaxed flex-1">"{t.text}"</p>

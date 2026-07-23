@@ -317,7 +317,7 @@ html {
   to { transform: rotate(360deg); }
 }
 
-.animated-border, .animated-border-silver {
+.animated-border {
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -334,41 +334,16 @@ html {
   width: 200%;
   height: 200%;
   animation: spin 3s linear infinite;
-  background: conic-gradient(from 0deg, transparent 55%, #d4af37 100%);
-}
-
-.animated-border-silver::before {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  animation: spin 3s linear infinite;
-  background: conic-gradient(from 0deg, transparent 55%, #e2e8f0 100%);
-}
-
-.theme-joints .animated-border::before {
-  background: conic-gradient(from 0deg, transparent 55%, #e2e8f0 100%);
+  background: conic-gradient(from 0deg, transparent 35%, #d4af37 100%);
 }
 
 .animated-border::after {
   content: '';
   position: absolute;
   z-index: -1;
-  inset: 3px;
+  inset: 4px;
   border-radius: inherit;
   background: #0F2E15;
-}
-
-.animated-border-silver::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  inset: 3px;
-  border-radius: inherit;
-  background: #133937;
 }
 
 .theme-joints .animated-border::after {
