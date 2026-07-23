@@ -72,6 +72,8 @@ const JointsOilPage = () => {
     toast.success("Added to basket!");
   };
 
+  useEffect(() => { if (videoRef.current) { videoRef.current.load(); videoRef.current.play().catch(e => console.log('Auto-play prevented', e)); } }, [activeVideo]);
+
   const toggleMute = () => {
     if (videoRef.current) {
       videoRef.current.muted = !videoRef.current.muted;

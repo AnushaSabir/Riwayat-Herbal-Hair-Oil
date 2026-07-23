@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 interface VideoSectionProps {
   videos?: { src: string; label: string }[];
@@ -30,6 +30,8 @@ const VideoSection = ({
   const accentBorder = accentColor === "gold" ? "border-gold/30" : "border-herbal/30";
   const glowColor = accentColor === "gold" ? "bg-gold/20" : "bg-herbal/20";
   const shadowColor = accentColor === "gold" ? "shadow-gold" : "border border-herbal/20";
+
+  useEffect(() => { if (videoRef.current) { videoRef.current.load(); videoRef.current.play().catch(e => console.log('Auto-play prevented', e)); } }, [activeVideo]);
 
   const toggleMute = () => {
     if (videoRef.current) {
