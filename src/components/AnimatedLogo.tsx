@@ -21,7 +21,7 @@ export default function AnimatedLogo({
   return (
     <div className={`relative inline-flex items-center justify-center overflow-visible ${className}`}>
       {/* Background Text (Faded) */}
-      <div className={`opacity-20 relative z-0 whitespace-nowrap px-2 ${textColor}`}>
+      <div className={`opacity-50 relative z-0 whitespace-nowrap px-2 ${textColor}`}>
         {text}
       </div>
       
