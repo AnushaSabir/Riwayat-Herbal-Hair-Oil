@@ -33,7 +33,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col"
                     >
-                        <span className="text-2xl lg:text-3xl font-display font-medium text-herbal tracking-[0.4em] uppercase">RIWAYAT</span>
+                        <span className="text-2xl lg:text-3xl font-display font-medium text-white tracking-[0.4em] uppercase">RIWAYAT</span>
                         <span className="text-[9px] lg:text-[10px] font-elegant tracking-[0.5em] text-gold uppercase mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
                     </motion.div>
 
@@ -100,12 +100,12 @@ const Navbar = () => {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="md:hidden bg-background border-b border-black/5 overflow-hidden"
+                            className="md:hidden bg-white border-b border-black/5 overflow-hidden"
                         >
                             <div className="container mx-auto px-4 py-8 flex flex-col gap-6">
-                                <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-white text-center uppercase tracking-widest font-bold">Benefits</a>
-                                <a href="#ingredients" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-white text-center uppercase tracking-widest font-bold">Ingredients</a>
-                                <a href="#results" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-white text-center uppercase tracking-widest font-bold">Results</a>
+                                <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-herbal text-center uppercase tracking-widest font-bold">Benefits</a>
+                                <a href="#ingredients" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-herbal text-center uppercase tracking-widest font-bold">Ingredients</a>
+                                <a href="#results" onClick={() => setIsMobileMenuOpen(false)} className="text-lg font-elegant text-herbal text-center uppercase tracking-widest font-bold">Results</a>
                                 <div className="flex flex-col gap-4 pt-4 border-t border-black/5">
                                     <button
                                         onClick={() => {
@@ -122,7 +122,7 @@ const Navbar = () => {
                                             setIsMobileMenuOpen(false);
                                             setIsCartOpen(true);
                                         }}
-                                        className="flex items-center justify-center gap-2 px-6 py-4 border border-foreground/20 text-white rounded-full font-bold uppercase tracking-widest text-sm"
+                                        className="flex items-center justify-center gap-2 px-6 py-4 border border-foreground/20 text-herbal rounded-full border-herbal font-bold uppercase tracking-widest text-sm"
                                     >
                                         <ShoppingCart className="w-5 h-5" />
                                         Cart ({cartCount})
