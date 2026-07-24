@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Sparkles } from "lucide-react";
 
 interface AnimatedLogoProps {
   textColor?: string;
@@ -13,12 +14,12 @@ export default function AnimatedLogo({
   textColor = "text-foreground",
   text = "RIWAYAT",
 }: AnimatedLogoProps) {
-  const duration = 2.5; 
+  const duration = 3.5; // Slightly longer for a magical movie feel
   
   return (
     <div className={`relative inline-flex items-center justify-center overflow-visible ${className}`}>
-      {/* Background Text - Faintly visible before reveal */}
-      <div className={`relative z-0 whitespace-nowrap px-2 opacity-10 ${textColor}`}>
+      {/* Background Text - Invisible before reveal */}
+      <div className={`relative z-0 whitespace-nowrap px-2 opacity-0`}>
         {text}
       </div>
       
@@ -33,19 +34,19 @@ export default function AnimatedLogo({
         {text}
       </motion.div>
       
-      {/* Thick Diagonal Golden Shine Sweep */}
+      {/* Magical Golden Glowing Cloud */}
       <motion.div 
-        className="absolute z-20 pointer-events-none"
+        className="absolute z-20 pointer-events-none mix-blend-plus-lighter rounded-full"
         style={{ 
-          top: '-50%',
-          bottom: '-50%',
-          width: '140px',
-          background: 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 20%, rgba(255, 230, 150, 0.9) 50%, rgba(212, 175, 55, 0.2) 80%, transparent 100%)',
-          filter: 'blur(4px)',
-          mixBlendMode: 'plus-lighter'
+          top: '50%',
+          marginTop: '-60px',
+          height: '120px',
+          width: '120px',
+          background: 'radial-gradient(circle, rgba(255,230,150,0.9) 0%, rgba(212,175,55,0.6) 30%, transparent 70%)',
+          filter: 'blur(8px)',
         }}
-        initial={{ left: "-40%", skewX: -25, opacity: 0 }}
-        whileInView={{ left: "120%", skewX: -25, opacity: [0, 1, 1, 0] }}
+        initial={{ left: "-20%", opacity: 0, scale: 0.5 }}
+        whileInView={{ left: "100%", opacity: [0, 1, 1, 0], scale: [0.8, 1.2, 1.2, 0.8] }}
         viewport={{ once: true, margin: "0px" }}
         transition={{ 
           duration, 
@@ -53,6 +54,34 @@ export default function AnimatedLogo({
           opacity: { times: [0, 0.1, 0.9, 1], duration }
         }}
       />
+
+      {/* Floating Golden Sparkles */}
+      {[...Array(6)].map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute z-30 pointer-events-none text-gold"
+          initial={{ 
+            left: `${15 + i * 15}%`, 
+            top: `${10 + Math.random() * 80}%`, 
+            opacity: 0, 
+            scale: 0, 
+            rotate: 0 
+          }}
+          whileInView={{ 
+            opacity: [0, 1, 0], 
+            scale: [0, 1.5, 0], 
+            rotate: [0, 90, 180] 
+          }}
+          viewport={{ once: true, margin: "0px" }}
+          transition={{ 
+            duration: 1.2, 
+            delay: (i + 1) * (duration / 7) - 0.2, 
+            ease: "easeInOut" 
+          }}
+        >
+          <Sparkles size={14 + Math.random() * 10} fill="currentColor" />
+        </motion.div>
+      ))}
     </div>
   );
 }
