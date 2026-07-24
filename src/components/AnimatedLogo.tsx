@@ -54,9 +54,12 @@ export default function AnimatedLogo({
         <span
           className="pb-1"
           style={{
-            // Deep dark forest green color permanently
-            color: "#123B2A",
-            // No glowing drop-shadow on the text itself, keeping it clean
+            // Premium metallic gold gradient
+            backgroundImage: "linear-gradient(to bottom right, #B8860B 0%, #FFDF73 40%, #FFF8DC 50%, #D4AF37 60%, #996515 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            // Soft text glow
+            filter: "drop-shadow(0px 0px 8px rgba(255,215,0,0.3))",
           }}
         >
           {text}

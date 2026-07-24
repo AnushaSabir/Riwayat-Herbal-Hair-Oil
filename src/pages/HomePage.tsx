@@ -163,6 +163,13 @@ const HomePage = () => {
                   playsInline
                   className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10 pointer-events-none rounded-3xl"
                 />
+                {/* Satisfaction Guarantee Stamp — floating on top of video */}
+                <img
+                  src="/satisfaction-guarantee.png"
+                  alt="100% Satisfaction Guarantee"
+                  className="absolute bottom-2 right-0 w-24 md:w-28 z-20 drop-shadow-xl pointer-events-none"
+                  style={{ animation: "stampFloat 4s ease-in-out infinite" }}
+                />
                 <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-8 ${product.glowColor} blur-2xl rounded-full`} />
               </div>
 
