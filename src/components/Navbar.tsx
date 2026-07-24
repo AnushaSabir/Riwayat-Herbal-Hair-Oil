@@ -27,29 +27,29 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="fixed top-0 left-0 right-0 z-50 bg-herbal text-white backdrop-blur-md border-b border-herbal-light/10">
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 text-herbal backdrop-blur-md border-b border-black/5">
                 <div className="container mx-auto px-4 h-20 lg:h-24 flex items-center justify-between">
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         className="flex flex-col"
                     >
-                        <AnimatedLogo className="text-2xl lg:text-3xl font-display font-medium tracking-[0.4em] uppercase" textColor="text-gold" glowColor="text-gold" />
+                        <AnimatedLogo className="text-2xl lg:text-3xl font-display font-medium tracking-[0.4em] uppercase" textColor="text-herbal" glowColor="text-herbal drop-shadow-sm" />
                         <span className="text-[9px] lg:text-[10px] font-elegant tracking-[0.5em] text-gold uppercase mt-1 ml-0.5 opacity-80 font-bold">Herbal Wisdom</span>
                     </motion.div>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center gap-12">
                         <div className="flex items-center gap-10">
-                            <a href="#features" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-white/80 hover:text-gold transition-colors font-bold">Benefits</a>
-                            <a href="#ingredients" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-white/80 hover:text-gold transition-colors font-bold">Ingredients</a>
-                            <a href="#results" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-white/80 hover:text-gold transition-colors font-bold">Results</a>
+                            <a href="#features" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-herbal/80 hover:text-gold transition-colors font-bold">Benefits</a>
+                            <a href="#ingredients" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-herbal/80 hover:text-gold transition-colors font-bold">Ingredients</a>
+                            <a href="#results" className="text-[11px] uppercase tracking-[0.3em] font-elegant text-herbal/80 hover:text-gold transition-colors font-bold">Results</a>
                         </div>
 
                         <div className="flex items-center gap-6 ml-10 pl-10 border-l border-white/10">
                             <button
                                 onClick={() => setIsCartOpen(true)}
-                                className="relative p-2 text-white hover:text-gold transition-all group"
+                                className="relative p-2 text-herbal hover:text-gold transition-all group"
                             >
                                 <ShoppingCart className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 {cartCount > 0 && (
@@ -62,12 +62,12 @@ const Navbar = () => {
                             {user ? (
                                 <div className="flex items-center gap-5">
                                     <div className="flex flex-col items-end">
-                                        <span className="text-[10px] uppercase tracking-widest text-white/60 font-bold">Welcome</span>
-                                        <span className="text-xs font-elegant text-white font-bold italic">{user.email?.split('@')[0]}</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-herbal/60 font-bold">Welcome</span>
+                                        <span className="text-xs font-elegant text-herbal font-bold italic">{user.email?.split('@')[0]}</span>
                                     </div>
                                     <button
                                         onClick={handleSignOut}
-                                        className="p-2 text-white/60 hover:text-brand-red transition-colors"
+                                        className="p-2 text-herbal/60 hover:text-brand-red transition-colors"
                                         title="Sign Out"
                                     >
                                         <LogOut className="w-4 h-4" />
@@ -87,7 +87,7 @@ const Navbar = () => {
 
                     {/* Mobile Toggle */}
                     <button
-                        className="md:hidden text-white"
+                        className="md:hidden text-herbal"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                     >
                         {isMobileMenuOpen ? <X /> : <Menu />}

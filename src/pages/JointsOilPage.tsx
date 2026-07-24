@@ -103,7 +103,7 @@ const JointsOilPage = () => {
             </button>
             <div className="w-px h-6 bg-foreground/20" />
             <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-              <AnimatedLogo className="text-xl font-display font-bold tracking-[0.3em] uppercase" textColor="text-black" glowColor="text-black drop-shadow-sm" />
+              <AnimatedLogo className="text-xl font-display font-bold tracking-[0.3em] uppercase" textColor="text-herbal" glowColor="text-herbal drop-shadow-sm" />
               <span className="text-[9px] text-foreground/80 tracking-[0.4em] uppercase font-serif">Joint Care</span>
             </div>
           </div>

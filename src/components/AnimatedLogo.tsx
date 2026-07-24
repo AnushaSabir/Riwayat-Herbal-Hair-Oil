@@ -27,7 +27,7 @@ export default function AnimatedLogo({
         className={`absolute top-0 left-0 whitespace-nowrap h-full flex items-center px-2 z-10 ${glowColor}`}
         initial={{ clipPath: "inset(0 100% 0 0)" }}
         whileInView={{ clipPath: "inset(0 -10% 0 0)" }}
-        viewport={{ once: true, margin: "-20px" }}
+        viewport={{ once: true, margin: "0px" }}
         transition={{ duration, ease: "easeInOut" }}
       >
         {text}
@@ -45,7 +45,7 @@ export default function AnimatedLogo({
         }}
         initial={{ left: "0%", y: "-50%", opacity: 0 }}
         whileInView={{ left: "100%", y: "-50%", opacity: [0, 1, 1, 0] }}
-        viewport={{ once: true, margin: "-20px" }}
+        viewport={{ once: true, margin: "0px" }}
         transition={{ 
           duration, 
           ease: "easeInOut", 
