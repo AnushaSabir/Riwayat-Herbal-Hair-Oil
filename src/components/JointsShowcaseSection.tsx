@@ -31,17 +31,19 @@ const JointsShowcaseSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto flex flex-col items-center">
 
-                    <div className="relative w-full rounded-[40px] md:rounded-[60px] overflow-hidden border border-black/40 shadow-2xl bg-black/5 backdrop-blur-md group flex items-center justify-center min-h-[400px] md:min-h-[600px]">
-                        <AnimatePresence mode="wait">
-                            <motion.img
-                                key={index}
-                                src={images[index].src}
-                                initial={{ opacity: 0, scale: 0.98 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                exit={{ opacity: 0, scale: 1.02 }}
-                                transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-                                className="w-full h-auto max-h-[80vh] object-contain"
-                            />
+                    <div className="relative w-full group">
+                        <div className="absolute inset-0 bg-gold/5 blur-[100px] rounded-full -z-10" />
+                        <div className="relative overflow-hidden rounded-[80px] border border-black/40 shadow-2xl p-4 bg-black/10 backdrop-blur-sm flex items-center justify-center min-h-[400px] md:min-h-[600px]">
+                            <AnimatePresence mode="wait">
+                                <motion.img
+                                    key={index}
+                                    src={images[index].src}
+                                    initial={{ opacity: 0, scale: 0.98 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    exit={{ opacity: 0, scale: 1.02 }}
+                                    transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+                                    className="w-full h-auto max-h-[75vh] rounded-[64px] object-contain"
+                                />
                         </AnimatePresence>
 
                         {/* Navigation Arrows */}
@@ -70,6 +72,7 @@ const JointsShowcaseSection = () => {
                                 />
                             ))}
                         </div>
+                    </div>
                     </div>
 
                     <div className="mt-12 text-center h-24">
