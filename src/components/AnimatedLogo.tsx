@@ -59,7 +59,12 @@ export default function AnimatedLogo({
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute z-30 pointer-events-none text-gold"
+          className="absolute z-30 pointer-events-none"
+          style={{ 
+            color: '#FFD700', // Bright solid gold
+            filter: 'drop-shadow(0 0 6px rgba(255, 215, 0, 1))',
+            mixBlendMode: 'screen' 
+          }}
           initial={{ 
             left: `${15 + i * 15}%`, 
             top: `${10 + Math.random() * 80}%`, 
@@ -69,7 +74,7 @@ export default function AnimatedLogo({
           }}
           whileInView={{ 
             opacity: [0, 1, 0], 
-            scale: [0, 1.5, 0], 
+            scale: [0, 1.2, 0], 
             rotate: [0, 90, 180] 
           }}
           viewport={{ once: true, margin: "0px" }}
@@ -79,7 +84,7 @@ export default function AnimatedLogo({
             ease: "easeInOut" 
           }}
         >
-          <Sparkles size={14 + Math.random() * 10} fill="currentColor" />
+          <Sparkles size={8 + Math.random() * 6} fill="currentColor" />
         </motion.div>
       ))}
     </div>
