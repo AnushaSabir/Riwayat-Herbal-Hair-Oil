@@ -1,4 +1,6 @@
-import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { Sparkles } from "lucide-react";
 
 interface AnimatedLogoProps {
   textColor?: string;
@@ -7,25 +9,14 @@ interface AnimatedLogoProps {
   text?: string;
 }
 
-const starPositions = [
-  { top: "-18px", left: "8%",   size: "11px", delay: "0.1s" },
-  { top: "-22px", left: "22%",  size: "8px",  delay: "0.3s" },
-  { top: "-14px", left: "38%",  size: "13px", delay: "0.5s" },
-  { top: "-20px", left: "55%",  size: "9px",  delay: "0.2s" },
-  { top: "-16px", left: "72%",  size: "11px", delay: "0.4s" },
-  { top: "-18px", left: "88%",  size: "8px",  delay: "0.15s" },
-  { top: "calc(100% + 6px)",  left: "12%",  size: "9px",  delay: "0.35s" },
-  { top: "calc(100% + 4px)",  left: "32%",  size: "12px", delay: "0.55s" },
-  { top: "calc(100% + 8px)",  left: "60%",  size: "8px",  delay: "0.25s" },
-  { top: "calc(100% + 5px)",  left: "80%",  size: "10px", delay: "0.45s" },
-];
-
 export default function AnimatedLogo({
   className = "text-2xl font-display font-medium tracking-[0.4em] uppercase",
   glowColor = "text-gold",
+  textColor = "text-foreground", // Unused because the base is fully invisible now, as requested.
   text = "RIWAYAT",
 }: AnimatedLogoProps) {
   const wrapRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(false);
 
   useEffect(() => {
     const el = wrapRef.current;
@@ -34,7 +25,7 @@ export default function AnimatedLogo({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          el.classList.add("logo-in-view");
+          setInView(true);
           observer.disconnect();
         }
       },
@@ -44,32 +35,82 @@ export default function AnimatedLogo({
     return () => observer.disconnect();
   }, []);
 
+  const duration = 2.5;
+
   return (
     <div
       ref={wrapRef}
-      className={`logo-wrapper relative inline-flex items-center justify-center ${className}`}
-      style={{ overflow: "visible" }}
+      className={`relative inline-flex items-center justify-center overflow-visible ${className}`}
     >
-      {/* RIWAYAT text */}
-      <span className={`logo-text relative z-10 whitespace-nowrap px-2 ${glowColor}`}>
-        {text}
-      </span>
+      {/* Invisible placeholder to keep the layout size correct */}
+      <div className="invisible px-2 whitespace-nowrap">{text}</div>
 
-      {/* Stars positioned outside the text */}
-      {starPositions.map((s, i) => (
-        <span
-          key={i}
-          className="logo-star"
+      {/* The Text that gets magically revealed from left to right */}
+      <motion.div
+        className={`absolute inset-0 flex items-center justify-center px-2 whitespace-nowrap z-10 ${glowColor}`}
+        initial={{ clipPath: "inset(0 100% 0 0)" }}
+        animate={inView ? { clipPath: "inset(0 -10% 0 0)" } : {}}
+        transition={{ duration, ease: "linear" }}
+      >
+        {text}
+      </motion.div>
+
+      {/* The Magic Golden Shine & Sparkles that sweeps across */}
+      <motion.div
+        className="absolute top-1/2 -translate-y-1/2 z-20 pointer-events-none flex items-center justify-center"
+        style={{
+          height: "2em", // Scales perfectly with text size (text-2xl vs text-8xl)
+          width: "1.5em",
+        }}
+        initial={{ left: "-10%", opacity: 0 }}
+        animate={inView ? { left: "110%", opacity: [0, 1, 1, 0] } : {}}
+        transition={{
+          left: { duration, ease: "linear" },
+          opacity: { duration, times: [0, 0.1, 0.9, 1], ease: "linear" },
+        }}
+      >
+        {/* The Golden Glow Cloud */}
+        <div
+          className="absolute inset-0 rounded-full"
           style={{
-            top: s.top,
-            left: s.left,
-            fontSize: s.size,
-            animationDelay: s.delay,
+            background:
+              "radial-gradient(circle, rgba(255,215,0,0.8) 0%, rgba(255,215,0,0.4) 40%, transparent 70%)",
+            filter: "blur(4px)",
+            mixBlendMode: "screen",
           }}
-        >
-          ✦
-        </span>
-      ))}
+        />
+
+        {/* The Little Stars sparkling inside the glow */}
+        {[...Array(5)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute text-[#FFD700]"
+            style={{
+              top: `${10 + Math.random() * 80}%`,
+              left: `${10 + Math.random() * 80}%`,
+              filter: "drop-shadow(0 0 2px rgba(255,215,0,1))",
+            }}
+            animate={
+              inView
+                ? {
+                    scale: [0, 1.5, 0],
+                    opacity: [0, 1, 0],
+                    rotate: [0, 90, 180],
+                  }
+                : {}
+            }
+            transition={{
+              duration: 0.6 + Math.random() * 0.4,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
+              delay: Math.random() * 0.5,
+            }}
+          >
+            <Sparkles size={8 + Math.random() * 8} fill="currentColor" />
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 }
