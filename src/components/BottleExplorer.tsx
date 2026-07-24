@@ -91,6 +91,16 @@ const BottleExplorer = () => {
                                 <span className="text-[10px] font-elegant tracking-widest uppercase text-foreground/60">99% Glass Eco-Bottle</span>
                                 <div className="w-4 h-4 rounded-full bg-gold animate-ping" />
                             </motion.div>
+
+                            {/* 100% Satisfaction Guarantee Stamp */}
+                            <motion.img 
+                                src="/satisfaction-guarantee.png" 
+                                alt="100% Satisfaction Guarantee"
+                                className="absolute -bottom-10 -right-10 md:-right-20 w-32 md:w-40 drop-shadow-2xl z-20"
+                                style={{ translateZ: 200 }}
+                                animate={{ rotate: [0, 5, 0, -5, 0], scale: [1, 1.05, 1] }}
+                                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                            />
                         </motion.div>
                     </div>
                 </div>
