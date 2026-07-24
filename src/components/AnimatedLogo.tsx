@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import defaultBottleImage from "@/assets/riwayat-bottle.png";
+import jerryImage from "@/assets/jerry-running.png";
 
 interface AnimatedLogoProps {
   textColor?: string;
-  className?: string; // For base text sizing and colors
-  glowColor?: string; // For the revealed text color
-  text?: string; // The text to reveal, defaults to RIWAYAT
-  bottleSrc?: string; // Custom bottle image
+  className?: string;
+  glowColor?: string;
+  text?: string;
 }
 
 export default function AnimatedLogo({ 
@@ -14,18 +13,17 @@ export default function AnimatedLogo({
   glowColor = "text-gold drop-shadow-md",
   textColor = "text-foreground",
   text = "RIWAYAT",
-  bottleSrc = defaultBottleImage
 }: AnimatedLogoProps) {
-  const duration = 2.5; 
+  const duration = 2.2; 
   
   return (
     <div className={`relative inline-flex items-center justify-center overflow-visible ${className}`}>
-      {/* Background Text (Faded) */}
-      <div className={`opacity-50 relative z-0 whitespace-nowrap px-2 ${textColor}`}>
+      {/* Background Text - fully hidden, waiting to be revealed */}
+      <div className={`relative z-0 whitespace-nowrap px-2 ${textColor} opacity-0`}>
         {text}
       </div>
       
-      {/* Highlight Text (Revealed by clip-path) */}
+      {/* Revealed Text - Jerry uncovers it left to right */}
       <motion.div 
         className={`absolute top-0 left-0 whitespace-nowrap h-full flex items-center px-2 z-10 ${glowColor}`}
         initial={{ clipPath: "inset(0 100% 0 0)" }}
@@ -35,35 +33,44 @@ export default function AnimatedLogo({
       >
         {text}
       </motion.div>
-      
-      {/* Golden Shine tracking the bottle */}
+
+      {/* Golden sparkle glow that Jerry leaves behind */}
       <motion.div 
-        className="absolute top-1/2 z-15 pointer-events-none bg-gold blur-[10px] rounded-full mix-blend-normal"
-        style={{ height: '2em', width: '1.5em' }}
+        className="absolute top-1/2 z-20 pointer-events-none"
+        style={{ 
+          height: '1.8em', 
+          width: '2em',
+          background: 'radial-gradient(circle, rgba(212,175,55,0.7) 0%, rgba(212,175,55,0.2) 60%, transparent 100%)',
+          borderRadius: '50%',
+          filter: 'blur(6px)',
+        }}
         initial={{ left: "0%", x: "-50%", y: "-50%", opacity: 0 }}
-        whileInView={{ left: "100%", x: "-50%", y: "-50%", opacity: [0, 0.6, 0.6, 0] }}
+        whileInView={{ left: "100%", x: "-50%", y: "-50%", opacity: [0, 0.8, 0.8, 0] }}
         viewport={{ once: true, margin: "-20px" }}
         transition={{ 
           duration, 
           ease: "easeInOut", 
-          opacity: { times: [0, 0.1, 0.9, 1], duration }
+          opacity: { times: [0, 0.05, 0.9, 1], duration }
         }}
       />
       
-      {/* Bottle gliding across */}
+      {/* Jerry running across */}
       <motion.img 
-        src={bottleSrc} 
+        src={jerryImage} 
         alt=""
-        className="absolute top-1/2 z-20 pointer-events-none drop-shadow-2xl mix-blend-normal"
-        style={{ height: '2.5em', width: 'auto' }}
-        initial={{ left: "0%", x: "-50%", y: "-50%", opacity: 0, rotate: -15 }}
-        whileInView={{ left: "100%", x: "-50%", y: "-50%", opacity: [0, 1, 1, 0], rotate: 0 }}
+        className="absolute top-1/2 z-30 pointer-events-none drop-shadow-xl"
+        style={{ 
+          height: '3em', 
+          width: 'auto',
+          // Bounce animation using scaleY to simulate running legs
+        }}
+        initial={{ left: "-5%", x: "-50%", y: "-60%", opacity: 0 }}
+        whileInView={{ left: "108%", x: "-50%", y: "-60%", opacity: [0, 1, 1, 0] }}
         viewport={{ once: true, margin: "-20px" }}
         transition={{ 
           duration, 
-          ease: "easeInOut", 
-          opacity: { times: [0, 0.1, 0.95, 1], duration }, 
-          rotate: { duration, ease: "easeOut" } 
+          ease: "linear",
+          opacity: { times: [0, 0.05, 0.95, 1], duration },
         }}
       />
     </div>
