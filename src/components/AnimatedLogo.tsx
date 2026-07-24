@@ -69,47 +69,45 @@ export default function AnimatedLogo({
           opacity: { duration, times: [0, 0.1, 0.9, 1], ease: "linear" },
         }}
       >
-        {/* The Golden Glow Cloud */}
-        <div
-          className="absolute inset-0 rounded-full"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(255,215,0,0.8) 0%, rgba(255,215,0,0.4) 40%, transparent 70%)",
-            filter: "blur(4px)",
-            mixBlendMode: "screen",
-          }}
-        />
-
-        {/* The Little Stars sparkling inside the glow */}
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-[#FFD700]"
-            style={{
-              top: `${10 + Math.random() * 80}%`,
-              left: `${10 + Math.random() * 80}%`,
-              filter: "drop-shadow(0 0 2px rgba(255,215,0,1))",
-            }}
-            animate={
-              inView
-                ? {
-                    scale: [0, 1.5, 0],
-                    opacity: [0, 1, 0],
-                    rotate: [0, 90, 180],
-                  }
-                : {}
-            }
-            transition={{
-              duration: 0.6 + Math.random() * 0.4,
-              repeat: Infinity,
-              repeatType: "loop",
-              ease: "easeInOut",
-              delay: Math.random() * 0.5,
-            }}
-          >
-            <Sparkles size={8 + Math.random() * 8} fill="currentColor" />
-          </motion.div>
-        ))}
+        {/* The Magic Sparkle Cluster (replaces the yellow blob) */}
+        {[...Array(12)].map((_, i) => {
+          // Mix of gold and white sparkles
+          const isWhite = i % 3 === 0;
+          const color = isWhite ? "#FFFFFF" : "#FFD700";
+          const glow = isWhite ? "rgba(255,255,255,0.8)" : "rgba(255,215,0,0.8)";
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute pointer-events-none"
+              style={{
+                top: `${-10 + Math.random() * 120}%`, // Spread vertically
+                left: `${-20 + Math.random() * 140}%`, // Spread horizontally
+                color: color,
+                filter: `drop-shadow(0 0 3px ${glow}) drop-shadow(0 0 6px ${glow})`,
+                zIndex: 30,
+              }}
+              animate={
+                inView
+                  ? {
+                      scale: [0, 1.2 + Math.random(), 0],
+                      opacity: [0, 1, 0],
+                      rotate: [0, 90, 180],
+                    }
+                  : {}
+              }
+              transition={{
+                duration: 0.4 + Math.random() * 0.4,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut",
+                delay: Math.random() * 0.3,
+              }}
+            >
+              <Sparkles size={8 + Math.random() * 10} fill="currentColor" strokeWidth={1.5} />
+            </motion.div>
+          );
+        })}
       </motion.div>
     </div>
   );
