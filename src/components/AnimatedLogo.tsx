@@ -17,8 +17,8 @@ export default function AnimatedLogo({
   
   return (
     <div className={`relative inline-flex items-center justify-center overflow-visible ${className}`}>
-      {/* Background Text - Invisible before reveal */}
-      <div className={`relative z-0 whitespace-nowrap px-2 opacity-0`}>
+      {/* Background Text - Faintly visible before reveal */}
+      <div className={`relative z-0 whitespace-nowrap px-2 opacity-10 ${textColor}`}>
         {text}
       </div>
       
@@ -33,18 +33,19 @@ export default function AnimatedLogo({
         {text}
       </motion.div>
       
-      {/* Golden Shine Line that moves with the reveal */}
+      {/* Thick Diagonal Golden Shine Sweep */}
       <motion.div 
-        className="absolute top-1/2 z-20 pointer-events-none"
+        className="absolute z-20 pointer-events-none"
         style={{ 
-          height: '140%', 
-          width: '6px',
-          background: 'linear-gradient(to bottom, transparent, rgba(212,175,55,1), transparent)',
-          boxShadow: '0 0 15px 5px rgba(212,175,55,0.6)',
-          borderRadius: '3px'
+          top: '-50%',
+          bottom: '-50%',
+          width: '140px',
+          background: 'linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.2) 20%, rgba(255, 230, 150, 0.9) 50%, rgba(212, 175, 55, 0.2) 80%, transparent 100%)',
+          filter: 'blur(4px)',
+          mixBlendMode: 'plus-lighter'
         }}
-        initial={{ left: "0%", y: "-50%", opacity: 0 }}
-        whileInView={{ left: "100%", y: "-50%", opacity: [0, 1, 1, 0] }}
+        initial={{ left: "-40%", skewX: -25, opacity: 0 }}
+        whileInView={{ left: "120%", skewX: -25, opacity: [0, 1, 1, 0] }}
         viewport={{ once: true, margin: "0px" }}
         transition={{ 
           duration, 
