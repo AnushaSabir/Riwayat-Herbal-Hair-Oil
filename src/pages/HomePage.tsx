@@ -59,7 +59,7 @@ const HomePage = () => {
       {/* Simple top nav */}
       <nav className="relative z-50 flex items-center justify-between px-6 py-5 max-w-7xl mx-auto">
         <div className="flex flex-col cursor-pointer" onClick={() => navigate("/")}>
-          <AnimatedLogo className="text-2xl md:text-3xl font-display font-bold tracking-[0.25em] uppercase" textColor="text-gold" glowColor="text-gold drop-shadow-sm" />
+          <AnimatedLogo className="text-2xl md:text-3xl font-display font-bold tracking-[0.25em] uppercase" textColor="text-herbal" glowColor="text-herbal drop-shadow-sm" />
           <span className="text-[10px] text-gold tracking-[0.3em] uppercase font-serif">Herbal Wisdom</span>
         </div>
         <div className="flex items-center gap-6 text-sm text-foreground/60 font-display uppercase tracking-widest">
