@@ -1,5 +1,4 @@
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 
 interface AnimatedLogoProps {
   textColor?: string;
@@ -14,35 +13,43 @@ export default function AnimatedLogo({
   textColor = "text-foreground",
   text = "RIWAYAT",
 }: AnimatedLogoProps) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-20px" });
-
+  const duration = 2.5; 
+  
   return (
-    <div ref={ref} className={`relative inline-flex items-center justify-center overflow-hidden ${className}`}>
+    <div className={`relative inline-flex items-center justify-center overflow-visible ${className}`}>
+      {/* Background Text - Invisible before reveal */}
+      <div className={`relative z-0 whitespace-nowrap px-2 opacity-0`}>
+        {text}
+      </div>
       
-      {/* The solid RIWAYAT text — always visible */}
-      <motion.div
-        className={`relative z-10 whitespace-nowrap px-2 ${glowColor}`}
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+      {/* Revealed Text - Uncovered left to right */}
+      <motion.div 
+        className={`absolute top-0 left-0 whitespace-nowrap h-full flex items-center px-2 z-10 ${glowColor}`}
+        initial={{ clipPath: "inset(0 100% 0 0)" }}
+        whileInView={{ clipPath: "inset(0 -10% 0 0)" }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ duration, ease: "easeInOut" }}
       >
         {text}
       </motion.div>
-
-      {/* Golden shine that sweeps across RIWAYAT */}
-      <motion.div
-        className="absolute inset-0 z-20 pointer-events-none"
-        style={{
-          background: "linear-gradient(105deg, transparent 20%, rgba(255,223,100,0.15) 38%, rgba(255,235,150,0.9) 50%, rgba(255,223,100,0.15) 62%, transparent 80%)",
-          filter: "blur(1px)",
+      
+      {/* Golden Shine Line that moves with the reveal */}
+      <motion.div 
+        className="absolute top-1/2 z-20 pointer-events-none"
+        style={{ 
+          height: '140%', 
+          width: '6px',
+          background: 'linear-gradient(to bottom, transparent, rgba(212,175,55,1), transparent)',
+          boxShadow: '0 0 15px 5px rgba(212,175,55,0.6)',
+          borderRadius: '3px'
         }}
-        initial={{ x: "-120%" }}
-        animate={isInView ? { x: "120%" } : { x: "-120%" }}
-        transition={{
-          duration: 1.0,
-          delay: 0.35,
-          ease: "easeInOut",
+        initial={{ left: "0%", y: "-50%", opacity: 0 }}
+        whileInView={{ left: "100%", y: "-50%", opacity: [0, 1, 1, 0] }}
+        viewport={{ once: true, margin: "-20px" }}
+        transition={{ 
+          duration, 
+          ease: "easeInOut", 
+          opacity: { times: [0, 0.1, 0.9, 1], duration }
         }}
       />
     </div>
