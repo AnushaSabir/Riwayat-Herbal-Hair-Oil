@@ -349,3 +349,13 @@ html {
 .theme-joints .animated-border::after {
   background: #133937;
 }
+/* ===== RIWAYAT Logo Metallic Shimmer ===== */
+@keyframes logoShimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -50% center; }
+}
+
+.shimmer-text {
+  background-size: 250% auto;
+  animation: logoShimmer 2.2s ease-in-out 0.2s 1 forwards;
+}
