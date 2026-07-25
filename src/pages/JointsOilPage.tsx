@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, ShoppingCart, Volume2, VolumeX, Leaf, Shield, Zap, Star, ChevronRight, Heart, Activity, Wind } from "lucide-react";
+import { ArrowLeft, ShoppingCart, Volume2, VolumeX, Leaf, Shield, Zap, Star, ChevronRight, Heart, Activity, Wind, Flame, Droplets, TreePine, Flower2, CircleDot, Sun } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
 import AnimatedLogo from "../components/AnimatedLogo";
 import { useCartStore } from "@/lib/cartStore";
@@ -12,14 +12,21 @@ import JointsShowcaseSection from "@/components/JointsShowcaseSection";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
-  { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
-  { name: "Kalonji", benefit: "Powerful pain relief & anti-inflammatory", icon: <Shield className="w-10 h-10 text-herbal-light" /> },
-  { name: "Eucalyptus", benefit: "Deep cooling & instant pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
-  { name: "Rosemary", benefit: "Improves blood circulation in joints", icon: <Leaf className="w-10 h-10 text-herbal-light" /> },
-  { name: "Ajwain", benefit: "Relieves stiffness & muscle cramps", icon: <Activity className="w-10 h-10 text-herbal-light" /> },
-  { name: "Himalayan Salt", benefit: "Natural detox & mineral support", icon: <Star className="w-10 h-10 text-herbal-light" /> },
-  { name: "Camphor (Kapur)", benefit: "Anti-spasm & deep pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
-  { name: "Til Oil (Sesame)", benefit: "Base carrier oil, deeply nourishing", icon: <Heart className="w-10 h-10 text-herbal-light" /> },
+  { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints with natural heat therapy", icon: <Flame className="w-10 h-10 text-herbal-light" /> },
+  { name: "Kalonji (Black Seed)", benefit: "Thymoquinone provides powerful anti-inflammatory pain relief", icon: <Shield className="w-10 h-10 text-herbal-light" /> },
+  { name: "Eucalyptus", benefit: "Deep cooling sensation gives instant, lasting pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
+  { name: "Rosemary", benefit: "Boosts blood circulation, reducing stiffness in joints", icon: <Leaf className="w-10 h-10 text-herbal-light" /> },
+  { name: "Ajwain (Carom)", benefit: "Relieves muscular stiffness, cramps & nerve pain", icon: <Activity className="w-10 h-10 text-herbal-light" /> },
+  { name: "Himalayan Salt", benefit: "Natural mineral detox that draws out toxins from tissues", icon: <Star className="w-10 h-10 text-herbal-light" /> },
+  { name: "Camphor (Kapur)", benefit: "Powerful anti-spasmodic for deep muscle & joint pain", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
+  { name: "Til Oil (Sesame)", benefit: "Deeply penetrating base oil that nourishes joint tissue", icon: <Heart className="w-10 h-10 text-herbal-light" /> },
+  { name: "Mustard Oil (Sarson)", benefit: "Stimulates circulation & produces warming analgesic effect", icon: <Droplets className="w-10 h-10 text-herbal-light" /> },
+  { name: "Neem", benefit: "Anti-arthritic properties reduce chronic joint inflammation", icon: <TreePine className="w-10 h-10 text-herbal-light" /> },
+  { name: "Ashwagandha", benefit: "Adaptogenic root repairs cartilage & builds joint resilience", icon: <Sun className="w-10 h-10 text-herbal-light" /> },
+  { name: "Methi Dana (Fenugreek)", benefit: "Diosgenin reduces swelling & morning joint stiffness", icon: <CircleDot className="w-10 h-10 text-herbal-light" /> },
+  { name: "Haldi (Turmeric)", benefit: "Curcumin is nature's most potent anti-inflammatory compound", icon: <Flower2 className="w-10 h-10 text-herbal-light" /> },
+  { name: "Lavender Oil", benefit: "Calms nerve pain & provides soothing aromatherapy relief", icon: <ChevronRight className="w-10 h-10 text-herbal-light" /> },
+  { name: "Peppermint Oil", benefit: "Menthol creates cooling numbing effect for acute joint pain", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
 ];
 
 // ─── Benefits ──────────────────────────────────────────────────────────────
@@ -364,11 +371,11 @@ const JointsOilPage = () => {
           >
             <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Nature's Power</span>
             <h2 className="text-4xl md:text-5xl font-display text-herbal">
-              8 Herbal <span className="text-herbal">Ingredients</span>
+              15 Herbal <span className="text-gold italic">Ingredients</span>
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 max-w-7xl mx-auto">
             {ingredients.map((ing, i) => (
               <motion.div
                 key={ing.name}
