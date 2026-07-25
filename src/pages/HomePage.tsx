@@ -245,7 +245,7 @@ const HomePage = () => {
         
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { icon: <Leaf className="w-6 h-6" />, title: "Pure Ingredients", desc: "Sourced directly from nature, completely free from harsh chemicals, parabens, and artificial preservatives." },
+            { icon: <Leaf className="w-6 h-6" />, title: "Pure Organic Ingredients", desc: "Sourced directly from nature, completely free from harsh chemicals, parabens, and artificial preservatives." },
             { icon: <Star className="w-6 h-6" />, title: "Proven Results", desc: "Trusted by thousands of satisfied customers for genuine, visible results that speak for themselves." },
             { icon: <Heart className="w-6 h-6" />, title: "Heritage Formula", desc: "Crafted using age-old traditional methods passed down through generations, blended with modern precision." }
           ].map((feature, i) => (
