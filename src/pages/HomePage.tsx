@@ -112,10 +112,10 @@ const HomePage = () => {
         >
           {[
             { icon: <Leaf className="w-4 h-4 text-green-900" />, text: "100% Herbal" },
-            { icon: <Shield className="w-4 h-4 text-blue-100" />, text: "Lab Tested" },
-            { icon: <Sparkles className="w-4 h-4 text-yellow-200" />, text: "No Chemicals" },
+            { icon: <Shield className="w-4 h-4 text-blue-400" />, text: "Lab Tested" },
+            { icon: <Sparkles className="w-4 h-4 text-yellow-500" />, text: "No Chemicals" },
           ].map((b) => (
-            <span key={b.text} className="flex items-center gap-1.5 text-xs font-semibold text-white bg-[#25D366] shadow-md border border-white/20 px-4 py-2 rounded-full">
+            <span key={b.text} className="flex items-center gap-1.5 text-xs font-semibold text-[#25D366] border border-black/10 bg-black/5 px-3 py-1.5 rounded-full backdrop-blur-sm">
               {b.icon} <span>{b.text}</span>
             </span>
           ))}
