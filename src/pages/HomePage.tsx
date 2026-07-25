@@ -197,7 +197,7 @@ const HomePage = () => {
                 {/* Ingredient tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {product.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] text-foreground/50 border border-black/10 px-2.5 py-1 rounded-full bg-black/5">
+                    <span key={tag} className="text-[10px] font-semibold text-[#25D366] border border-black/10 px-2.5 py-1 rounded-full bg-black/5 backdrop-blur-sm">
                       {tag}
                     </span>
                   ))}
