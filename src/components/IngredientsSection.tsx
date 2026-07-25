@@ -75,8 +75,8 @@ const ingredients = [
     icon: <Heart className="w-10 h-10 text-gold" />,
   },
   {
-    name: "Henna (Mehndi)",
-    benefit: "Naturally conditions, imparts shine & creates a protective coating on each strand",
+    name: "Argan Oil (Liquid Gold)",
+    benefit: "Rich in antioxidants & vitamin E, deeply moisturizes, tames frizz & adds incredible shine",
     icon: <FlaskConical className="w-10 h-10 text-gold" />,
   },
   {
