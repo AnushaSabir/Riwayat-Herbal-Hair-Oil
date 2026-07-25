@@ -12,7 +12,9 @@ const products = [
     route: "/hair-oil",
     name: "Herbal Hair Oil",
     tagline: "Root se Growth tak",
-    description: "Premium herbal formula with 8 powerful ingredients for stronger, thicker, silky hair.",
+    subTagline: "21 Organic Herbs",
+    subTaglineColor: "text-red-500",
+    description: "Premium herbal formula with 21 powerful ingredients for stronger, thicker, silky hair.",
     bottle: hairOilBottle,
     video: "/videos/hair-hero.mp4",
     color: "from-herbal/20 to-gold/10",
@@ -178,6 +180,11 @@ const HomePage = () => {
                 <p className={`text-xs tracking-[0.3em] uppercase font-serif mb-1 ${product.accentColor}`}>
                   {product.tagline}
                 </p>
+                {product.subTagline && (
+                  <p className={`text-xs tracking-[0.2em] uppercase font-serif mb-2 font-bold ${product.subTaglineColor}`}>
+                    {product.subTagline}
+                  </p>
+                )}
                 <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2">
                   {product.name}
                 </h2>
