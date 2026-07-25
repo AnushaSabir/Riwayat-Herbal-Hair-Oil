@@ -4,10 +4,10 @@ import bottleImage from "@/assets/riwayat-bottle.png";
 import {
   Leaf, Droplets, Sparkles, Shield, Zap, Heart,
   Sun, FlaskConical, TreePine, Wind, Flame, Star,
-  Flower2, CircleDot, Waves
+  Flower2, CircleDot, Waves, Sprout, Activity
 } from "lucide-react";
 
-// ─── 15 Hair Oil Ingredients ───────────────────────────────────────────────
+// ─── 21 Hair Oil Ingredients ───────────────────────────────────────────────
 const ingredients = [
   {
     name: "Amla (Indian Gooseberry)",
@@ -84,6 +84,36 @@ const ingredients = [
     benefit: "Rich in antioxidants & minerals that protect hair from UV damage & environmental stress",
     icon: <Wind className="w-10 h-10 text-gold" />,
   },
+  {
+    name: "Gudhal Ka Phool (Hibiscus)",
+    benefit: "Rich in amino acids, it stimulates hair growth, prevents baldness, and treats dandruff",
+    icon: <Flower2 className="w-10 h-10 text-gold" />,
+  },
+  {
+    name: "Kari Patta (Curry Leaves)",
+    benefit: "Loaded with beta-carotene and proteins to reduce hair loss and increase hair growth",
+    icon: <Leaf className="w-10 h-10 text-gold" />,
+  },
+  {
+    name: "Baal Jhar (Jatamansi)",
+    benefit: "Promotes hair growth, darkens hair naturally, and prevents premature greying",
+    icon: <Sprout className="w-10 h-10 text-gold" />,
+  },
+  {
+    name: "Rosemary",
+    benefit: "Improves cellular generation, increasing hair thickness and stimulating hair growth",
+    icon: <TreePine className="w-10 h-10 text-gold" />,
+  },
+  {
+    name: "Ginseng",
+    benefit: "Increases dermal cells on the scalp, strengthening follicles and roots",
+    icon: <Activity className="w-10 h-10 text-gold" />,
+  },
+  {
+    name: "Vitamin E Oil",
+    benefit: "A potent antioxidant that supports a healthy scalp and hair, maintaining growth",
+    icon: <Droplets className="w-10 h-10 text-gold" />,
+  },
 ];
 
 const IngredientsSection = () => {
@@ -114,7 +144,7 @@ const IngredientsSection = () => {
             Nature's <span className="italic">Finest</span> Elements
           </h2>
           <p className="text-foreground/50 font-elegant text-base md:text-lg mt-4 max-w-xl mx-auto">
-            15 rare herbs & oils — each chosen for one reason: your hair's transformation.
+            21 rare herbs & oils — each chosen for one reason: your hair's transformation.
           </p>
           <div className="w-24 h-[1px] bg-gold/30 mx-auto mt-8" />
         </motion.div>
@@ -136,7 +166,7 @@ const IngredientsSection = () => {
           />
         </motion.div>
 
-        {/* ── 15 Ingredient Cards (same style as JointsOilPage) ── */}
+        {/* ── 21 Ingredient Cards (same style as JointsOilPage) ── */}
         <div ref={gridRef} className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -145,7 +175,7 @@ const IngredientsSection = () => {
             className="text-center mb-12"
           >
             <h3 className="text-2xl md:text-3xl font-display text-herbal">
-              15 Herbal <span className="text-gold italic">Ingredients</span>
+              21 Herbal <span className="text-gold italic">Ingredients</span>
             </h3>
           </motion.div>
 
