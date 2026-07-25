@@ -54,12 +54,12 @@ export default function AnimatedLogo({
         <span
           className="pb-1"
           style={{
-            // Premium metallic gold gradient
-            backgroundImage: "linear-gradient(to bottom right, #B8860B 0%, #FFDF73 40%, #FFF8DC 50%, #D4AF37 60%, #996515 100%)",
+            // Warm, rich gold gradient (matching the satisfaction badge)
+            backgroundImage: "linear-gradient(180deg, #FBE18D 0%, #D89F3C 45%, #764A12 70%, #D89F3C 100%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
-            // Soft text glow
-            filter: "drop-shadow(0px 0px 8px rgba(255,215,0,0.3))",
+            // Emboss effect using drop-shadow (dark shadow bottom-right, light highlight top-left + soft glow)
+            filter: "drop-shadow(1px 2px 1px rgba(0,0,0,0.7)) drop-shadow(-1px -1px 0px rgba(255,255,255,0.3)) drop-shadow(0px 4px 8px rgba(0,0,0,0.4))",
           }}
         >
           {text}
