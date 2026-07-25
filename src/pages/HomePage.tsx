@@ -111,12 +111,12 @@ const HomePage = () => {
           className="flex items-center justify-center gap-4 mt-6 flex-wrap"
         >
           {[
-            { icon: <Leaf className="w-4 h-4" />, text: "100% Herbal" },
-            { icon: <Shield className="w-4 h-4" />, text: "Lab Tested" },
-            { icon: <Sparkles className="w-4 h-4" />, text: "No Chemicals" },
+            { icon: <Leaf className="w-4 h-4 text-green-900" />, text: "100% Herbal" },
+            { icon: <Shield className="w-4 h-4 text-blue-100" />, text: "Lab Tested" },
+            { icon: <Sparkles className="w-4 h-4 text-yellow-200" />, text: "No Chemicals" },
           ].map((b) => (
-            <span key={b.text} className="flex items-center gap-1.5 text-xs text-foreground/50 border border-black/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
-              <span className="text-gold">{b.icon}</span> {b.text}
+            <span key={b.text} className="flex items-center gap-1.5 text-xs font-semibold text-white bg-[#25D366] shadow-md border border-white/20 px-4 py-2 rounded-full">
+              {b.icon} <span>{b.text}</span>
             </span>
           ))}
         </motion.div>
