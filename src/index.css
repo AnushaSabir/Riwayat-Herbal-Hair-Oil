@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -215,7 +215,7 @@ html {
 
   .leaf-decoration::before,
   .leaf-decoration::after {
-    content: '🌿';
+    content: 'ðŸŒ¿';
     position: absolute;
     opacity: 0.15;
     font-size: 2rem;
@@ -350,7 +350,7 @@ html {
   background: #133937;
 }
 
-/* ===== RIWAYAT Logo � Cinematic Reveal ===== */
+/* ===== RIWAYAT Logo — Cinematic Reveal ===== */
 .logo-reveal-wrapper {
   overflow: visible !important;
 }
@@ -430,10 +430,11 @@ html {
 
 /* ===== Real Walking Camel ===== */
 @keyframes camelEnter {
-  0%   { transform: translateX(140px); opacity: 0; }
-  15%  { opacity: 1; }
+  0%   { transform: translateX(100px); opacity: 0; }
+  20%  { opacity: 1; }
   100% { transform: translateX(0px); opacity: 1; }
 }
+
 @keyframes camelBob {
   0%   { transform: translateY(0px); }
   100% { transform: translateY(-4px); }
@@ -447,10 +448,6 @@ html {
   100% { transform: rotate(-22deg); }
 }
 
-@keyframes camelWalkAcross {
-  0%   { transform: translateX(calc(100vw + 80px)); }
-  100% { transform: translateX(-120px); }
-}
 
 /* ===== Camel Walk Across (video overlay) ===== */
 @keyframes camelWalkAcross {
@@ -475,12 +472,12 @@ html {
 /* ===== Image Camel Left-to-Right Walk ===== */
 @keyframes camelEnterLtr {
   0%   { transform: translateX(-140px); opacity: 0; }
-  15%  { opacity: 1; }
-  100% { transform: translateX(0px); opacity: 1; }
-}
+
 @keyframes camelWalkAcrossLtr {
   0%   { transform: translateX(-120%); opacity: 0; }
   5%   { opacity: 1; }
   95%  { opacity: 1; }
   100% { transform: translateX(160%); opacity: 0; }
 }
+
+

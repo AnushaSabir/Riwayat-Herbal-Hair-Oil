@@ -27,6 +27,7 @@ const products = [
     tags: ["Amla", "Neem", "Shikakai", "Kalonji"],
     badge: "Best Seller",
     volume: "250ml",
+    price: "Rs. 1,499",
   },
   {
     id: "joints-oil",
@@ -47,6 +48,7 @@ const products = [
     tags: ["Adrak", "Eucalyptus", "Rosemary", "Kalonji"],
     badge: "New Arrival",
     volume: "200ml",
+    price: "Rs. 2,499",
   },
 ];
 
@@ -125,8 +127,8 @@ const HomePage = () => {
 
 
       {/* Product Cards */}
-      <section className="relative z-10 max-w-6xl mx-auto px-4 pb-24">
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-10">
+      <section className="relative z-10 max-w-7xl mx-auto px-4 pb-24">
+        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {products.map((product, i) => (
             <motion.div
               key={product.id}
@@ -159,7 +161,7 @@ const HomePage = () => {
               </div>
 
               {/* Product Video */}
-              <div className="flex justify-center pt-10 pb-2 relative h-[22rem] sm:h-[24rem] md:h-[26rem] lg:h-[28rem]">
+              <div className="flex justify-center pt-12 pb-2 relative h-[26rem] sm:h-[28rem] md:h-[30rem] lg:h-[34rem]">
                 <video
                   src={product.video}
                   autoPlay
@@ -198,9 +200,12 @@ const HomePage = () => {
                     </span>
                   )}
                 </h2>
-                <p className="text-foreground/60 text-sm mb-4 leading-relaxed">
+                <p className="text-foreground/60 text-sm mb-3 leading-relaxed">
                   {product.description}
                 </p>
+
+                {/* Price */}
+                <p className="text-2xl font-bold text-herbal mb-4">{(product as any).price}</p>
 
                 {/* Ingredient tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
