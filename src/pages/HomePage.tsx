@@ -159,7 +159,7 @@ const HomePage = () => {
               </div>
 
               {/* Product Video */}
-              <div className="flex justify-center pt-14 pb-4 relative h-72 md:h-80 lg:h-[26rem] px-4">
+              <div className="flex justify-center pt-10 pb-2 relative h-[22rem] sm:h-[24rem] md:h-[26rem] lg:h-[28rem]">
                 <video
                   src={product.video}
                   autoPlay
