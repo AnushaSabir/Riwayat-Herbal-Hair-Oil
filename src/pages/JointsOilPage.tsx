@@ -161,7 +161,7 @@ const JointsOilPage = () => {
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide flex items-center gap-3">
               Camel Hump Fat
-              <WalkingCamel size={72} />
+              <WalkingCamel size={44} />
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
               Joints Pain Oil

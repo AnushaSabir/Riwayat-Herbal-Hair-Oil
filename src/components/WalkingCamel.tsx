@@ -1,24 +1,38 @@
-import { useEffect, useRef } from "react";
+// Walk-in duration: 2.4s | Leg cycle: 0.42s | Iterations to cover walk-in: ~6
+// After 6 iterations legs freeze via animationFillMode: forwards
 
-const WalkingCamel = ({ size = 80 }: { size?: number }) => {
-  const wrapperRef = useRef<HTMLDivElement>(null);
+const WALK_DURATION = 2.4; // seconds
+const LEG_CYCLE    = 0.42; // seconds per swing
+const LEG_ITERS    = Math.ceil(WALK_DURATION / LEG_CYCLE); // 6
+
+const WalkingCamel = ({ size = 48 }: { size?: number }) => {
+  const legAnimA = {
+    animation: `legSwingA ${LEG_CYCLE}s ease-in-out ${LEG_ITERS} alternate`,
+    animationFillMode: "forwards" as const,
+  };
+  const legAnimB = {
+    animation: `legSwingB ${LEG_CYCLE}s ease-in-out ${LEG_ITERS} alternate`,
+    animationFillMode: "forwards" as const,
+  };
+  const bobAnim = {
+    animation: `camelBob ${LEG_CYCLE}s ease-in-out ${LEG_ITERS} alternate`,
+    animationFillMode: "forwards" as const,
+  };
 
   return (
     <div
-      ref={wrapperRef}
       style={{
         display: "inline-block",
-        // Walk in from right side
-        animation: "camelEnter 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) forwards",
+        animation: `camelEnter ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
         opacity: 0,
       }}
     >
-      {/* Body bobs up-down while walking */}
-      <div style={{ animation: "camelBob 0.42s ease-in-out infinite alternate" }}>
+      {/* Body bobs while walking, then freezes */}
+      <div style={bobAnim}>
         <svg
           viewBox="0 0 140 100"
           width={size}
-          height={size * 0.72}
+          height={Math.round(size * 0.72)}
           xmlns="http://www.w3.org/2000/svg"
           style={{ overflow: "visible" }}
         >
@@ -61,27 +75,26 @@ const WalkingCamel = ({ size = 80 }: { size?: number }) => {
 
           {/* ═══════════ LEGS ═══════════ */}
 
-          {/* Front-left leg (pair A — swings forward) */}
-          <g style={{ transformOrigin: "49px 78px", animation: "legSwingA 0.42s ease-in-out infinite alternate" }}>
+          {/* Front-left leg */}
+          <g style={{ transformOrigin: "49px 78px", ...legAnimA }}>
             <rect x="45" y="78" width="8" height="26" rx="4" fill="black" />
-            {/* Hoof */}
             <ellipse cx="49" cy="105" rx="5" ry="3" fill="#222" />
           </g>
 
-          {/* Front-right leg (pair B — swings backward) */}
-          <g style={{ transformOrigin: "61px 78px", animation: "legSwingB 0.42s ease-in-out infinite alternate" }}>
+          {/* Front-right leg */}
+          <g style={{ transformOrigin: "61px 78px", ...legAnimB }}>
             <rect x="57" y="78" width="8" height="26" rx="4" fill="black" />
             <ellipse cx="61" cy="105" rx="5" ry="3" fill="#222" />
           </g>
 
-          {/* Back-left leg (pair B — opposite to front-left) */}
-          <g style={{ transformOrigin: "85px 78px", animation: "legSwingB 0.42s ease-in-out infinite alternate" }}>
+          {/* Back-left leg */}
+          <g style={{ transformOrigin: "85px 78px", ...legAnimB }}>
             <rect x="81" y="78" width="8" height="26" rx="4" fill="black" />
             <ellipse cx="85" cy="105" rx="5" ry="3" fill="#222" />
           </g>
 
-          {/* Back-right leg (pair A — opposite to front-right) */}
-          <g style={{ transformOrigin: "99px 78px", animation: "legSwingA 0.42s ease-in-out infinite alternate" }}>
+          {/* Back-right leg */}
+          <g style={{ transformOrigin: "99px 78px", ...legAnimA }}>
             <rect x="95" y="78" width="8" height="26" rx="4" fill="black" />
             <ellipse cx="99" cy="105" rx="5" ry="3" fill="#222" />
           </g>
