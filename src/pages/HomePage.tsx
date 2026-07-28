@@ -30,7 +30,7 @@ const products = [
   {
     id: "joints-oil",
     route: "/joints-oil",
-    name: "Camel Hump Fat Joints Pain Oil",
+    name: "Camel Hump Fat Joints Pain Oil 🐪",
     tagline: "Relieves Pain. Restores Life.",
     subTagline: "17 Organic Herbs",
     subTaglineColor: "text-red-500",
@@ -188,7 +188,9 @@ const HomePage = () => {
                   </p>
                 )}
                 <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2">
-                  {product.name}
+                  <span style={product.id === 'joints-oil' ? { filter: 'grayscale(1) brightness(0)' } : {}}>
+                    {product.name}
+                  </span>
                 </h2>
                 <p className="text-foreground/60 text-sm mb-4 leading-relaxed">
                   {product.description}
