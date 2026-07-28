@@ -1,35 +1,35 @@
-import camelImg from "@/assets/camel.png";
+// WalkingCamel — uses a real camel photo, walks in, then stops.
+// scaleX(-1) flips the image so camel faces LEFT (walks right-to-left).
+// Walk-in: 2.4s | Leg bob: finishes after walk-in.
 
 const WALK_DURATION = 2.4; // seconds
-const LEG_CYCLE = 0.42; // seconds per swing
-const LEG_ITERS = Math.ceil(WALK_DURATION / LEG_CYCLE); // 6
 
 const WalkingCamel = ({ size = 48 }: { size?: number }) => {
-  const bobAnim = {
-    animation: `camelBob ${LEG_CYCLE}s ease-in-out ${LEG_ITERS} alternate`,
-    animationFillMode: "forwards" as const,
-  };
-
   return (
     <div
       style={{
         display: "inline-block",
-        animation: `camelEnterLtr ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
+        animation: `camelEnter ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
         opacity: 0,
+        // Bob up-down while entering, freeze after
+        // We layer a bob on the image itself
       }}
     >
-      <div style={bobAnim}>
-        <img
-          src={camelImg}
-          alt="Walking Camel"
-          style={{
-            width: size * 1.5, // The image is a bit wider than our SVG so adjusting aspect ratio scale
-            height: "auto",
-            objectFit: "contain",
-            display: "block",
-          }}
-        />
-      </div>
+      <img
+        src="/camel.png"
+        alt="camel"
+        draggable={false}
+        style={{
+          width: size,
+          height: "auto",
+          display: "block",
+          transform: "scaleX(-1)",      // face LEFT → walks right-to-left
+          animation: `camelBob 0.42s ease-in-out 6 alternate forwards`,
+          imageRendering: "auto",
+          pointerEvents: "none",
+          userSelect: "none",
+        }}
+      />
     </div>
   );
 };

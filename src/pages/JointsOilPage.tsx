@@ -10,7 +10,6 @@ import { toast } from "sonner";
 import jointsBottle from "@/assets/joints/joints-bottle.png";
 import JointsShowcaseSection from "@/components/JointsShowcaseSection";
 import WalkingCamel from "@/components/WalkingCamel";
-import camelImg from "@/assets/camel.png";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
@@ -235,14 +234,14 @@ const JointsOilPage = () => {
               />
             </motion.div>
 
-            {/* 🐪 Walking Camel — on top of video, outside video container so no clipping */}
+            {/* 🐪 Real Walking Camel — loops across the top of video */}
             <div
               style={{
                 position: "absolute",
-                top: "-45px",
+                top: "-55px",
                 left: 0,
                 right: 0,
-                height: "70px",
+                height: "80px",
                 pointerEvents: "none",
                 zIndex: 50,
               }}
@@ -251,17 +250,20 @@ const JointsOilPage = () => {
                 style={{
                   position: "absolute",
                   bottom: 0,
-                  animation: "camelWalkAcrossLtr 5s linear 1.5s infinite",
+                  animation: "camelWalkAcross 6s linear 1.5s infinite",
                 }}
               >
                 <div style={{ animation: "camelBodyBobLoop 0.42s ease-in-out infinite alternate" }}>
                   <img
-                    src={camelImg}
-                    alt="Walking Camel"
+                    src="/camel.png"
+                    alt="camel"
+                    draggable={false}
                     style={{
-                      width: "45px",
+                      width: "75px",
                       height: "auto",
-                      objectFit: "contain",
+                      transform: "scaleX(-1)",
+                      pointerEvents: "none",
+                      userSelect: "none",
                       display: "block",
                     }}
                   />
