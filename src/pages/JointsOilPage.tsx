@@ -256,37 +256,43 @@ const JointsOilPage = () => {
                 <div style={{ animation: "camelBodyBobLoop 0.42s ease-in-out infinite alternate" }}>
                   <svg
                     viewBox="0 0 140 100"
-                    width="72"
-                    height="52"
+                    width="45"
+                    height="32"
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ overflow: "visible" }}
                   >
-                    <path d="M112 52 Q124 44 120 58 Q116 64 122 68" stroke="black" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-                    <ellipse cx="72" cy="58" rx="40" ry="24" fill="black" />
-                    <ellipse cx="78" cy="34" rx="18" ry="16" fill="black" />
-                    <path d="M44 50 Q40 36 30 30" stroke="black" strokeWidth="13" strokeLinecap="round" fill="none" />
-                    <ellipse cx="23" cy="27" rx="15" ry="10" fill="black" />
-                    <ellipse cx="9" cy="30" rx="8" ry="6" fill="black" />
-                    <circle cx="5" cy="32" r="1.8" fill="#444" />
-                    <circle cx="18" cy="22" r="3" fill="white" />
-                    <circle cx="18" cy="22" r="1.8" fill="#222" />
-                    <circle cx="17" cy="21" r="0.7" fill="white" />
-                    <ellipse cx="32" cy="18" rx="3.5" ry="6" fill="black" transform="rotate(-10,32,18)" />
-                    <g style={{ transformOrigin: "49px 78px", animation: "camelLegLoop 0.42s ease-in-out infinite alternate" }}>
-                      <rect x="45" y="78" width="8" height="26" rx="4" fill="black"/>
-                      <ellipse cx="49" cy="105" rx="5" ry="3" fill="#222"/>
-                    </g>
+                    <path d="M112 52 Q124 44 120 58 Q116 64 122 68" stroke="#C19A6B" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
+                    
+                    {/* Back legs first */}
                     <g style={{ transformOrigin: "61px 78px", animation: "camelLegLoopB 0.42s ease-in-out infinite alternate" }}>
-                      <rect x="57" y="78" width="8" height="26" rx="4" fill="black"/>
-                      <ellipse cx="61" cy="105" rx="5" ry="3" fill="#222"/>
-                    </g>
-                    <g style={{ transformOrigin: "85px 78px", animation: "camelLegLoopB 0.42s ease-in-out infinite alternate" }}>
-                      <rect x="81" y="78" width="8" height="26" rx="4" fill="black"/>
-                      <ellipse cx="85" cy="105" rx="5" ry="3" fill="#222"/>
+                      <rect x="57" y="78" width="8" height="26" rx="4" fill="#A07850"/>
+                      <ellipse cx="61" cy="105" rx="5" ry="3" fill="#3E2723"/>
                     </g>
                     <g style={{ transformOrigin: "99px 78px", animation: "camelLegLoop 0.42s ease-in-out infinite alternate" }}>
-                      <rect x="95" y="78" width="8" height="26" rx="4" fill="black"/>
-                      <ellipse cx="99" cy="105" rx="5" ry="3" fill="#222"/>
+                      <rect x="95" y="78" width="8" height="26" rx="4" fill="#A07850"/>
+                      <ellipse cx="99" cy="105" rx="5" ry="3" fill="#3E2723"/>
+                    </g>
+                    
+                    <ellipse cx="72" cy="58" rx="40" ry="24" fill="#C19A6B" />
+                    <ellipse cx="78" cy="34" rx="18" ry="16" fill="#C19A6B" />
+                    <path d="M44 50 Q40 36 30 30" stroke="#C19A6B" strokeWidth="13" strokeLinecap="round" fill="none" />
+                    <ellipse cx="23" cy="27" rx="15" ry="10" fill="#C19A6B" />
+                    <ellipse cx="9" cy="30" rx="8" ry="6" fill="#D4B48C" />
+                    <circle cx="5" cy="32" r="1.8" fill="#3E2723" />
+                    <circle cx="18" cy="22" r="3" fill="white" />
+                    <circle cx="18" cy="22" r="1.8" fill="#3E2723" />
+                    <circle cx="17" cy="21" r="0.7" fill="white" />
+                    <ellipse cx="32" cy="18" rx="3.5" ry="6" fill="#C19A6B" transform="rotate(-10,32,18)" />
+                    <path d="M16 19 Q18 16 21 18" stroke="#3E2723" strokeWidth="1" fill="none" strokeLinecap="round" />
+                    
+                    {/* Front legs on top */}
+                    <g style={{ transformOrigin: "49px 78px", animation: "camelLegLoop 0.42s ease-in-out infinite alternate" }}>
+                      <rect x="45" y="78" width="8" height="26" rx="4" fill="#C19A6B"/>
+                      <ellipse cx="49" cy="105" rx="5" ry="3" fill="#3E2723"/>
+                    </g>
+                    <g style={{ transformOrigin: "85px 78px", animation: "camelLegLoopB 0.42s ease-in-out infinite alternate" }}>
+                      <rect x="81" y="78" width="8" height="26" rx="4" fill="#C19A6B"/>
+                      <ellipse cx="85" cy="105" rx="5" ry="3" fill="#3E2723"/>
                     </g>
                   </svg>
                 </div>
