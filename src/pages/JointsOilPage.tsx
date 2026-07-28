@@ -158,8 +158,8 @@ const JointsOilPage = () => {
             <div className="mb-3 flex lg:justify-start">
               <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
             </div>
-            <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide">
-              Camel Hump Fat
+            <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide flex items-center gap-2">
+              Camel Hump Fat <span className="text-black text-xl">🐪</span>
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
               Joints Pain Oil
