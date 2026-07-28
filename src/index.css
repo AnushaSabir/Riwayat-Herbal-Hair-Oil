@@ -446,3 +446,28 @@ html {
   0%   { transform: rotate(18deg); }
   100% { transform: rotate(-22deg); }
 }
+
+@keyframes camelWalkAcross {
+  0%   { transform: translateX(calc(100vw + 80px)); }
+  100% { transform: translateX(-120px); }
+}
+
+/* ===== Camel Walk Across (video overlay) ===== */
+@keyframes camelWalkAcross {
+  0%   { transform: translateX(120%); opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { transform: translateX(-160%); opacity: 0; }
+}
+@keyframes camelLegLoop {
+  0%   { transform: rotate(-22deg); }
+  100% { transform: rotate(18deg); }
+}
+@keyframes camelLegLoopB {
+  0%   { transform: rotate(18deg); }
+  100% { transform: rotate(-22deg); }
+}
+@keyframes camelBodyBobLoop {
+  0%   { transform: translateY(0px); }
+  100% { transform: translateY(-4px); }
+}
