@@ -159,7 +159,17 @@ const JointsOilPage = () => {
               <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide flex items-center gap-2">
-              Camel Hump Fat <span style={{ filter: "grayscale(1) brightness(0)" }} className="text-xl">🐪</span>
+              Camel Hump Fat{" "}
+              <span
+                style={{
+                  display: "inline-block",
+                  fontSize: "1.6rem",
+                  filter: "grayscale(1) brightness(0)",
+                  animation: "camelWalkIn 2.2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards, camelSway 1.8s ease-in-out 2.4s infinite",
+                }}
+              >
+                🐪
+              </span>
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
               Joints Pain Oil

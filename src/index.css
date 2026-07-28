@@ -408,3 +408,22 @@ html {
   0%, 100% { transform: translateY(0px) rotate(-3deg); }
   50% { transform: translateY(-6px) rotate(3deg); }
 }
+
+/* ===== Camel Walk-In Animation ===== */
+@keyframes camelWalkIn {
+  0%   { transform: translateX(110px) translateY(0px); opacity: 0; }
+  10%  { opacity: 1; }
+  20%  { transform: translateX(85px) translateY(-6px); }
+  35%  { transform: translateX(60px) translateY(0px); }
+  50%  { transform: translateX(38px) translateY(-6px); }
+  65%  { transform: translateX(18px) translateY(0px); }
+  80%  { transform: translateX(6px) translateY(-4px); }
+  92%  { transform: translateX(0px) translateY(0px); }
+  100% { transform: translateX(0px) translateY(0px); opacity: 1; }
+}
+
+@keyframes camelSway {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  30%       { transform: translateY(-5px) rotate(-2deg); }
+  70%       { transform: translateY(-3px) rotate(1deg); }
+}
