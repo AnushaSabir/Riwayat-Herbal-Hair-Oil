@@ -188,11 +188,15 @@ const HomePage = () => {
                     {product.subTagline}
                   </p>
                 )}
-                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2 flex items-center gap-2">
+                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2 leading-snug">
                   <span style={product.id === 'joints-oil' ? { filter: 'grayscale(1) brightness(0)' } : {}}>
                     {product.name}
                   </span>
-                  {product.id === 'joints-oil' && <WalkingCamel size={32} />}
+                  {product.id === 'joints-oil' && (
+                    <span className="inline-block ml-2 align-bottom pb-1">
+                      <WalkingCamel size={32} />
+                    </span>
+                  )}
                 </h2>
                 <p className="text-foreground/60 text-sm mb-4 leading-relaxed">
                   {product.description}

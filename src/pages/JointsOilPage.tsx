@@ -238,7 +238,7 @@ const JointsOilPage = () => {
             <div
               style={{
                 position: "absolute",
-                top: "5%",
+                top: "-45px",
                 left: 0,
                 right: 0,
                 height: "70px",
