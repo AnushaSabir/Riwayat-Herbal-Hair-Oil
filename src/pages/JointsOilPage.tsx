@@ -12,6 +12,8 @@ import JointsShowcaseSection from "@/components/JointsShowcaseSection";
 
 // ─── Ingredients ───────────────────────────────────────────────────────────
 const ingredients = [
+  { name: "Ostrich Oil (Shutar Murgh)", benefit: "Penetrates deep into joint tissue — fastest absorbing oil with powerful anti-inflammatory properties", icon: <Star className="w-10 h-10 text-herbal-light" /> },
+  { name: "Camel Hump Fat (Oont Ki Charbi)", benefit: "Ancient Arabian remedy — lubricates joints, repairs cartilage & provides deep sustained pain relief", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
   { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints with natural heat therapy", icon: <Flame className="w-10 h-10 text-herbal-light" /> },
   { name: "Kalonji (Black Seed)", benefit: "Thymoquinone provides powerful anti-inflammatory pain relief", icon: <Shield className="w-10 h-10 text-herbal-light" /> },
   { name: "Eucalyptus", benefit: "Deep cooling sensation gives instant, lasting pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
@@ -72,7 +74,7 @@ const JointsOilPage = () => {
   const handleAddToCart = () => {
     addItem({
       id: "riwayat-joints-oil-200ml",
-      name: "Riwayat Joint Pain & Repair Oil (200ml)",
+      name: "Riwayat Camel Hump Fat Joints Pain Oil (200ml)",
       price: 1459,
       quantity: 1,
       image: jointsBottle,
@@ -157,10 +159,10 @@ const JointsOilPage = () => {
               <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide">
-              Joint Pain &
+              Camel Hump Fat
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
-              Joint Repair Oil
+              Joints Pain Oil
             </h2>
 
             <div className="flex flex-wrap gap-2 mb-6">
@@ -371,7 +373,7 @@ const JointsOilPage = () => {
           >
             <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Nature's Power</span>
             <h2 className="text-4xl md:text-5xl font-display text-herbal">
-              15 Herbal <span className="text-gold italic">Ingredients</span>
+              17 Herbal <span className="text-gold italic">Ingredients</span>
             </h2>
           </motion.div>
 
