@@ -5,6 +5,7 @@ import AnimatedLogo from "../components/AnimatedLogo";
 import hairOilBottle from "@/assets/riwayat-bottle.png";
 import jointsOilBottle from "@/assets/joints/joints-bottle.png";
 import Footer from "@/components/Footer";
+import WalkingCamel from "@/components/WalkingCamel";
 
 const products = [
   {
@@ -30,7 +31,7 @@ const products = [
   {
     id: "joints-oil",
     route: "/joints-oil",
-    name: "Camel Hump Fat Joints Pain Oil 🐪",
+    name: "Camel Hump Fat Joints Pain Oil",
     tagline: "Relieves Pain. Restores Life.",
     subTagline: "17 Organic Herbs",
     subTaglineColor: "text-red-500",
@@ -175,55 +176,6 @@ const HomePage = () => {
                   style={{ animation: "stampFloat 4s ease-in-out infinite" }}
                 />
                 <div className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-8 ${product.glowColor} blur-2xl rounded-full`} />
-                
-                {/* 🐪 Walking Camel Overlay for Joints Oil Card */}
-                {product.id === 'joints-oil' && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "15%",
-                      left: 0,
-                      right: 0,
-                      height: "50px",
-                      pointerEvents: "none",
-                      zIndex: 30,
-                    }}
-                  >
-                    <div style={{ position: "absolute", bottom: 0, animation: "camelWalkAcross 5s linear infinite" }}>
-                      <div style={{ animation: "camelBodyBobLoop 0.42s ease-in-out infinite alternate" }}>
-                        <svg viewBox="0 0 140 100" width="52" height="38" xmlns="http://www.w3.org/2000/svg" style={{ overflow: "visible" }}>
-                          <path d="M112 52 Q124 44 120 58 Q116 64 122 68" stroke="black" strokeWidth="3.5" fill="none" strokeLinecap="round"/>
-                          <ellipse cx="72" cy="58" rx="40" ry="24" fill="black" />
-                          <ellipse cx="78" cy="34" rx="18" ry="16" fill="black" />
-                          <path d="M44 50 Q40 36 30 30" stroke="black" strokeWidth="13" strokeLinecap="round" fill="none" />
-                          <ellipse cx="23" cy="27" rx="15" ry="10" fill="black" />
-                          <ellipse cx="9" cy="30" rx="8" ry="6" fill="black" />
-                          <circle cx="5" cy="32" r="1.8" fill="#444" />
-                          <circle cx="18" cy="22" r="3" fill="white" />
-                          <circle cx="18" cy="22" r="1.8" fill="#222" />
-                          <circle cx="17" cy="21" r="0.7" fill="white" />
-                          <ellipse cx="32" cy="18" rx="3.5" ry="6" fill="black" transform="rotate(-10,32,18)" />
-                          <g style={{ transformOrigin: "49px 78px", animation: "camelLegLoop 0.42s ease-in-out infinite alternate" }}>
-                            <rect x="45" y="78" width="8" height="26" rx="4" fill="black"/>
-                            <ellipse cx="49" cy="105" rx="5" ry="3" fill="#222"/>
-                          </g>
-                          <g style={{ transformOrigin: "61px 78px", animation: "camelLegLoopB 0.42s ease-in-out infinite alternate" }}>
-                            <rect x="57" y="78" width="8" height="26" rx="4" fill="black"/>
-                            <ellipse cx="61" cy="105" rx="5" ry="3" fill="#222"/>
-                          </g>
-                          <g style={{ transformOrigin: "85px 78px", animation: "camelLegLoopB 0.42s ease-in-out infinite alternate" }}>
-                            <rect x="81" y="78" width="8" height="26" rx="4" fill="black"/>
-                            <ellipse cx="85" cy="105" rx="5" ry="3" fill="#222"/>
-                          </g>
-                          <g style={{ transformOrigin: "99px 78px", animation: "camelLegLoop 0.42s ease-in-out infinite alternate" }}>
-                            <rect x="95" y="78" width="8" height="26" rx="4" fill="black"/>
-                            <ellipse cx="99" cy="105" rx="5" ry="3" fill="#222"/>
-                          </g>
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Content */}
@@ -236,10 +188,11 @@ const HomePage = () => {
                     {product.subTagline}
                   </p>
                 )}
-                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2">
+                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2 flex items-center gap-2">
                   <span style={product.id === 'joints-oil' ? { filter: 'grayscale(1) brightness(0)' } : {}}>
                     {product.name}
                   </span>
+                  {product.id === 'joints-oil' && <WalkingCamel size={32} />}
                 </h2>
                 <p className="text-foreground/60 text-sm mb-4 leading-relaxed">
                   {product.description}
