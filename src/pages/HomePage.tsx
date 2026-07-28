@@ -194,7 +194,7 @@ const HomePage = () => {
                   </span>
                   {product.id === 'joints-oil' && (
                     <span className="inline-block ml-2 align-bottom pb-1">
-                      <WalkingCamel size={32} />
+                      <WalkingCamel size={64} />
                     </span>
                   )}
                 </h2>

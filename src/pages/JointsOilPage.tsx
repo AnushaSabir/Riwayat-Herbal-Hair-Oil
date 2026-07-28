@@ -161,7 +161,7 @@ const JointsOilPage = () => {
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide flex items-center gap-3">
               Camel Hump Fat
-              <WalkingCamel size={44} />
+              <WalkingCamel size={80} />
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
               Joints Pain Oil
@@ -250,7 +250,7 @@ const JointsOilPage = () => {
                 style={{
                   position: "absolute",
                   bottom: 0,
-                  animation: "camelWalkAcross 6s linear 1.5s infinite",
+                  animation: "camelWalkAcrossLtr 6s linear 1.5s infinite",
                 }}
               >
                 <div style={{ animation: "camelBodyBobLoop 0.42s ease-in-out infinite alternate" }}>
@@ -259,9 +259,8 @@ const JointsOilPage = () => {
                     alt="camel"
                     draggable={false}
                     style={{
-                      width: "75px",
+                      width: "120px",
                       height: "auto",
-                      transform: "scaleX(-1)",
                       pointerEvents: "none",
                       userSelect: "none",
                       display: "block",
