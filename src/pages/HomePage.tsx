@@ -31,7 +31,7 @@ const products = [
   {
     id: "joints-oil",
     route: "/joints-oil",
-    name: "Camel Hump Fat Joints Pain Oil",
+    name: "Camel Hump Joints Pain Oil",
     tagline: "Relieves Pain. Restores Life.",
     subTagline: "17 Organic Herbs",
     subTaglineColor: "text-red-500",

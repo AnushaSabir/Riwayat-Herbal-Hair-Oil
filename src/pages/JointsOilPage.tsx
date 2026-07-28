@@ -160,7 +160,7 @@ const JointsOilPage = () => {
               <AnimatedLogo className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-herbal" glowColor="text-herbal drop-shadow-lg" />
             </div>
             <h2 className="text-2xl md:text-3xl font-display text-herbal mb-2 tracking-wide flex items-center gap-3">
-              Camel Hump Fat
+              Camel Hump
               <WalkingCamel size={80} />
             </h2>
             <h2 className="text-2xl md:text-3xl font-display text-herbal/70 mb-6 tracking-wide">
@@ -250,7 +250,7 @@ const JointsOilPage = () => {
                 style={{
                   position: "absolute",
                   bottom: 0,
-                  animation: "camelWalkAcrossLtr 6s linear 1.5s infinite",
+                  animation: "camelWalkAcross 6s linear 1.5s infinite",
                 }}
               >
                 <div style={{ animation: "camelBodyBobLoop 0.42s ease-in-out infinite alternate" }}>
@@ -261,6 +261,7 @@ const JointsOilPage = () => {
                     style={{
                       width: "120px",
                       height: "auto",
+                      transform: "scaleX(-1)",
                       pointerEvents: "none",
                       userSelect: "none",
                       display: "block",

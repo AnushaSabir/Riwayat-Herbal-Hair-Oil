@@ -9,7 +9,7 @@ const WalkingCamel = ({ size = 64 }: { size?: number }) => {
     <div
       style={{
         display: "inline-block",
-        animation: `camelEnterLtr ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
+        animation: `camelEnter ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
         opacity: 0,
         // Bob up-down while entering, freeze after
         // We layer a bob on the image itself
@@ -23,6 +23,7 @@ const WalkingCamel = ({ size = 64 }: { size?: number }) => {
           width: size,
           height: "auto",
           display: "block",
+          transform: "scaleX(-1)",
           animation: `camelBob 0.42s ease-in-out 6 alternate forwards`,
           imageRendering: "auto",
           pointerEvents: "none",
