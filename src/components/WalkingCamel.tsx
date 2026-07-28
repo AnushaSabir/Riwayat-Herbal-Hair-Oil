@@ -11,25 +11,24 @@ const WalkingCamel = ({ size = 64 }: { size?: number }) => {
         display: "inline-block",
         animation: `camelEnter ${WALK_DURATION}s cubic-bezier(0.22, 0.61, 0.36, 1) forwards`,
         opacity: 0,
-        // Bob up-down while entering, freeze after
-        // We layer a bob on the image itself
       }}
     >
-      <img
-        src="/camel.png"
-        alt="camel"
-        draggable={false}
-        style={{
-          width: size,
-          height: "auto",
-          display: "block",
-          transform: "scaleX(-1)",
-          animation: `camelBob 0.42s ease-in-out 6 alternate forwards`,
-          imageRendering: "auto",
-          pointerEvents: "none",
-          userSelect: "none",
-        }}
-      />
+      <div style={{ animation: `camelBob 0.42s ease-in-out 6 alternate forwards` }}>
+        <img
+          src="/camel.png"
+          alt="camel"
+          draggable={false}
+          style={{
+            width: size,
+            height: "auto",
+            display: "block",
+            transform: "scaleX(-1)",
+            imageRendering: "auto",
+            pointerEvents: "none",
+            userSelect: "none",
+          }}
+        />
+      </div>
     </div>
   );
 };
