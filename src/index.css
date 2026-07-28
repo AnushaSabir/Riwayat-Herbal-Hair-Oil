@@ -471,3 +471,16 @@ html {
   0%   { transform: translateY(0px); }
   100% { transform: translateY(-4px); }
 }
+
+/* ===== Image Camel Left-to-Right Walk ===== */
+@keyframes camelEnterLtr {
+  0%   { transform: translateX(-140px); opacity: 0; }
+  15%  { opacity: 1; }
+  100% { transform: translateX(0px); opacity: 1; }
+}
+@keyframes camelWalkAcrossLtr {
+  0%   { transform: translateX(-120%); opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { transform: translateX(160%); opacity: 0; }
+}
