@@ -74,8 +74,8 @@ const JointsOilPage = () => {
 
   const handleAddToCart = () => {
     addItem({
-      id: "riwayat-joints-oil-200ml",
-      name: "Riwayat Camel Hump Fat Joints Pain Oil (200ml)",
+      id: "riwayat-joints-oil-175ml",
+      name: "Riwayat Camel Hump Fat Joints Pain Oil (175ml)",
       price: 2499,
       quantity: 1,
       image: jointsBottle,
@@ -563,5 +563,6 @@ const JointsOilPage = () => {
 };
 
 export default JointsOilPage;
+
 
 

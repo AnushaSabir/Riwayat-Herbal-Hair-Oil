@@ -36,6 +36,39 @@ const Index = () => {
       <SectionDivider />
       <FeaturesSection />
       <SectionDivider />
+
+      {/* ═══ URDU INFO GALLERY ═══ */}
+      <section className="relative py-20 bg-gradient-to-b from-gold/5 to-transparent">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-gold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">
+              مزید معلومات • More Info
+            </span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-gold mb-3">
+              تفصیلی <span className="text-herbal italic">رہنمائی</span>
+            </h2>
+            <p className="text-foreground/50 text-sm max-w-md mx-auto">
+              Detailed information in Urdu for our valued customers
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {[
+              { src: "/hair-urdu-pic-1.jpg", alt: "Urdu Hair Oil Info 1" },
+              { src: "/hair-urdu-pic-2.jpg", alt: "Urdu Hair Oil Info 2" },
+              { src: "/hair-urdu-pic-3.jpg", alt: "Urdu Hair Oil Info 3" },
+            ].map((pic, i) => (
+              <div
+                key={i}
+                className="rounded-2xl overflow-hidden border border-gold/20 shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 bg-card"
+              >
+                <img src={pic.src} alt={pic.alt} className="w-full h-auto object-cover block" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
       <IngredientsSection />
       <SectionDivider />
       <BottleExplorer />

@@ -47,7 +47,7 @@ const products = [
     btnClass: "bg-herbal hover:bg-herbal/90 text-white",
     tags: ["Adrak", "Eucalyptus", "Rosemary", "Kalonji"],
     badge: "New Arrival",
-    volume: "200ml",
+    volume: "175ml",
     price: "Rs. 2,499",
   },
 ];
@@ -155,7 +155,7 @@ const HomePage = () => {
 
               {/* Volume */}
               <div className="absolute top-5 right-5 z-20">
-                <span className="text-[10px] text-foreground/40 border border-black/10 px-2.5 py-1 rounded-full bg-background/20">
+                <span className="text-[11px] font-bold text-blue-500 border border-blue-400/40 px-2.5 py-1 rounded-full bg-blue-500/10">
                   {product.volume}
                 </span>
               </div>
