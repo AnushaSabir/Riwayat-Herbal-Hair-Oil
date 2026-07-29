@@ -1,4 +1,4 @@
-import { motion, useInView } from "framer-motion";
+﻿import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import bottleImage from "@/assets/riwayat-bottle.png";
 import { useCartStore } from "@/lib/cartStore";
@@ -95,7 +95,7 @@ const CTASection = () => {
               </motion.button>
               <div className="flex items-center gap-2 mt-2">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                <span className="text-[10px] text-white/50 font-elegant tracking-widest uppercase">In Stock • Ready to Ship</span>
+                <span className="text-[10px] text-white/50 font-elegant tracking-widest uppercase">In Stock â€¢ Ready to Ship</span>
               </div>
             </motion.div>
 
@@ -121,3 +121,4 @@ const CTASection = () => {
 };
 
 export default CTASection;
+

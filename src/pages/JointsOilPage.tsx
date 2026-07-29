@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ShoppingCart, Volume2, VolumeX, Leaf, Shield, Zap, Star, ChevronRight, Heart, Activity, Wind, Flame, Droplets, TreePine, Flower2, CircleDot, Sun } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
@@ -11,10 +11,10 @@ import jointsBottle from "@/assets/joints/joints-bottle.png";
 import JointsShowcaseSection from "@/components/JointsShowcaseSection";
 import WalkingCamel from "@/components/WalkingCamel";
 
-// ─── Ingredients ───────────────────────────────────────────────────────────
+// â”€â”€â”€ Ingredients â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const ingredients = [
-  { name: "Ostrich Oil (Shutar Murgh)", benefit: "Penetrates deep into joint tissue — fastest absorbing oil with powerful anti-inflammatory properties", icon: <Star className="w-10 h-10 text-herbal-light" /> },
-  { name: "Camel Hump Fat (Oont Ki Charbi)", benefit: "Ancient Arabian remedy — lubricates joints, repairs cartilage & provides deep sustained pain relief", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
+  { name: "Ostrich Oil (Shutar Murgh)", benefit: "Penetrates deep into joint tissue â€” fastest absorbing oil with powerful anti-inflammatory properties", icon: <Star className="w-10 h-10 text-herbal-light" /> },
+  { name: "Camel Hump Fat (Oont Ki Charbi)", benefit: "Ancient Arabian remedy â€” lubricates joints, repairs cartilage & provides deep sustained pain relief", icon: <Zap className="w-10 h-10 text-herbal-light" /> },
   { name: "Adrak (Ginger)", benefit: "Reduces inflammation & warms joints with natural heat therapy", icon: <Flame className="w-10 h-10 text-herbal-light" /> },
   { name: "Kalonji (Black Seed)", benefit: "Thymoquinone provides powerful anti-inflammatory pain relief", icon: <Shield className="w-10 h-10 text-herbal-light" /> },
   { name: "Eucalyptus", benefit: "Deep cooling sensation gives instant, lasting pain relief", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
@@ -32,17 +32,17 @@ const ingredients = [
   { name: "Peppermint Oil", benefit: "Menthol creates cooling numbing effect for acute joint pain", icon: <Wind className="w-10 h-10 text-herbal-light" /> },
 ];
 
-// ─── Benefits ──────────────────────────────────────────────────────────────
+// â”€â”€â”€ Benefits â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const benefits = [
   { icon: <Activity className="w-6 h-6" />, title: "Relieves Joint Pain", desc: "Works deep inside the joint tissues to eliminate chronic and acute pain." },
   { icon: <Wind className="w-6 h-6" />, title: "Reduces Swelling", desc: "Powerful anti-inflammatory herbs reduce swelling within minutes of application." },
   { icon: <Zap className="w-6 h-6" />, title: "Improves Flexibility", desc: "Regular use restores joint mobility and improves range of motion." },
   { icon: <Heart className="w-6 h-6" />, title: "100% Herbal & Safe", desc: "No steroids, no chemicals. Safe for daily long-term use for all ages." },
-  { icon: <Leaf className="w-6 h-6" />, title: "Fast Absorption", desc: "Lightweight formula absorbs instantly — no greasy residue." },
+  { icon: <Leaf className="w-6 h-6" />, title: "Fast Absorption", desc: "Lightweight formula absorbs instantly â€” no greasy residue." },
   { icon: <Shield className="w-6 h-6" />, title: "Repairs Cartilage", desc: "Herbal actives support natural cartilage repair and bone health." },
 ];
 
-// ─── Testimonials ──────────────────────────────────────────────────────────
+// â”€â”€â”€ Testimonials â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const testimonials = [
   { name: "Sajida Bibi", age: "58", text: "Meri knee ka dard 2 mahine mein bilkul khatam ho gaya. Ye oil waqai kaam karta hai!", rating: 5 },
   { name: "Tariq Ahmed", age: "45", text: "Office mein ghante bhar baith kar kamar mein dard hota tha, ab bilkul theek hoon.", rating: 5 },
@@ -50,14 +50,14 @@ const testimonials = [
   { name: "Muhammad Arif", age: "52", text: "Spine ki problem thi, doctor ne bhi yahi recommend kiya. Bohat aacha product hai.", rating: 5 },
 ];
 
-// ─── Videos ────────────────────────────────────────────────────────────────
+// â”€â”€â”€ Videos â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const videos = [
   { src: "/videos/joint-1.mp4", label: "How It Works" },
   { src: "/videos/joint-2.mp4", label: "Real Results" },
   { src: "/videos/joint-3.mp4", label: "Application Guide" },
 ];
 
-// ──────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const JointsOilPage = () => {
   useEffect(() => {
     document.body.classList.add("theme-joints");
@@ -76,7 +76,7 @@ const JointsOilPage = () => {
     addItem({
       id: "riwayat-joints-oil-200ml",
       name: "Riwayat Camel Hump Fat Joints Pain Oil (200ml)",
-      price: 1459,
+      price: 2499,
       quantity: 1,
       image: jointsBottle,
     });
@@ -94,13 +94,13 @@ const JointsOilPage = () => {
 
   return (
     <main className="min-h-screen bg-background overflow-x-hidden">
-      {/* ── Ambient Glow ── */}
+      {/* â”€â”€ Ambient Glow â”€â”€ */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-herbal/5 blur-[150px] rounded-full" />
         <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-cyan-500/5 blur-[150px] rounded-full" />
       </div>
 
-      {/* ── Navbar ── */}
+      {/* â”€â”€ Navbar â”€â”€ */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#86B3B1] text-foreground backdrop-blur-md border-b border-foreground/10">
         <div className="container mx-auto px-4 h-20 flex items-center justify-between">
           <div className="flex items-center gap-4">
@@ -137,9 +137,9 @@ const JointsOilPage = () => {
         </div>
       </nav>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           HERO SECTION
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="relative min-h-screen flex items-center pt-20">
 
         <div className="container mx-auto px-4 lg:px-8 grid lg:grid-cols-2 gap-12 items-center relative z-10">
@@ -170,13 +170,13 @@ const JointsOilPage = () => {
             <div className="flex flex-wrap gap-2 mb-6">
               {["Relieves Pain", "Reduces Swelling", "Improves Flexibility"].map((tag) => (
                 <span key={tag} className="text-xs text-herbal border border-herbal/30 px-3 py-1.5 rounded-full bg-herbal/5 font-medium">
-                  ✓ {tag}
+                  âœ“ {tag}
                 </span>
               ))}
             </div>
 
             <p className="text-foreground/60 text-base leading-relaxed mb-8 max-w-md">
-              A powerful blend of 8 ancient herbs — scientifically formulated to penetrate deep into joints,
+              A powerful blend of 8 ancient herbs â€” scientifically formulated to penetrate deep into joints,
               relieve pain, reduce inflammation and restore your natural mobility.
             </p>
 
@@ -187,7 +187,7 @@ const JointsOilPage = () => {
                 onClick={handleAddToCart}
                 className="px-8 py-4 bg-herbal text-white font-display text-base rounded-full uppercase tracking-widest font-semibold shadow-lg transition-all"
               >
-                Order Now — Rs. 1,459
+                Order Now â€” Rs. 2,499
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.04 }}
@@ -209,13 +209,13 @@ const JointsOilPage = () => {
                 ))}
               </div>
               <div>
-                <div className="flex text-herbal text-sm">{Array(5).fill("★").join("")}</div>
+                <div className="flex text-herbal text-sm">{Array(5).fill("â˜…").join("")}</div>
                 <p className="text-foreground/50 text-xs">3k+ satisfied customers</p>
               </div>
             </div>
           </motion.div>
 
-          {/* Right — Bottle + Ingredients infographic */}
+          {/* Right â€” Bottle + Ingredients infographic */}
           <div className="relative flex items-center justify-center min-h-[400px] sm:min-h-[500px] translate-x-0 sm:translate-x-4 md:translate-x-8 lg:translate-x-16 xl:translate-x-24 scale-[0.95] sm:scale-100 origin-center">
             {/* === HERO VIDEO === */}
             <motion.div
@@ -234,7 +234,7 @@ const JointsOilPage = () => {
               />
             </motion.div>
 
-            {/* 🐪 Real Walking Camel — loops across the top of video */}
+            {/* ðŸª Real Walking Camel â€” loops across the top of video */}
             <div
               style={{
                 position: "absolute",
@@ -275,9 +275,9 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          INGREDIENTS SECTION — Circular Orbit (Same as Hair Oil)
-      ═══════════════════════════════════════════════════ */}
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+          INGREDIENTS SECTION â€” Circular Orbit (Same as Hair Oil)
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="ingredients" className="relative py-32 overflow-hidden bg-transparent">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -315,9 +315,9 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           VIDEO SECTION
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="videos" className="relative py-24 bg-card/30">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
@@ -363,14 +363,14 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           SHOWCASE GALLERY
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <JointsShowcaseSection />
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           BENEFITS
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="benefits" className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
@@ -402,9 +402,9 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           INGREDIENTS
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="ingredients" className="relative py-24 bg-card/20">
         <div className="container mx-auto px-4">
           <motion.div
@@ -434,9 +434,9 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           TESTIMONIALS
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section id="results" className="relative py-24">
         <div className="container mx-auto px-4">
           <motion.div
@@ -457,7 +457,7 @@ const JointsOilPage = () => {
                 transition={{ delay: i * 0.1, duration: 0.6 }}
                 className="p-6 rounded-2xl bg-[#133937] animated-border hover:bg-[#0d2726] border border-[#0d2726] transition-all duration-300 flex flex-col gap-3 shadow-md"
               >
-                <div className="flex text-white text-sm">{Array(t.rating).fill("★").join("")}</div>
+                <div className="flex text-white text-sm">{Array(t.rating).fill("â˜…").join("")}</div>
                 <p className="text-white/80 text-sm leading-relaxed flex-1">"{t.text}"</p>
                 <div>
                   <p className="text-white font-display font-bold text-sm">{t.name}</p>
@@ -469,9 +469,9 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
+      {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           CTA
-      ═══════════════════════════════════════════════════ */}
+      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-herbal/10 via-background to-background" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-herbal/10 blur-[120px] rounded-full pointer-events-none" />
@@ -496,7 +496,7 @@ const JointsOilPage = () => {
                 onClick={handleAddToCart}
                 className="px-10 py-4 bg-herbal text-white font-display font-bold text-base rounded-full uppercase tracking-widest shadow-lg"
               >
-                Order Now — Rs. 1,459
+                Order Now â€” Rs. 2,499
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.04 }}
@@ -511,13 +511,14 @@ const JointsOilPage = () => {
         </div>
       </section>
 
-      {/* ── Footer ── */}
+      {/* â”€â”€ Footer â”€â”€ */}
       <footer className="bg-[#86B3B1] py-10 text-center border-t border-foreground/10">
-        <p className="text-foreground/80 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Joint Pain & Repair Oil</p>
-        <p className="text-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural · Trusted · Effective</p>
+        <p className="text-foreground/80 text-xs tracking-widest uppercase font-display">Â© 2024 Riwayat â€” Herbal Wisdom Â· Joint Pain & Repair Oil</p>
+        <p className="text-foreground/50 text-[10px] tracking-wider mt-2 font-serif">Natural Â· Trusted Â· Effective</p>
       </footer>
     </main>
   );
 };
 
 export default JointsOilPage;
+
