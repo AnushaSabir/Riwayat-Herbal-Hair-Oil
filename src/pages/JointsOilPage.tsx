@@ -402,6 +402,48 @@ const JointsOilPage = () => {
         </div>
       </section>
 
+
+      {/* ═══════════════════════════════════
+          URDU INFO GALLERY
+      ═══════════════════════════════════ */}
+      <section className="relative py-20 bg-gradient-to-b from-herbal/5 to-transparent">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">
+              مزید معلومات • More Info
+            </span>
+            <h2 className="text-3xl md:text-4xl font-display text-herbal mb-3">
+              تفصیلی <span className="text-gold italic">رہنمائی</span>
+            </h2>
+            <p className="text-foreground/50 text-sm max-w-md mx-auto">
+              Detailed information in Urdu for our valued customers
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {[
+              { src: "/urdu-pic-1.jpg", alt: "Urdu Info 1" },
+              { src: "/urdu-pic-2.jpg", alt: "Urdu Info 2" },
+              { src: "/urdu-pic-3.jpg", alt: "Urdu Info 3" },
+            ].map((pic, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.6 }}
+                className="rounded-2xl overflow-hidden border border-herbal/20 shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 bg-card"
+              >
+                <img src={pic.src} alt={pic.alt} className="w-full h-auto object-cover block" />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
           INGREDIENTS
       â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */}
