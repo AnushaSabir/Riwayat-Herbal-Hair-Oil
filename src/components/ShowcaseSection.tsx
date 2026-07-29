@@ -27,7 +27,7 @@ const ShowcaseSection = () => {
     }, []);
 
     return (
-        <section className="py-32 relative overflow-hidden bg-transparent">
+        <section className="py-12 md:py-32 relative overflow-hidden bg-transparent">
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-6xl mx-auto flex flex-col items-center">
 

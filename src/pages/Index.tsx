@@ -38,7 +38,7 @@ const Index = () => {
       <SectionDivider />
 
       {/* ═══ URDU INFO GALLERY ═══ */}
-      <section className="relative py-20 bg-gradient-to-b from-gold/5 to-transparent">
+      <section className="relative py-10 md:py-20 bg-gradient-to-b from-gold/5 to-transparent">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-gold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">

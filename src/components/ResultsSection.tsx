@@ -35,12 +35,12 @@ const ResultsSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative py-32 overflow-hidden bg-transparent"
+      className="relative py-12 md:py-32 overflow-hidden bg-transparent"
     >
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-24 border-b border-black/10 pb-16">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-12 md:mb-24 border-b border-black/10 pb-8 md:pb-16">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}

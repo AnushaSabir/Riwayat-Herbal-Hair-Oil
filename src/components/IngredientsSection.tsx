@@ -126,7 +126,7 @@ const IngredientsSection = () => {
     <section
       id="ingredients"
       ref={sectionRef}
-      className="relative py-32 overflow-hidden bg-transparent"
+      className="relative py-12 md:py-32 overflow-hidden bg-transparent"
     >
       <div className="container mx-auto px-4 relative z-10">
 
@@ -135,7 +135,7 @@ const IngredientsSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-10 md:mb-20"
         >
           <span className="text-gold font-elegant tracking-[0.4em] uppercase text-xs mb-4 block">
             The Secret Formula
