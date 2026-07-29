@@ -417,7 +417,7 @@ const JointsOilPage = () => {
             <span className="text-herbal text-xs uppercase tracking-[0.4em] font-serif mb-3 block">
               مزید معلومات • More Info
             </span>
-            <h2 className="text-3xl md:text-4xl font-display text-herbal mb-3">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-herbal mb-3">
               تفصیلی <span className="text-gold italic">رہنمائی</span>
             </h2>
             <p className="text-foreground/50 text-sm max-w-md mx-auto">
@@ -563,4 +563,5 @@ const JointsOilPage = () => {
 };
 
 export default JointsOilPage;
+
 
