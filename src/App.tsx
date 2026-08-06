@@ -7,6 +7,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import HomePage from "./pages/HomePage";
 import Index from "./pages/Index";
 import JointsOilPage from "./pages/JointsOilPage";
+import BeardOilPage from "./pages/BeardOilPage";
 import Checkout from "./pages/Checkout";
 import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
@@ -23,12 +24,14 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            {/* Landing page — both products overview */}
+            {/* Landing page — all products overview */}
             <Route path="/" element={<HomePage />} />
             {/* Hair Oil full page */}
             <Route path="/hair-oil" element={<Index />} />
             {/* Joints Pain Oil full page */}
             <Route path="/joints-oil" element={<JointsOilPage />} />
+            {/* Beard & Mustache Growth Oil full page */}
+            <Route path="/beard-oil" element={<BeardOilPage />} />
             {/* Other pages */}
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/admin" element={<AdminDashboard />} />

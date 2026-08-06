@@ -50,6 +50,27 @@ const products = [
     volume: "175ml",
     price: "Rs. 2,499",
   },
+  {
+    id: "beard-oil",
+    route: "/beard-oil",
+    name: "Beard & Mustache Growth Oil",
+    tagline: "Fuller Beard. Nourished Roots.",
+    subTagline: "7 Natural Ingredients",
+    subTaglineColor: "text-amber-500",
+    description: "A premium natural oil that deeply moisturizes, reduces dryness & beard dandruff, softens coarse facial hair and promotes a healthy, darker-looking beard.",
+    bottle: "/beard-bottle.jpg",
+    video: "/videos/beard-hero.mp4",
+    color: "from-amber-900/20 to-gold/10",
+    borderColor: "border-amber-500/30",
+    glowColor: "bg-amber-500/20",
+    badgeColor: "text-amber-500 border-amber-500/40",
+    accentColor: "text-amber-500",
+    btnClass: "bg-amber-600 hover:bg-amber-700 text-white",
+    tags: ["Castor Oil", "Argan Oil", "Jojoba", "Black Seed"],
+    badge: "New Launch",
+    volume: "100ml",
+    price: "Rs. 1,799",
+  },
 ];
 
 const HomePage = () => {
@@ -82,6 +103,12 @@ const HomePage = () => {
           >
             Joint Oil
           </span>
+          <span
+            className="hover:text-amber-500 cursor-pointer transition-colors hidden md:block"
+            onClick={() => navigate("/beard-oil")}
+          >
+            Beard Oil
+          </span>
         </div>
       </nav>
 
@@ -102,7 +129,7 @@ const HomePage = () => {
             Nature's Best, Bottled for You
           </h2>
           <p className="text-foreground/60 max-w-xl mx-auto text-base md:text-lg font-medium">
-            Two powerful herbal solutions — crafted from centuries-old wisdom, made for modern lives.
+            Three powerful herbal solutions — crafted from centuries-old wisdom, made for modern lives.
           </p>
         </motion.div>
 
@@ -128,7 +155,7 @@ const HomePage = () => {
 
       {/* Product Cards */}
       <section className="relative z-10 max-w-7xl mx-auto px-4 pb-24">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {products.map((product, i) => (
             <motion.div
               key={product.id}
@@ -160,7 +187,7 @@ const HomePage = () => {
                 </span>
               </div>
 
-              {/* Product Video */}
+              {/* Product Video / Image */}
               <div className="flex justify-center pt-12 pb-2 relative h-[26rem] sm:h-[28rem] md:h-[30rem] lg:h-[34rem]">
                 <video
                   src={product.video}
@@ -168,7 +195,20 @@ const HomePage = () => {
                   muted
                   loop
                   playsInline
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = 'none';
+                    const img = (e.target as HTMLElement).nextElementSibling as HTMLElement;
+                    if (img && img.tagName === 'IMG') {
+                      img.style.display = 'block';
+                    }
+                  }}
                   className="w-full h-full object-contain mix-blend-multiply drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10 pointer-events-none rounded-3xl"
+                />
+                <img
+                  src={product.bottle}
+                  alt={product.name}
+                  style={{ display: 'none' }}
+                  className="w-full h-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.5)] relative z-10 pointer-events-none rounded-3xl"
                 />
                 {/* Satisfaction Guarantee Stamp — floating on top of video */}
                 <img
