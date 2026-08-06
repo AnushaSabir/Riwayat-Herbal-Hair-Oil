@@ -64,7 +64,7 @@ const products = [
     borderColor: "border-[#b45309]/40",
     glowColor: "bg-[#b45309]/20",
     badgeColor: "text-[#78350f] border-2 border-[#b45309]/70 bg-white/90 font-black shadow-sm",
-    accentColor: "text-[#b45309]",
+    accentColor: "text-[#78350f]",
     btnClass: "bg-[#b45309] hover:bg-[#92400e] text-white font-black",
     tags: ["Castor Oil", "Argan Oil", "Jojoba", "Black Seed"],
     badge: "New Launch",
@@ -222,15 +222,15 @@ const HomePage = () => {
 
               {/* Content */}
               <div className="px-6 pb-8 relative z-10">
-                <p className={`text-xs tracking-[0.3em] uppercase font-serif mb-1 ${product.accentColor}`}>
+                <p className={`text-xs tracking-[0.25em] uppercase font-serif mb-1 font-black ${product.accentColor}`}>
                   {product.tagline}
                 </p>
                 {product.subTagline && (
-                  <p className={`text-xs tracking-[0.2em] uppercase font-serif mb-2 font-bold ${product.subTaglineColor}`}>
+                  <p className={`text-xs tracking-[0.2em] uppercase font-serif mb-2 font-black ${product.subTaglineColor}`}>
                     {product.subTagline}
                   </p>
                 )}
-                <h2 className="text-xl md:text-2xl font-display font-bold text-herbal mb-2 leading-snug">
+                <h2 className="text-xl md:text-2xl font-display font-black text-[#0F2E15] mb-2 leading-snug">
                   <span style={product.id === 'joints-oil' ? { filter: 'grayscale(1) brightness(0)' } : {}}>
                     {product.name}
                   </span>
@@ -240,17 +240,17 @@ const HomePage = () => {
                     </span>
                   )}
                 </h2>
-                <p className="text-foreground/60 text-sm mb-3 leading-relaxed">
+                <p className="text-[#1c1917] font-semibold text-sm mb-3 leading-relaxed">
                   {product.description}
                 </p>
 
                 {/* Price */}
-                <p className="text-2xl font-bold text-herbal mb-4">{(product as any).price}</p>
+                <p className="text-2xl font-black text-[#0F2E15] mb-4">{(product as any).price}</p>
 
                 {/* Ingredient tags */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {product.tags.map((tag) => (
-                    <span key={tag} className="text-[10px] font-semibold text-blue-900 border border-black/10 px-2.5 py-1 rounded-full bg-black/5 backdrop-blur-sm">
+                    <span key={tag} className="text-[10px] font-black text-[#78350f] border border-[#78350f]/30 px-2.5 py-1 rounded-full bg-white/90 shadow-sm">
                       {tag}
                     </span>
                   ))}
