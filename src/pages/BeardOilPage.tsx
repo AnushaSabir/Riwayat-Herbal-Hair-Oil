@@ -101,7 +101,7 @@ const BeardOilPage = () => {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden" style={{ background: '#18181b', color: '#ffffff' }}>
+    <main className="min-h-screen bg-background overflow-x-hidden text-foreground">
       {/* ── Ambient Glow ── */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <div className="absolute top-1/4 left-0 w-96 h-96 bg-amber-500/10 blur-[150px] rounded-full" />
@@ -183,7 +183,7 @@ const BeardOilPage = () => {
               ))}
             </div>
 
-            <p className="text-white/90 text-base leading-relaxed mb-8 max-w-md">
+            <p className="text-zinc-200 text-base leading-relaxed mb-8 max-w-md">
               A premium beard and mustache oil formulated with nourishing natural oils to help support thicker, healthier-looking facial hair. It deeply moisturizes the skin, reduces dryness and itchiness, and enhances the natural shine and appearance of your beard.
             </p>
 
@@ -217,7 +217,7 @@ const BeardOilPage = () => {
               </div>
               <div>
                 <div className="flex text-amber-400 text-sm">★★★★★</div>
-                <p className="text-white/70 text-xs">4,500+ beard men trust Riwayat</p>
+                <p className="text-zinc-300 text-xs">4,500+ beard men trust Riwayat</p>
               </div>
             </div>
           </motion.div>
@@ -274,7 +274,7 @@ const BeardOilPage = () => {
       {/* ═══════════════════════════════════
           BENEFITS SECTION
       ═══════════════════════════════════ */}
-      <section id="benefits" className="relative py-24" style={{ background: '#1c1917' }}>
+      <section id="benefits" className="relative py-24 bg-card/20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -282,7 +282,7 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-amber-400 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Why Men Choose Riwayat</span>
+            <span className="text-amber-500 text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Why Men Choose Riwayat</span>
             <h2 className="text-4xl md:text-5xl font-display text-white">
               6 Key <span className="text-amber-400">Beard Benefits</span>
             </h2>
@@ -301,8 +301,8 @@ const BeardOilPage = () => {
                 <div className="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center mb-4 group-hover:bg-amber-500 group-hover:text-black transition-colors">
                   {b.icon}
                 </div>
-                <h3 className="text-white font-display font-bold text-base mb-2">{b.title}</h3>
-                <p className="text-white/80 text-sm leading-relaxed">{b.desc}</p>
+                <h3 className="text-amber-400 font-display font-bold text-base mb-2">{b.title}</h3>
+                <p className="text-zinc-200 text-sm leading-relaxed">{b.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -326,7 +326,7 @@ const BeardOilPage = () => {
             <h2 className="text-4xl md:text-5xl font-display font-bold text-amber-400 mb-3">
               تفصیلی <span className="text-white italic">رہنمائی</span>
             </h2>
-            <p className="text-white/70 text-sm max-w-md mx-auto">
+            <p className="text-foreground/60 text-sm max-w-md mx-auto">
               Detailed information in Urdu for beard care & proper usage
             </p>
           </motion.div>
@@ -361,12 +361,12 @@ const BeardOilPage = () => {
                   <span className="inline-block text-[10px] uppercase font-bold tracking-widest text-amber-400 border border-amber-500/40 px-3 py-1 rounded-full mb-4 bg-amber-500/10">
                     {info.badge}
                   </span>
-                  <h3 className="text-xl font-bold text-white mb-3 text-right font-serif leading-snug">{info.title}</h3>
-                  <p className="text-white/80 text-sm text-right leading-relaxed font-sans">{info.desc}</p>
+                  <h3 className="text-xl font-bold text-amber-300 mb-3 text-right font-serif leading-snug">{info.title}</h3>
+                  <p className="text-zinc-200 text-sm text-right leading-relaxed font-sans">{info.desc}</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-amber-500/10 flex justify-between items-center text-xs text-amber-400/80">
                   <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                  <span className="text-amber-400/90 text-xs">روایت ہربل کیر</span>
+                  <span>روایت ہربل کیر</span>
                 </div>
               </motion.div>
             ))}
@@ -382,7 +382,7 @@ const BeardOilPage = () => {
       {/* ═══════════════════════════════════
           INGREDIENTS LIST
       ═══════════════════════════════════ */}
-      <section id="ingredients" className="relative py-24" style={{ background: '#1c1917' }}>
+      <section id="ingredients" className="relative py-24 bg-card/20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -394,7 +394,7 @@ const BeardOilPage = () => {
             <h2 className="text-4xl md:text-5xl font-display text-white">
               7 Pure <span className="text-amber-400 italic">Natural Ingredients</span>
             </h2>
-            <p className="text-white/70 text-sm mt-3 max-w-lg mx-auto">Castor Oil · Jojoba Oil · Argan Oil · Black Seed Oil · Vitamin E · Rosemary · Peppermint</p>
+            <p className="text-zinc-300 text-sm mt-3 max-w-lg mx-auto">Castor Oil · Jojoba Oil · Argan Oil · Black Seed Oil · Vitamin E · Rosemary · Peppermint</p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-5xl mx-auto">
@@ -408,8 +408,8 @@ const BeardOilPage = () => {
                 className="group p-5 rounded-2xl bg-[#1a1714] border border-amber-500/20 hover:border-amber-400 transition-all duration-300 hover:-translate-y-1 text-center shadow-md"
               >
                 <div className="text-4xl mb-3 flex justify-center text-amber-400">{ing.icon}</div>
-                <h3 className="font-display font-bold text-sm mb-1.5 text-white">{ing.name}</h3>
-                <p className="text-white/75 text-xs leading-relaxed">{ing.benefit}</p>
+                <h3 className="font-display font-bold text-sm mb-1.5 text-amber-300">{ing.name}</h3>
+                <p className="text-zinc-300 text-xs leading-relaxed">{ing.benefit}</p>
               </motion.div>
             ))}
           </div>
@@ -452,8 +452,8 @@ const BeardOilPage = () => {
                   {s.step}
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-white font-display font-bold text-base mb-2">{s.title}</h3>
-                  <p className="text-white/80 text-sm leading-relaxed">{s.desc}</p>
+                  <h3 className="text-amber-400 font-display font-bold text-base mb-2">{s.title}</h3>
+                  <p className="text-zinc-200 text-sm leading-relaxed">{s.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -475,7 +475,7 @@ const BeardOilPage = () => {
       {/* ═══════════════════════════════════
           VIDEO SECTION
       ═══════════════════════════════════ */}
-      <section id="videos" className="relative py-24" style={{ background: '#161412' }}>
+      <section id="videos" className="relative py-24 bg-card/30">
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -498,7 +498,7 @@ const BeardOilPage = () => {
                 className={`px-5 py-2 rounded-full text-xs font-display uppercase tracking-widest transition-all ${
                   activeVideo === i
                     ? "bg-amber-500 text-black font-bold"
-                    : "border border-amber-500/30 text-amber-300 hover:border-amber-500 hover:text-amber-400"
+                    : "border border-amber-500/30 text-amber-400/70 hover:border-amber-500"
                 }`}
               >
                 {v.label}
@@ -574,11 +574,11 @@ const BeardOilPage = () => {
               >
                 <div>
                   <div className="flex text-amber-400 text-sm mb-3">{"★".repeat(t.rating)}</div>
-                  <p className="text-white/85 text-sm leading-relaxed italic">"{t.text}"</p>
+                  <p className="text-zinc-100 text-sm leading-relaxed italic">"{t.text}"</p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-amber-500/10">
                   <p className="text-white font-display font-bold text-sm">{t.name}</p>
-                  <p className="text-amber-400 text-xs font-semibold">Age {t.age}</p>
+                  <p className="text-amber-400 text-xs">Age {t.age}</p>
                 </div>
               </motion.div>
             ))}
@@ -590,7 +590,7 @@ const BeardOilPage = () => {
           CALL TO ACTION
       ═══════════════════════════════════ */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/20 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 via-background to-background pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -602,7 +602,7 @@ const BeardOilPage = () => {
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white mb-4">
               Get Your Dream <span className="text-amber-400">Full Beard</span>
             </h2>
-            <p className="text-white/80 max-w-lg mx-auto text-base mb-10 leading-relaxed">
+            <p className="text-zinc-200 max-w-lg mx-auto text-base mb-10 leading-relaxed">
               Order your 100ml bottle of Riwayat Beard & Mustache Growth Oil today with free Cash on Delivery across Pakistan.
             </p>
 
@@ -630,7 +630,7 @@ const BeardOilPage = () => {
 
       {/* ── Footer ── */}
       <footer className="bg-[#161412] py-10 text-center border-t border-amber-500/20">
-        <p className="text-white/60 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Beard &amp; Mustache Growth Oil</p>
+        <p className="text-foreground/70 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Beard & Mustache Growth Oil</p>
         <p className="text-amber-500/60 text-[10px] tracking-wider mt-2 font-serif">100% Organic · Handcrafted · Pure Herbal Power</p>
       </footer>
     </main>
