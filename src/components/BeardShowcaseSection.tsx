@@ -27,9 +27,9 @@ const BeardShowcaseSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-5xl mx-auto flex flex-col items-center">
                     <div className="text-center mb-12">
-                        <span className="text-amber-500 font-serif tracking-[0.4em] uppercase text-xs mb-3 block">Product Showcase</span>
-                        <h2 className="text-3xl md:text-5xl font-display font-medium text-herbal uppercase tracking-tight">
-                            The Science of <span className="text-amber-500 italic">Growth</span>
+                        <span className="text-amber-400 font-bold tracking-[0.4em] uppercase text-xs mb-3 block drop-shadow">Product Showcase</span>
+                        <h2 className="text-3xl md:text-5xl font-display font-extrabold text-white uppercase tracking-tight">
+                            The Science of <span className="text-amber-400 italic drop-shadow">Growth</span>
                         </h2>
                     </div>
 
@@ -86,8 +86,8 @@ const BeardShowcaseSection = () => {
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <span className="text-amber-500 font-elegant tracking-[0.5em] uppercase text-xs mb-2 block font-semibold">{images[index].label}</span>
-                                <h3 className="text-2xl md:text-4xl font-display font-medium text-herbal tracking-tight italic">
+                                <span className="text-amber-400 font-bold tracking-[0.5em] uppercase text-xs mb-2 block">{images[index].label}</span>
+                                <h3 className="text-2xl md:text-4xl font-display font-extrabold text-white tracking-tight italic drop-shadow">
                                     {images[index].title}
                                 </h3>
                             </motion.div>
