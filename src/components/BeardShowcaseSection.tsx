@@ -27,15 +27,15 @@ const BeardShowcaseSection = () => {
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-5xl mx-auto flex flex-col items-center">
                     <div className="text-center mb-12">
-                        <span className="text-amber-400 font-bold tracking-[0.4em] uppercase text-xs mb-3 block drop-shadow">Product Showcase</span>
-                        <h2 className="text-3xl md:text-5xl font-display font-extrabold text-white uppercase tracking-tight">
-                            The Science of <span className="text-amber-400 italic drop-shadow">Growth</span>
+                        <span className="text-[#b45309] font-extrabold tracking-[0.4em] uppercase text-xs mb-3 block">Product Showcase</span>
+                        <h2 className="text-3xl md:text-5xl font-display font-black text-[#0F2E15] uppercase tracking-tight">
+                            The Science of <span className="text-[#b45309] italic font-black">Growth</span>
                         </h2>
                     </div>
 
                     <div className="relative w-full group">
                         <div className="absolute inset-0 bg-amber-500/10 blur-[100px] rounded-full -z-10" />
-                        <div className="relative overflow-hidden rounded-[40px] md:rounded-[60px] border border-amber-500/30 shadow-2xl p-4 bg-black/40 backdrop-blur-md flex items-center justify-center min-h-[350px] md:min-h-[500px]">
+                        <div className="relative overflow-hidden rounded-[40px] md:rounded-[60px] border-2 border-[#b45309]/30 shadow-2xl p-4 bg-black/60 backdrop-blur-md flex items-center justify-center min-h-[350px] md:min-h-[500px]">
                             <AnimatePresence mode="wait">
                                 <motion.img
                                     key={index}
@@ -86,8 +86,8 @@ const BeardShowcaseSection = () => {
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <span className="text-amber-400 font-bold tracking-[0.5em] uppercase text-xs mb-2 block">{images[index].label}</span>
-                                <h3 className="text-2xl md:text-4xl font-display font-extrabold text-white tracking-tight italic drop-shadow">
+                                <span className="text-[#b45309] font-extrabold tracking-[0.5em] uppercase text-xs mb-2 block">{images[index].label}</span>
+                                <h3 className="text-2xl md:text-4xl font-display font-black text-[#0F2E15] tracking-tight italic">
                                     {images[index].title}
                                 </h3>
                             </motion.div>

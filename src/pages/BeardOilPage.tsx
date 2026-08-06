@@ -160,39 +160,39 @@ const BeardOilPage = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
           >
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              <span className="inline-flex items-center gap-2 text-amber-300 text-xs font-bold tracking-[0.3em] uppercase font-serif mb-4 border-2 border-amber-400/80 px-4 py-2 rounded-full bg-amber-500/20 shadow-[0_0_15px_rgba(245,158,11,0.25)]">
-                <Leaf className="w-4 h-4 text-amber-400" /> Premium Natural Beard & Mustache Oil
+              <span className="inline-flex items-center gap-2 text-[#78350f] text-xs font-extrabold tracking-[0.25em] uppercase font-serif mb-4 border-2 border-[#b45309]/50 px-4 py-2 rounded-full bg-white/80 shadow-md">
+                <Leaf className="w-4 h-4 text-[#b45309]" /> Premium Natural Beard & Mustache Oil
               </span>
             </motion.div>
 
             <div className="mb-2 flex lg:justify-start">
-              <AnimatedLogo className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-amber-400" glowColor="text-amber-400 drop-shadow-lg" />
+              <AnimatedLogo className="text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight" textColor="text-[#0F2E15]" glowColor="text-[#0F2E15] drop-shadow-md" />
             </div>
-            <h1 className="text-3xl md:text-5xl font-display font-bold text-white mb-3 tracking-wide">
-              Beard & Mustache <span className="text-amber-400 italic">Growth Oil</span>
+            <h1 className="text-3xl md:text-5xl font-display font-black text-[#0F2E15] mb-3 tracking-wide">
+              Beard & Mustache <span className="text-[#b45309] italic font-black">Growth Oil</span>
             </h1>
-            <p className="text-amber-400 font-bold tracking-[0.25em] text-xs md:text-sm uppercase mb-6 font-display drop-shadow">
+            <p className="text-[#78350f] font-extrabold tracking-[0.2em] text-xs md:text-sm uppercase mb-6 font-display drop-shadow-sm">
               Fuller Beard • Nourished Follicles • Lightweight Formula
             </p>
 
             <div className="flex flex-wrap gap-2 mb-6">
               {["Supports Fuller Beard", "Reduces Dryness & Dandruff", "Softens Coarse Hair", "Non-Greasy Formula"].map((tag) => (
-                <span key={tag} className="text-xs text-amber-200 border-2 border-amber-400/60 px-3.5 py-1.5 rounded-full bg-amber-500/20 font-bold shadow-md">
+                <span key={tag} className="text-xs text-[#78350f] border-2 border-[#b45309]/40 px-3.5 py-1.5 rounded-full bg-white/90 font-extrabold shadow-sm">
                   ✓ {tag}
                 </span>
               ))}
             </div>
 
-            <p className="text-zinc-200 text-base leading-relaxed mb-8 max-w-md font-medium">
+            <p className="text-[#0F2E15] text-base leading-relaxed mb-8 max-w-md font-bold">
               A premium beard and mustache oil formulated with nourishing natural oils to help support thicker, healthier-looking facial hair. It deeply moisturizes the skin, reduces dryness and itchiness, and enhances the natural shine and appearance of your beard.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 0 35px rgba(245, 158, 11, 0.7)" }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleAddToCart}
-                className="px-8 py-4 bg-amber-400 hover:bg-amber-300 text-black font-black text-base rounded-full uppercase tracking-widest shadow-[0_0_20px_rgba(245,158,11,0.5)] transition-all"
+                className="px-8 py-4 bg-[#b45309] hover:bg-[#92400e] text-white font-black text-base rounded-full uppercase tracking-widest shadow-xl transition-all"
               >
                 Order Now — Rs. 1,799
               </motion.button>
@@ -200,7 +200,7 @@ const BeardOilPage = () => {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => document.getElementById("benefits")?.scrollIntoView({ behavior: "smooth" })}
-                className="px-8 py-4 border-2 border-amber-400 text-amber-300 hover:text-white bg-black/60 hover:bg-amber-500/30 font-bold text-base rounded-full transition-all uppercase tracking-widest shadow-md"
+                className="px-8 py-4 bg-[#133937] hover:bg-black text-amber-300 font-black text-base rounded-full transition-all uppercase tracking-widest shadow-xl"
               >
                 Learn More
               </motion.button>
@@ -210,14 +210,14 @@ const BeardOilPage = () => {
             <div className="flex items-center gap-4">
               <div className="flex">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-10 h-10 rounded-full bg-card border-2 border-amber-500/40 overflow-hidden -ml-2 first:ml-0">
+                  <div key={i} className="w-10 h-10 rounded-full bg-card border-2 border-[#0F2E15]/40 overflow-hidden -ml-2 first:ml-0">
                     <img src={`https://api.dicebear.com/7.x/notionists/svg?seed=beardman${i}&backgroundColor=transparent`} alt="" className="w-full h-full object-cover" />
                   </div>
                 ))}
               </div>
               <div>
-                <div className="flex text-amber-400 text-lg font-bold drop-shadow-[0_0_10px_rgba(245,158,11,0.6)]">★★★★★</div>
-                <p className="text-white font-bold text-sm">4,500+ beard men trust Riwayat</p>
+                <div className="flex text-[#d97706] text-lg font-black drop-shadow-sm">★★★★★</div>
+                <p className="text-[#0F2E15] font-extrabold text-sm">4,500+ beard men trust Riwayat</p>
               </div>
             </div>
           </motion.div>
@@ -282,9 +282,9 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block drop-shadow">Why Men Choose Riwayat</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white">
-              6 Key <span className="text-amber-400 drop-shadow-[0_0_15px_rgba(245,158,11,0.4)]">Beard Benefits</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Why Men Choose Riwayat</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15]">
+              6 Key <span className="text-[#b45309] font-black">Beard Benefits</span>
             </h2>
           </motion.div>
 
@@ -320,13 +320,13 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">
               مزید معلومات • More Info
             </span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-amber-400 mb-3 drop-shadow">
-              تفصیلی <span className="text-white italic">رہنمائی</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15] mb-3">
+              تفصیلی <span className="text-[#b45309] italic font-black">رہنمائی</span>
             </h2>
-            <p className="text-zinc-200 font-semibold text-sm max-w-md mx-auto">
+            <p className="text-[#0F2E15] font-bold text-sm max-w-md mx-auto">
               Detailed information in Urdu for beard care & proper usage
             </p>
           </motion.div>
@@ -390,11 +390,11 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Nature's Power</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white">
-              7 Pure <span className="text-amber-400 italic drop-shadow">Natural Ingredients</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Nature's Power</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15]">
+              7 Pure <span className="text-[#b45309] italic font-black">Natural Ingredients</span>
             </h2>
-            <p className="text-zinc-200 font-semibold text-sm mt-3 max-w-lg mx-auto">Castor Oil · Jojoba Oil · Argan Oil · Black Seed Oil · Vitamin E · Rosemary · Peppermint</p>
+            <p className="text-[#0F2E15] font-bold text-sm mt-3 max-w-lg mx-auto">Castor Oil · Jojoba Oil · Argan Oil · Black Seed Oil · Vitamin E · Rosemary · Peppermint</p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 max-w-5xl mx-auto">
@@ -428,9 +428,9 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Simple & Effective</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white">
-              How to <span className="text-amber-400 italic drop-shadow">Use</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Simple & Effective</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15]">
+              How to <span className="text-[#b45309] italic font-black">Use</span>
             </h2>
           </motion.div>
 
@@ -463,9 +463,9 @@ const BeardOilPage = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="mt-8 p-5 rounded-2xl border border-amber-500/20 bg-amber-500/5 text-center"
+            className="mt-8 p-5 rounded-2xl border-2 border-[#b45309]/30 bg-white/90 text-center shadow-md"
           >
-            <p className="text-amber-300 text-sm font-medium">
+            <p className="text-[#78350f] text-sm font-bold">
               💡 <strong>Pro Tip:</strong> For best results, apply before bedtime and leave overnight. The oils absorb deeply while you sleep, maximizing nourishment for your beard follicles.
             </p>
           </motion.div>
@@ -483,9 +483,9 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Video Guides</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white mb-4">
-              Watch <span className="text-amber-400 drop-shadow">Beard Results & Care</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Video Guides</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15] mb-4">
+              Watch <span className="text-[#b45309] font-black">Beard Results & Care</span>
             </h2>
           </motion.div>
 
@@ -495,10 +495,10 @@ const BeardOilPage = () => {
               <button
                 key={i}
                 onClick={() => setActiveVideo(i)}
-                className={`px-5 py-2 rounded-full text-xs font-display uppercase tracking-widest transition-all ${
+                className={`px-5 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all ${
                   activeVideo === i
-                    ? "bg-amber-500 text-black font-bold"
-                    : "border border-amber-500/30 text-amber-400/70 hover:border-amber-500"
+                    ? "bg-[#b45309] text-white font-black shadow-lg"
+                    : "border-2 border-[#78350f]/40 text-[#78350f] font-bold bg-white/80 hover:bg-[#b45309] hover:text-white"
                 }`}
               >
                 {v.label}
@@ -556,9 +556,9 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Customer Reviews</span>
-            <h2 className="text-4xl md:text-5xl font-display font-extrabold text-white">
-              Real Men, <span className="text-amber-400 drop-shadow">Real Beard Density</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Customer Reviews</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15]">
+              Real Men, <span className="text-[#b45309] font-black">Real Beard Density</span>
             </h2>
           </motion.div>
 
@@ -598,20 +598,20 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-amber-400 font-bold text-xs uppercase tracking-[0.4em] font-serif mb-4 block">Special Promotional Offer</span>
-            <h2 className="text-4xl md:text-6xl font-display font-extrabold text-white mb-4">
-              Get Your Dream <span className="text-amber-400 drop-shadow">Full Beard</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-4 block">Special Promotional Offer</span>
+            <h2 className="text-4xl md:text-6xl font-display font-black text-[#0F2E15] mb-4">
+              Get Your Dream <span className="text-[#b45309] font-black">Full Beard</span>
             </h2>
-            <p className="text-zinc-200 max-w-lg mx-auto text-base mb-10 leading-relaxed">
+            <p className="text-[#0F2E15] font-bold max-w-lg mx-auto text-base mb-10 leading-relaxed">
               Order your 100ml bottle of Riwayat Beard & Mustache Growth Oil today with free Cash on Delivery across Pakistan.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(245, 158, 11, 0.4)" }}
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={handleAddToCart}
-                className="px-10 py-4 bg-amber-500 hover:bg-amber-600 text-black font-display font-bold text-base rounded-full uppercase tracking-widest shadow-xl"
+                className="px-10 py-4 bg-[#b45309] hover:bg-[#92400e] text-white font-black text-base rounded-full uppercase tracking-widest shadow-xl"
               >
                 Order Now — Rs. 1,799
               </motion.button>
@@ -619,7 +619,7 @@ const BeardOilPage = () => {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate("/")}
-                className="px-10 py-4 border-2 border-amber-500/50 text-amber-400 rounded-full font-display font-semibold text-base uppercase tracking-widest hover:bg-amber-500/10 transition-all flex items-center gap-2 justify-center"
+                className="px-10 py-4 bg-[#133937] hover:bg-black text-amber-300 rounded-full font-black text-base uppercase tracking-widest shadow-xl transition-all flex items-center gap-2 justify-center"
               >
                 See All Products <ChevronRight className="w-4 h-4" />
               </motion.button>
@@ -629,9 +629,9 @@ const BeardOilPage = () => {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#161412] py-10 text-center border-t border-amber-500/20">
-        <p className="text-foreground/70 text-xs tracking-widest uppercase font-display">© 2024 Riwayat — Herbal Wisdom · Beard & Mustache Growth Oil</p>
-        <p className="text-amber-500/60 text-[10px] tracking-wider mt-2 font-serif">100% Organic · Handcrafted · Pure Herbal Power</p>
+      <footer className="bg-[#161412] py-10 text-center border-t border-amber-500/30">
+        <p className="text-white text-xs tracking-widest uppercase font-display font-semibold">© 2024 Riwayat — Herbal Wisdom · Beard & Mustache Growth Oil</p>
+        <p className="text-amber-400 font-bold text-xs tracking-wider mt-2 font-serif">100% Organic · Handcrafted · Pure Herbal Power</p>
       </footer>
     </main>
   );
