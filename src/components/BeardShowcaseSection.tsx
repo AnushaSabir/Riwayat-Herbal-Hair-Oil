@@ -2,13 +2,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import img1 from "@/assets/beard/beard-gallery-1.jpg";
 import img2 from "@/assets/beard/beard-gallery-2.jpg";
-import img3 from "@/assets/beard/beard-bottle.jpg";
+import img3 from "@/assets/beard/beard-gallery-3.jpg";
+import img4 from "@/assets/beard/beard-gallery-4.jpg";
+import img5 from "@/assets/beard/beard-gallery-5.jpg";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
     { src: img1, title: "Fuller & Thicker Beard", label: "Density & Growth" },
     { src: img2, title: "100% Pure Organic Oils", label: "Natural Ingredients" },
-    { src: img3, title: "Riwayat Beard Formula", label: "Root Activation" }
+    { src: img3, title: "Riwayat Beard Formula", label: "Root Activation" },
+    { src: img4, title: "Softens Coarse Beard", label: "Deep Conditioning" },
+    { src: img5, title: "Healthy Beard Care", label: "Nourished Skin" },
 ];
 
 const BeardShowcaseSection = () => {
