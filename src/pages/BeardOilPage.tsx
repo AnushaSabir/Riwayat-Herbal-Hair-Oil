@@ -63,9 +63,10 @@ const testimonials = [
 
 // ─── Videos ──────────────────────────────────────────────────────────────────
 const videos = [
-  { src: "/videos/beard-1.mp4", label: "Beard Growth Magic" },
-  { src: "/videos/beard-2.mp4", label: "How to Apply" },
-  { src: "/videos/beard-3.mp4", label: "Patchy Beard Care" },
+  { src: "/videos/beard-making.mp4", label: "Oil Making Process" },
+  { src: "/videos/beard-hero.mp4", label: "Beard Growth Magic" },
+  { src: "/videos/beard-1.mp4", label: "How to Apply" },
+  { src: "/videos/beard-2.mp4", label: "Patchy Beard Care" },
 ];
 
 const BeardOilPage = () => {
@@ -483,10 +484,11 @@ const BeardOilPage = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Video Guides</span>
-            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15] mb-4">
-              Watch <span className="text-[#b45309] font-black">Beard Results & Care</span>
+            <span className="text-[#b45309] font-extrabold text-xs uppercase tracking-[0.4em] font-serif mb-3 block">Pure Herbal Craftsmanship</span>
+            <h2 className="text-4xl md:text-5xl font-display font-black text-[#0F2E15] mb-3">
+              The Making of <span className="text-[#b45309] font-black">Beard Growth Oil</span>
             </h2>
+            <p className="text-[#0F2E15] font-bold text-sm max-w-md mx-auto">Watch our authentic 100% natural herbal extraction & oil making process</p>
           </motion.div>
 
           {/* Video Tabs */}
