@@ -64,9 +64,6 @@ const testimonials = [
 // ─── Videos ──────────────────────────────────────────────────────────────────
 const videos = [
   { src: "/videos/beard-making.mp4", label: "Oil Making Process" },
-  { src: "/videos/beard-hero.mp4", label: "Beard Growth Magic" },
-  { src: "/videos/beard-1.mp4", label: "How to Apply" },
-  { src: "/videos/beard-2.mp4", label: "Patchy Beard Care" },
 ];
 
 const BeardOilPage = () => {
@@ -492,21 +489,23 @@ const BeardOilPage = () => {
           </motion.div>
 
           {/* Video Tabs */}
-          <div className="flex justify-center gap-3 mb-8 flex-wrap">
-            {videos.map((v, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveVideo(i)}
-                className={`px-5 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all ${
-                  activeVideo === i
-                    ? "bg-[#b45309] text-white font-black shadow-lg"
-                    : "border-2 border-[#78350f]/40 text-[#78350f] font-bold bg-white/80 hover:bg-[#b45309] hover:text-white"
-                }`}
-              >
-                {v.label}
-              </button>
-            ))}
-          </div>
+          {videos.length > 1 && (
+            <div className="flex justify-center gap-3 mb-8 flex-wrap">
+              {videos.map((v, i) => (
+                <button
+                  key={i}
+                  onClick={() => setActiveVideo(i)}
+                  className={`px-5 py-2.5 rounded-full text-xs font-display uppercase tracking-widest transition-all ${
+                    activeVideo === i
+                      ? "bg-[#b45309] text-white font-black shadow-lg"
+                      : "border-2 border-[#78350f]/40 text-[#78350f] font-bold bg-white/80 hover:bg-[#b45309] hover:text-white"
+                  }`}
+                >
+                  {v.label}
+                </button>
+              ))}
+            </div>
+          )}
 
           {/* Video Player Box */}
           <div className="max-w-sm mx-auto">
